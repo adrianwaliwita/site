@@ -9,7 +9,7 @@ const SectionTextLeft = ({
   component,
 }) => {
   return (
-    <section className="px-4 sm:px-[7%] mx-auto bg-white pb-20">
+    <section className="px-4 sm:px-[7%] mx-auto bg-white pb-20 h:20vh md:h-[87vh]">
       <div className="flex flex-col">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-8 items-center">
           <div className="order-last md:order-first">
@@ -21,13 +21,13 @@ const SectionTextLeft = ({
               {titleAfterBlue}
             </p>
             <div>
-              <p className="font-arial text-sm sm:text-base lg:text-xl mt-4 text-gray-700">
+              <p className="font-arial text-sm md:text-base xl:text-xl mt-4 text-gray-700">
                 {description}
               </p>
             </div>
           </div>
           <div className="h-full w-full order-first md:order-last flex justify-center">
-            {component || <Card />}
+            {component}
           </div>
         </div>
       </div>

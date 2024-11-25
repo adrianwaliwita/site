@@ -10,7 +10,7 @@ const SectionTextRight = ({
   component,
 }) => {
   return (
-    <section className="px-4 sm:px-[5%] h-auto mx-auto flex items-center justify-center md:pt-[5%]">
+    <section className="px-4 sm:px-[5%] h:20vh md:h-[87vh] mx-auto flex items-center justify-center md:pt-[5%] md:pb-[5%]">
       <div className="flex flex-col w-full">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 items-center ">
           <div className="h-full w-full order-first md:order-none flex justify-center">
@@ -25,7 +25,7 @@ const SectionTextRight = ({
               {titleAfterBlue}
             </p>
             <div className="pr-0 sm:pr-[5vw]">
-              <p className="font-arial text-sm sm:text-base lg:text-xl mt-4 text-black">
+              <p className="font-arialtext-sm md:text-base xl:text-xl mt-4 text-black">
                 {description}
               </p>
             </div>

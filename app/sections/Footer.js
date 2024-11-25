@@ -7,21 +7,18 @@ const Footer = () => {
             <div className="space-y-4">
               <div>
                 <a href="/">
-                  <div className="flex items-center space-x-2 text-2xl font-medium">
+                  <div className="flex items-center  space-x-2 text-2xl font-medium">
                     <span>
                       <img
-                        src="https://www.svgrepo.com/show/452102/slack.svg"
+                        src="/hci-white.png"
                         alt="AI Logo"
-                        width="64"
-                        height="64"
-                        className="w-16"
+                        className="w-60 ml-[-1.5rem] mb-[-1.5rem] "
                       />
                     </span>
-                    <span className="text-white">AIOps</span>
                   </div>
                 </a>
               </div>
-              <div className="max-w-md pr-16 text-md text-gray-200">
+              <div className="max-w-md pr-16 text-md text-gray-400">
                 Enhance productivity and efficiency with cutting-edge artificial
                 intelligence solutions for your business operations.
               </div>
@@ -210,13 +207,19 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-16 border-t border-gray-100/30 pt-8 sm:mt-20 lg:mt-24">
-            <div className="text-md text-center text-white">
-              Copyright © 2024. Crafted with
-              <span className="text-gray-50"></span> by
-              <a rel="noopener" href="/">
-                {" "}
-                H Connect International.
-              </a>
+            <div className="text-md text-center text-white mx-auto">
+              Copyright © 2024. All rights reserved. <br></br>
+            </div>
+            <div className="text-md text-center text-sm pt-2 text-gray-400 mx-auto">
+              This website and its content are the property of H Connect
+              International and are protected by applicable copyright laws.
+              Unauthorized use, reproduction, or distribution is strictly
+              prohibited. By accessing this site, you agree to our Terms of Use,
+              Privacy Policy, and Data Protection Agreement (DPA). H Connect
+              International is committed to safeguarding your personal data in
+              compliance with applicable data protection regulations. For more
+              information, please refer to our policy documents or contact us
+              directly.
             </div>
           </div>
         </div>
