@@ -5,7 +5,7 @@ const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "relative w-[30vw] md:w-[12vw] h-[30vw] md:h-[12vw] cursor-pointer overflow-hidden rounded-xl border",
+        "cursor-pointer overflow-hidden rounded-xl border",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -24,10 +24,10 @@ export default function MarqueeVert({ items = [] }) {
     Math.floor(items.length / 3),
     Math.floor((2 * items.length) / 3)
   );
-  const thirdRow = items.slice(Math.floor((2 * items.length) / 3));
+  const thirdRow = items.slice(Math.floor((2 * items.length) / 6));
 
   return (
-    <div className="relative flex h-[30vh] md:h-[80vh]  w-full md:w-[100%] flex-row items-center justify-center overflow-hidden rounded-lg  bg-background ">
+    <div className="relative flex h-[30vh] md:h-[80vh]  w-full md:w-[100%] flex-row items-center justify-center overflow-hidden rounded-lg  bg-[#2e2e5300] ">
       <Marquee pauseOnHover vertical className="[--duration:60s]">
         {firstRow.map((item, index) => (
           <ReviewCard key={index} {...item} />

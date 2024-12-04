@@ -1,72 +1,242 @@
 "use client";
-import React, { useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useMotionValueEvent,
-} from "framer-motion";
-import Link from "next/link";
-import { cn } from "../lib/util";
+import React, { useState, useRef } from "react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "app/components/Menu";
+import { cn } from "@/lib/utils";
 
-export const Header = ({ navItems, className }) => {
-  const { scrollYProgress } = useScroll();
+export default function NavbarMain() {
+  const { scrollY } = useScroll();
+  const [scrollingDown, setScrollingDown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const lastY = useRef(0);
 
-  const [visible, setVisible] = useState(false);
-
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current - scrollYProgress.getPrevious();
-
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+  // Detect scroll direction with debounce logic
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const delta = latest - lastY.current;
+    if (Math.abs(delta) > 5) {
+      setScrollingDown(delta > 0);
     }
+    lastY.current = latest;
   });
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
+    <div className="relative w-full flex items-center justify-center">
+      <Navbar
+        className={cn("top-0", scrollingDown ? "hidden" : "visible")}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
+    </div>
+  );
+}
+
+function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
+  const [active, setActive] = useState(null);
+
+  // Close mobile menu when a link is clicked
+  const handleMobileMenuItemClick = () => {
+    setIsMobileMenuOpen(false);
+    setActive(null);
+  };
+
+  return (
+    <>
+      {/* Desktop Menu */}
+      <div
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white bg-opacity-90 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] pr-2 pl-8 py-2  items-center justify-center space-x-4",
+          "fixed top-10 inset-x-0 shadow-lg mx-auto z-50 hidden md:block ",
           className
         )}
       >
-        {navItems.map((navItem, idx) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+        <Menu setActive={setActive}>
+          <MenuItem setActive={setActive} active={active} item="Home" />
+          <MenuItem setActive={setActive} active={active} item="About" />
+
+          <MenuItem setActive={setActive} active={active} item="Services">
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="Algochurn"
+                href="https://algochurn.com"
+                src="/future-legacy.jpg"
+                description="Prepare for tech interviews like never before."
+              />
+              <ProductItem
+                title="Tailwind Master Kit"
+                href="https://tailwindmasterkit.com"
+                src="/future-legacy.jpg"
+                description="Production ready Tailwind css components for your next project"
+              />
+              <ProductItem
+                title="Moonbeam"
+                href="https://gomoonbeam.com"
+                src="/future-legacy.jpg"
+                description="Never write from scratch again. Go from idea to blog in minutes."
+              />
+              <ProductItem
+                title="Rogue"
+                href="https://userogue.com"
+                src="/future-legacy.jpg"
+                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              />
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Contact" />
+
+          {/* <MenuItem setActive={setActive} active={active} item="Pricing">
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink href="/hobby">Hobby</HoveredLink>
+              <HoveredLink href="/individual">Individual</HoveredLink>
+              <HoveredLink href="/team">Team</HoveredLink>
+              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            </div>
+          </MenuItem> */}
+        </Menu>
+      </div>
+
+      {/* Mobile Menu Hamburger */}
+      <div
+        className={cn(
+          "fixed top-10 inset-x-0 z-50 md:hidden flex justify-between items-center px-4  bg-white",
+          className
+        )}
+      >
+        <div className="flex-grow "></div>
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="z-60 relative"
+        >
+          <div className="w-20 h-20  bg-white">
+            <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isMobileMenuOpen
+                    ? "rotate-45 translate-y-0"
+                    : "-translate-y-1.5"
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isMobileMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+                  isMobileMenuOpen
+                    ? "-rotate-45 translate-y-0"
+                    : "translate-y-1.5"
+                }`}
+              ></span>
+            </div>
+          </div>
         </button>
-      </motion.div>
-    </AnimatePresence>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 bg-white/90 z-40 md:hidden overflow-y-auto"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <div
+            className="flex flex-col space-y-6 p-6 mt-20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <MobileSectionAccordion
+              title="Services"
+              onItemClick={handleMobileMenuItemClick}
+            >
+              <HoveredLink href="/web-dev">Web Development</HoveredLink>
+              <HoveredLink href="/interface-design">
+                Interface Design
+              </HoveredLink>
+              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+              <HoveredLink href="/branding">Branding</HoveredLink>
+            </MobileSectionAccordion>
+
+            <MobileSectionAccordion
+              title="Products"
+              onItemClick={handleMobileMenuItemClick}
+            >
+              <div className="space-y-4">
+                <ProductItemMobile
+                  title="Algochurn"
+                  href="https://algochurn.com"
+                  description="Prepare for tech interviews like never before."
+                />
+                <ProductItemMobile
+                  title="Tailwind Master Kit"
+                  href="https://tailwindmasterkit.com"
+                  description="Production ready Tailwind css components for your next project"
+                />
+                <ProductItemMobile
+                  title="Moonbeam"
+                  href="https://gomoonbeam.com"
+                  description="Never write from scratch again. Go from idea to blog in minutes."
+                />
+                <ProductItemMobile
+                  title="Rogue"
+                  href="https://userogue.com"
+                  description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                />
+              </div>
+            </MobileSectionAccordion>
+
+            <MobileSectionAccordion
+              title="Pricing"
+              onItemClick={handleMobileMenuItemClick}
+            >
+              <HoveredLink href="/hobby">Hobby</HoveredLink>
+              <HoveredLink href="/individual">Individual</HoveredLink>
+              <HoveredLink href="/team">Team</HoveredLink>
+              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+            </MobileSectionAccordion>
+          </div>
+        </div>
+      )}
+    </>
   );
-};
+}
+
+// Mobile Accordion Component
+function MobileSectionAccordion({ title, children, onItemClick }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b pb-2">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full text-left font-semibold text-xl flex justify-between items-center"
+      >
+        {title}
+        <span>{isOpen ? "−" : "+"}</span>
+      </button>
+      {isOpen && (
+        <div
+          className="mt-4 space-y-3"
+          onClick={() => {
+            setIsOpen(false);
+            onItemClick();
+          }}
+        >
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Mobile Product Item Component
+function ProductItemMobile({ title, href, description }) {
+  return (
+    <a
+      href={href}
+      className="block p-3 hover:bg-gray-100 rounded-lg transition-colors"
+    >
+      <div className="font-medium text-lg">{title}</div>
+      <div className="text-sm text-gray-600">{description}</div>
+    </a>
+  );
+}

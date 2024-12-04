@@ -1,3 +1,4 @@
+const {nextui} = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -5,6 +6,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/navbar.js"
   ],
   theme: {
     extend: {
@@ -64,6 +66,7 @@ module.exports = {
         move: "move 5s linear infinite",
         marquee: "marquee var(--duration) infinite linear",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        shine: "shine var(--duration) infinite linear", // Added shine animation
       },
       keyframes: {
         move: {
@@ -90,6 +93,17 @@ module.exports = {
             transform: "translateY(calc(-100% - var(--gap)))",
           },
         },
+        shine: {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -98,5 +112,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-motion"), require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-motion"),require("tailwindcss-animate"),nextui()],
 };

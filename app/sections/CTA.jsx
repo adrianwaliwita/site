@@ -7,14 +7,14 @@ const CalltoAction = ({ title, description }) => {
           <div className="relative">
             <div className="custom-screen py-28 relative">
               <div className="relative z-10 duration-1000 delay-150 opacity-1">
-                <div className="max-w-[50vw] text-4xl md:text-4xl lg:text-7xl mx-auto text-center">
+                <div className="max-w-[70vw] text-4xl md:text-4xl lg:text-7xl mx-auto text-center">
                   <h1 className="text-4xl md:text-4xl lg:text-7xl text-white font-bold font-GTAmerica">
                     {title}
                   </h1>
 
-                  <p className=" text-gray-300 text-sm py-3 md:py-5 md:text-base leading-normal ">
+                  <div className=" text-gray-300 text-sm py-3 md:py-5 md:text-base leading-normal ">
                     {description}
-                  </p>
+                  </div>
                 </div>
                 <div className="flex justify-center font-medium text-md">
                   <form className="mt-6 flex flex-col items-center sm:flex-row sm:gap-x-3">

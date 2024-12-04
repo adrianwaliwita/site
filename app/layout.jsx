@@ -1,9 +1,11 @@
+"use client";
 import "./globals.css";
 import Footer from "./sections/Footer";
-import { Header } from "./sections/Header";
+import Header from "./sections/Header";
 import localFont from "next/font/local";
 import { ReactLenis } from "lenis/dist/lenis-react";
-
+import { Providers } from "./providers";
+import NavbarMain from "./components/NavMenu";
 const GTAmerica = localFont({
   src: [
     {
@@ -21,20 +23,23 @@ const GTAmerica = localFont({
 });
 
 const navItems = [
-  { name: "Section 1", link: "#section1", icon: "🏠" },
-  { name: "Section 2", link: "#section2", icon: "ℹ️" },
-  { name: "Section 3", link: "#section3", icon: "📄" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GTAmerica.variable}`}>
       <body>
-        <ReactLenis root options={{ lerp: 0.35 }}>
-          <Header navItems={navItems} />
-          {children}
-        </ReactLenis>
-        <Footer></Footer>
+        <Providers>
+          <ReactLenis root options={{ lerp: 0.35 }}>
+            <Header />
+            {children}
+          </ReactLenis>
+          <Footer></Footer>
+        </Providers>
       </body>
     </html>
   );

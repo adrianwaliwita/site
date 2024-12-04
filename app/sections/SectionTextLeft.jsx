@@ -13,7 +13,7 @@ const SectionTextLeft = ({
       <div className="flex flex-col">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-8 items-center">
           <div className="order-last md:order-first">
-            <p className="font-GTAmerica text-4xl md:text-4xl lg:text-7xl font-bold tracking-normal text-black text-left md:text-left">
+            <p className="font-GTAmerica text-4xl leading-normal md:text-[4vw] md:leading-[4vw] font-bold tracking-normal text-black text-left md:text-left">
               {titleBeforeBlue}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 {blueTitle}

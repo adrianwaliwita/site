@@ -1,70 +1,35 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./Marquee";
 
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
-];
-
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({ img, name, username, body }) => {
+// ItemCard component to display individual items
+const ItemCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "relative w-[20vw] h-[20vw] cursor-pointer overflow-hidden rounded-xl border",
+        "relative w-[50vw] h-[50vw] md:w-[15vw] md:h-[15vw] cursor-pointer overflow-hidden rounded-xl border",
         // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        "border-[#ffffff] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-5xa0/[.15]"
       )}
     >
-      <img className=" w-full h-full object-cover " alt="" src={img} />
+      <img className="w-full h-full object-cover" alt="" src={img} />
     </figure>
   );
 };
 
-export default function MarqueeDemo() {
+// MarqueeDemo component to accept `items` as a prop
+export default function MarqueeDemo({ items }) {
+  // Split items into two rows dynamically
+  const firstRow = items.slice(0, Math.ceil(items.length / 2)); // Use ceil for better handling odd number of items
+  const secondRow = items.slice(Math.ceil(items.length / 2));
+
   return (
-    <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg  ">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+      <Marquee pauseOnHover className="[--duration:80s]">
+        {/* Combine firstRow and secondRow */}
+        {[...firstRow, ...secondRow].map((item, index) => (
+          <ItemCard key={index} {...item} />
         ))}
       </Marquee>
 

@@ -8,6 +8,7 @@ interface RevealProps {
   width?: "fit-content" | "100%";
   boxColor?: string;
   duration?: number;
+  className?: string;
 }
 
 const Reveal: React.FC<RevealProps> = ({
@@ -15,6 +16,7 @@ const Reveal: React.FC<RevealProps> = ({
   width = "fit-content",
   boxColor = "#5046e6",
   duration = 0.5,
+  className = "",
 }) => {
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -32,7 +34,11 @@ const Reveal: React.FC<RevealProps> = ({
   }, [isInView, mainControls, slideControls]);
 
   return (
-    <div ref={ref} className="relative overflow-hidden" style={{ width }}>
+    <div
+      ref={ref}
+      className={`relative inline-block ${className}`}
+      style={{ width }}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -41,6 +47,7 @@ const Reveal: React.FC<RevealProps> = ({
         initial="hidden"
         animate={mainControls}
         transition={{ duration, delay: 0.25 }}
+        className="inline-block"
       >
         {children}
       </motion.div>
@@ -53,8 +60,12 @@ const Reveal: React.FC<RevealProps> = ({
         initial="hidden"
         animate={slideControls}
         transition={{ duration, ease: "easeIn" }}
-        className="absolute inset-y-1 left-0 right-0 z-20"
-        style={{ background: boxColor }}
+        className="absolute inset-0 z-20"
+        style={{
+          background: boxColor,
+          top: "1px",
+          bottom: "1px",
+        }}
       />
     </div>
   );

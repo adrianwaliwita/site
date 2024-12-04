@@ -10,7 +10,7 @@ const LandingPageInner = ({
     <section className="flex flex-wrap flex-col-reverse sm:flex-row">
       {/* Text Content */}
       <div className="w-full sm:w-8/12  ">
-        <div className="container mx-auto lg:px-20 h-[400px] md:h-dvh ">
+        <div className="container mx-auto lg:px-20 h-[50vh] md:h-dvh ">
           <div className="container px-4 flex flex-col justify-center items-center h-full lg:mt-0 ">
             <div className="w-full text-center md:text-left ">
               <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">

@@ -19,8 +19,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="max-w-md pr-16 text-md text-gray-400">
-                Enhance productivity and efficiency with cutting-edge artificial
-                intelligence solutions for your business operations.
+                Tailored solutions for a transforming world.{" "}
               </div>
               <div className="flex space-x-2">
                 <a
@@ -60,7 +59,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 col-span-2 mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div>
                   <h3 className="text-md font-semibold leading-6 text-white">
                     Our Solutions
@@ -71,7 +70,7 @@ const Footer = () => {
                         href="/aiplatform"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        AI Platform
+                        Finance and Accounting
                       </a>
                     </li>
                     <li>
@@ -79,7 +78,7 @@ const Footer = () => {
                         href="/aialgorithms"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        AI Algorithms
+                        Technology
                       </a>
                     </li>
                     <li>
@@ -87,38 +86,39 @@ const Footer = () => {
                         href="/industryapplications"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Industry Applications
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="mt-10 md:mt-0">
-                  <h3 className="text-md font-semibold leading-6 text-white">
-                    Use Cases
-                  </h3>
-                  <ul role="list" className="mt-6 space-y-4">
-                    <li>
-                      <a
-                        href="/predictiveanalysis"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Predictive Analysis
+                        Consulting and Projects
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/customerexperience"
+                        href="/industryapplications"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Customer Experience
+                        Australian Accounting and Financial Services
                       </a>
                     </li>
                     <li>
                       <a
-                        href="/automation"
+                        href="/industryapplications"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Automation
+                        Admin Support
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/industryapplications"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Digital Marketing
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/industryapplications"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Human Resources
                       </a>
                     </li>
                   </ul>
@@ -135,7 +135,7 @@ const Footer = () => {
                         href="/pricing"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Pricing
+                        Newsletters
                       </a>
                     </li>
                     <li>
@@ -143,7 +143,7 @@ const Footer = () => {
                         href="/blog"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Blog
+                        Case studies
                       </a>
                     </li>
                     <li>
@@ -151,7 +151,7 @@ const Footer = () => {
                         href="/casestudies"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Case Studies
+                        Articles
                       </a>
                     </li>
                     <li>
@@ -159,7 +159,7 @@ const Footer = () => {
                         href="/terms"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Terms of Service
+                        Blogs
                       </a>
                     </li>
                     <li>
@@ -167,7 +167,7 @@ const Footer = () => {
                         href="/privacy"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Privacy Policy
+                        Policies
                       </a>
                     </li>
                   </ul>
