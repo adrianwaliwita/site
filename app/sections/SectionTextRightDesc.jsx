@@ -24,9 +24,9 @@ const SectionTextRight = ({
 
             {/* Description */}
             <div className="pr-0 sm:pr-[5vw] px-8 md:px-0">
-              <p className="font-arial text-sm md:text-base xl:text-xl text-black text-center md:text-left w-[90%]">
+              <div className="font-arial text-sm md:text-base xl:text-xl text-black text-center md:text-left w-[90%]">
                 {description}
-              </p>
+              </div>
             </div>
           </div>
         </div>

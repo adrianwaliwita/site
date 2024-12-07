@@ -12,6 +12,7 @@ import HoverCard from "app/components/HoverCard";
 import HoverCard2 from "app/components/HoverCard2";
 import Button from "app/components/Button";
 import MarqueeHori from "app/components/MarqueeHori";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
 const progressImages = [
   { img: "/about/1.jpg" },
@@ -34,7 +35,7 @@ const accredit = [
 
 const LifeAtHci = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-[10vh] md:pt-[10vh]">
       <section className="flex flex-col items-center w-full ">
         {/* Content Section */}
         <div className="w-full px-[5vw] pt-[5vw] text-center">
@@ -56,18 +57,16 @@ const LifeAtHci = () => {
 
                 {/* Main Heading */}
 
-                <h1 className="text-5xl md:text-[5vw] font-GTAmerica font-bold">
-                  <Reveal boxColor={"#5046e6"} duration={0.4898}>
-                    <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                      A WORKPLACE
-                    </span>
-                  </Reveal>{" "}
-                  LIKE NO OTHER{" "}
+                <h1 className={headingStyles.LargeHeading}>
+                  <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                    A WORKPLACE{" "}
+                  </span>
+                  LIKE NO OTHER
                 </h1>
 
                 {/* Description */}
 
-                <div className="text-sm md:text-base xl:text-xl font-arial mt-7">
+                <div className={bodyTextStyles.descriptionCenter}>
                   Where every day is a chance to learn, laugh, and fall in love
                   with what you do.
                 </div>
@@ -100,7 +99,6 @@ const LifeAtHci = () => {
         </div>{" "}
         {/* Marquee Section */}
       </section>
-
       <section className="px-4 sm:px-[5%] h:20vh md:h-[100vh] mx-auto flex items-center justify-center mb-[-10vh] ">
         <div className="flex flex-col w-full">
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 items-center ">
@@ -146,8 +144,14 @@ const LifeAtHci = () => {
           </div>
         </div>
       </section>
-
-      <CTA title={"CONNECT WITH US TODAY"}></CTA>
+      <CTA
+        title={"Ready to be part of the team?"}
+        description={
+          "Join an environment where your ideas can thrive and make a difference."
+        }
+        href={"/contact"}
+        text={"Get in touch"}
+      ></CTA>{" "}
     </div>
   );
 };

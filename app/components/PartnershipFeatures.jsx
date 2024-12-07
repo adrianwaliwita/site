@@ -1,4 +1,10 @@
 "use client";
+import {
+  DividerBlueCenter,
+  DividerBlueLeft,
+  DividerWhiteLeft,
+  DividerWhiteCenter,
+} from "app/components/Divider";
 const PartnershipFeatures = () => {
   const features = [
     {
@@ -22,7 +28,7 @@ const PartnershipFeatures = () => {
       ),
       title: "Dedicated Relationship Manager",
       description:
-        "A dedicated partner for seamless collaboration, from day one.",
+        "A dedicated partner for seamless collaboration, from day one",
     },
     {
       icon: (
@@ -120,7 +126,7 @@ const PartnershipFeatures = () => {
         </svg>
       ),
       title: "Time Zone Collaboration",
-      description: "24/7 uninterrupted support across all time zones.",
+      description: "24/7 uninterrupted support across all time zones",
     },
   ];
 
@@ -134,10 +140,13 @@ const PartnershipFeatures = () => {
           </span>{" "}
           PARTNERSHIP
         </div>
-        <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0">
-          Driven by our company values our experienced specialists guarantee
-          clients access to top-tier talent with a strong emphasis on building
-          lasting relationships
+        <div className=" lg:mb-[-1vh]">
+          {" "}
+          <DividerBlueCenter />
+        </div>
+        <div className="font-arial text-sm md:text-base xl:text-xl mt-4 text-black px-4 md:px-0">
+          Partnering with us delivers a distinct advantage, driving growth,
+          reducing costs, and providing reliable support.
         </div>
       </div>
       <div className="container mx-auto">
@@ -163,6 +172,7 @@ const PartnershipFeatures = () => {
                 <h3 className="text-white font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
                   {feature.title}
                 </h3>
+
                 <div className="text-md text-white">{feature.description}</div>
               </div>
             </div>

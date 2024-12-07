@@ -1,5 +1,19 @@
 "use client";
 import { Card } from "../components/Card"; // Adjust import path as needed
+import {
+  DividerBlueCenter,
+  DividerBlueLeft,
+  DividerWhiteLeft,
+} from "app/components/Divider";
+
+const commonStyles = {
+  title:
+    "font-GTAmerica text-4xl md:text-[4.6vw] md:leading-[4.6vw] font-bold tracking-normal text-white",
+  blueGradient:
+    "bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent",
+  description: "font-arial text-sm md:text-base xl:text-xl text-white",
+};
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
 const SectionTextLeft = ({
   titleBeforeBlue,
@@ -9,25 +23,29 @@ const SectionTextLeft = ({
   component,
 }) => {
   return (
-    <section className="px-4 sm:px-[7%] mx-auto bg-white pb-20 h:20vh md:h-[87vh]">
-      <div className="flex flex-col">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-8 items-center">
-          <div className="order-last md:order-first">
-            <p className="font-GTAmerica text-4xl leading-normal md:text-[4vw] md:leading-[4vw] font-bold tracking-normal text-black text-left md:text-left">
-              {titleBeforeBlue}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                {blueTitle}
-              </span>
-              {titleAfterBlue}
-            </p>
-            <div>
-              <p className="font-arial text-sm md:text-base xl:text-xl mt-4 text-gray-700">
-                {description}
-              </p>
-            </div>
+    <section className="md:px-[7%] mx-auto py-24 md:pb-0 min-h-[20vh] md:min-h-[87vh] bg-white items-center  ">
+      <div className=" flex flex-col md:flex-row w-full h-full  md:mb-[10vh] md:px-[3%]">
+        <div className="flex justify-center items-center w-full md:w-[50%] md:order-last ">
+          {component}
+        </div>
+
+        <div className="flex flex-col justify-center items-center md:items-start w-full md:w-[48%] md:order-first">
+          <div
+            className={`${headingStyles.primaryLeft} text-left md:text-left pt-8 md:py-0`}
+          >
+            {titleBeforeBlue}
+            <span className={`${commonStyles.blueGradient}`}>{blueTitle}</span>
+            {titleAfterBlue}
           </div>
-          <div className="h-full w-full order-first md:order-last flex justify-center">
-            {component}
+
+          <div>
+            <DividerBlueLeft />
+
+            <div
+              className={`${bodyTextStyles.descriptionLeft} text-center md:text-left mt-4`}
+            >
+              {description}
+            </div>
           </div>
         </div>
       </div>

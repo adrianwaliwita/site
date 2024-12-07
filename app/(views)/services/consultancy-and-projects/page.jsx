@@ -1,13 +1,18 @@
 "use client";
 import HoverCard3 from "app/components/HoverCard3";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
-import CalltoAction from "app/sections/CTA";
 import Security from "app/components/security";
 import ServiceBeyond from "app/components/ServiceBeyond";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
-
+import SecuringInterests from "app/components/SecuringInterests";
+import TopTierTalent from "app/components/TopTierTalent";
+import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
+import ProvenProcesses from "app/components/ProvenProcesses";
+import CTA from "app/sections/CTA";
+import ServGrid from "app/components/ServGrid";
 const steps = [
   {
     title: "Planning & Scheduling Phase",
@@ -17,27 +22,27 @@ const steps = [
   {
     title: "Resource Coordination & Management",
     description:
-      "We assign tasks and resources to project team members to ensure efficient utilization.",
+      "We assign tasks and resources to project team members to ensure efficient utilization",
   },
   {
     title: "Project Execution and Monitoring",
     description:
-      "We oversee project progress, track milestones, and make adjustments as needed to ensure timely completion.",
+      "We oversee project progress, track milestones, and make adjustments as needed to ensure timely completion",
   },
   {
-    title: "Project Closure and Evaluation:",
+    title: "Project Closure and Evaluation",
     description:
-      "We finalize project deliverables, assess project success, and document lessons learned for future projects.",
+      "We finalize project deliverables, assess project success, and document lessons learned for future projects",
   },
   {
-    title: "Document and Records Management:",
+    title: "Document and Records Management",
     description:
-      "We implement a robust system for organizing and trackining project documents, ensuring easy access and retrieval whenever needed.",
+      "We implement a robust system for organizing and trackining project documents, ensuring easy access and retrieval whenever needed",
   },
   {
     title: "Stakeholder Management",
     description:
-      "We proactively engage and manage communication with all project stakeholders, keeping everyone informed and aligned with project goals.",
+      "We proactively engage and manage communication with all project stakeholders, keeping everyone informed and aligned with project goals",
   },
 ];
 
@@ -58,48 +63,6 @@ const logos = [
     name: "PrivacyActi",
     url: "/DataProtection/PrivacyAct.jpg",
   },
-];
-const slugs = [
-  "oracle",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-];
-
-const accredit = [
-  { img: "/accredit/ACCA.jpg" },
-  { img: "/accredit/CIMA.jpg" },
-  { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
-  { img: "/accredit/CPA.jpg" },
-
-  { img: "/accredit/GPTW-WOMEN.jpg" },
 ];
 
 const serviceBorders = [
@@ -209,20 +172,32 @@ const FinanceAccounting = () => {
       <SectionTextRightDesc
         description={
           <>
-            We collaborate with leading enterprises to deliver strategic
-            consulting services that drive sustainable growth and innovation
-            through outsourcing. With extensive experience supporting
-            corporations across multiple continents, we provide customized
-            consulting solutions tailored to your specific region and industry.
-            Whether you're a small-to-medium enterprise seeking strategic
-            growth, a large corporation aiming to expand into new sectors, or a
-            business looking to solve complex challenges, we focus on delivering
-            solutions that perfectly align with your unique needs. By combining
-            industry knowledge, analytical skills, and a deep understanding of
-            your business, we will help you make informed decisions, improve
-            efficiency, and achieve your long-term goals. From strategy
-            development to execution and overall management we will support you
-            every step of the way.
+            <div className="space-y-4">
+              <div>
+                We collaborate with leading enterprises to deliver strategic
+                consulting services that drive sustainable growth and innovation
+                through outsourcing. With extensive experience supporting
+                corporations across multiple continents, we provide customized
+                consulting solutions tailored to your specific region and
+                industry.
+              </div>{" "}
+              <div>
+                Whether you&apos;re a small-to-medium enterprise seeking
+                strategic growth, a large corporation aiming to expand into new
+                sectors, or a business looking to solve complex challenges, we
+                focus on delivering solutions that perfectly align with your
+                unique needs.
+              </div>{" "}
+              <div>
+                By combining industry knowledge, analytical skills, and a deep
+                understanding of your business, we will help you make informed
+                decisions, improve efficiency, and achieve your long-term goals.
+              </div>{" "}
+              <div>
+                From strategy development to execution and overall management we
+                will support you every step of the way.
+              </div>{" "}
+            </div>
           </>
         }
         component={
@@ -244,7 +219,7 @@ const FinanceAccounting = () => {
             <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw] lg:leading-[4.6vw] m font-bold tracking-normal text-black   ">
               WE DRIVE{" "}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                COMPREHENSIVE
+                SUSTAINABLE
               </span>{" "}
               TRANSFORMATION
             </div>
@@ -325,19 +300,21 @@ const FinanceAccounting = () => {
               }
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/Apparel.jpg"}
@@ -357,19 +334,21 @@ const FinanceAccounting = () => {
               }
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>{" "}
+                  </a>
                 </div>
               }
               img={"/industries/insuranceFinance.jpg"}
@@ -391,19 +370,21 @@ const FinanceAccounting = () => {
               }
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/IT.jpg"}
@@ -422,18 +403,23 @@ const FinanceAccounting = () => {
                 ENTIRE PROCESS
               </span>{" "}
             </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl flex justify-center  text-black">
-              <div className="w-[80%] ">
-                We understand that no two projects are alike. Our tailor-made
-                approach ensures you achieve measurable outcomes. We carefully
-                assess your unique goals, challenges, and resources to determine
-                the most suitable methodology for your project. Whether you
-                require the flexibility of Agile, the structure of Waterfall, or
-                a hybrid approach, we'll select the ideal methodology to ensure
-                your project's success. Our team of experienced professionals
-                will work closely with you to develop a customized project plan
-                that aligns with your specific objectives and delivers
-                exceptional results
+            <div className={`space-y-4  ${bodyTextStyles.descriptionCenter}`}>
+              <div className="w-[100%] ">
+                <div>
+                  {" "}
+                  We understand that no two projects are alike. Our tailor-made
+                  approach ensures you achieve measurable outcomes. We carefully
+                  assess your unique goals, challenges, and resources to
+                  determine the most suitable methodology for your project.
+                  Whether you require the flexibility of Agile, the structure of
+                  Waterfall, or a hybrid approach, we&apos;ll select the ideal
+                  methodology to ensure your project&apos;s success.{" "}
+                </div>
+                <div>
+                  Our team of experienced professionals will work closely with
+                  you to develop a customized project plan that aligns with your
+                  specific objectives and delivers exceptional results.
+                </div>
               </div>
             </div>
           </div>
@@ -502,234 +488,20 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <section>
-        <div className="max-w-screen-xl mx-auto pb-8 px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black ">
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                TOP TIER
-              </span>{" "}
-              TALENT
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl text-black">
-              Driven by our company values our experienced specialists guarantee
-              clients access to top-tier talent with a strong emphasis on
-              building lasting relationships
-            </div>
-          </div>
-          <div className="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-14 h-14"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-                  <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                CERTIFIED
-              </h3>
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                Every member of our team holds a relevant finance certification.
-              </div>
-            </div>
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-14 h-14"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  />
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                DRIVEN
-              </h3>{" "}
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                {" "}
-                Our relentless pursuit of excellence is contagious
-              </div>
-            </div>
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-14 h-14"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                EXPERTLY TRAINED
-              </h3>{" "}
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                With regular training to ensure they are always at the top of
-                their game.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TopTierTalent></TopTierTalent>
 
-      <section>
-        <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black  ">
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                SECURING
-              </span>{" "}
-              YOUR INTERESTS
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              We have a comprehensive system with controls that protect your
-              data with the utmost diligence.
-            </div>
-          </div>
-          <div className="mx-auto mt-[-4vh] m-10">
-            <Security features={sec} />
-          </div>
-          <div className="font-arial text-sm md:text-base text-center xl:text-xl mt-2 text-black pb-5">
-            We strictly adhere to all applicable laws and regulations in every
-            region we operate.
-          </div>
-          <div className="w-full pt-[2vh]">
-            <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-              <div className="grid grid-cols-3 gap-x-6 md:grid-cols-4">
-                {logos.map((logo, key) => (
-                  <img
-                    key={key}
-                    src={logo.url}
-                    className="h-[30vh] w-full object-contain"
-                    alt={`${logo.name}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="">
-        <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black text-center  ">
-              SERVICE{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                BEYOND BORDERS
-              </span>
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              Experience a new level of partnership where professionalism meets
-              accessibility. No red tape, just results. Our client-first
-              philosophy drives everything we do, from concierge-level service
-              to personalized attention. You'll work with real people who are
-              committed to your success. Your dedicated relationship manager
-              will ensure your needs are met promptly and efficiently.{" "}
-            </div>
-          </div>
-          <div className="mx-auto ">
-            <div className="flex mx-auto justify-center ">
-              <ServiceBeyond features={serviceBorders} />
-            </div>
-            <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders2} />
-            </div>
-            <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"></div>
-          </div>
-        </div>
-      </section>
+      <SecuringInterests></SecuringInterests>
 
-      <section>
-        <div className=" max-w-screen-xl mx-auto px-4 pt-[5vh] md:pt-[10vh] pb-[5vh]  md:pb-[10vh]">
-          <div className="mx-auto-sm text-center  ">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black text-center  ">
-              THE POWER OF{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                PROVEN PROCESSES
-              </span>{" "}
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              We are equipped with the right tools for the right job
-            </div>
-          </div>
-          <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 relative">
-            <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100"></div>
-            <div className="grid divide-x divide-y divide-[0000ff] bg-transparent overflow-hidden rounded-xl border-[blue-500] text-blue-600 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-              {[
-                {
-                  title: "5-step Transition Plan",
-                  description:
-                    "Our structured onboarding ensures a seamless integration, so you can hit the ground running",
-                },
-                {
-                  title: "Business Continuity Plan",
-                  description:
-                    "Our BCP is designed to protect your business from disruptions and ensure continuity.",
-                },
-                {
-                  title: "State-of-the-art office",
-                  description:
-                    "Our office space offers the perfect blend of functionality and prestige",
-                },
-                {
-                  title: "In-house training and development",
-                  description:
-                    "Our dedicated training teams ensure your team is equipped with the latest skills through ongoing development",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative transition hover:z-[1] hover:shadow-2xl  hover:shadow-gray-600/10   "
-                >
-                  <div className="relative space-y-8 py-12 px-8">
-                    <div className="space-y-2">
-                      <h5 className="font-GTAmerica font-bold text-xl md:text-[2vw] md:leading-[2.3vw]  bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        {item.title}
-                      </h5>
-                      <div className="text-base text-black font-arial max-w-xs relative z-10 ">
-                        {item.description}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceBeyondBorders></ServiceBeyondBorders>
 
-      <CalltoAction
+      <ProvenProcesses></ProvenProcesses>
+
+      <CTA
         title="READY TO DELIVER FROM DAY ONE"
         description="Get in touch to learn more about our services and how we can help you grow your business."
-      ></CalltoAction>
+        href={"/contact"}
+        text={"Get in touch"}
+      ></CTA>
     </div>
   );
 };

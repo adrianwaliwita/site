@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useRouter } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "app/components/Menu";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,6 @@ export default function NavbarMain() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lastY = useRef(0);
 
-  // Detect scroll direction with debounce logic
   useMotionValueEvent(scrollY, "change", (latest) => {
     const delta = latest - lastY.current;
     if (Math.abs(delta) > 5) {
@@ -33,7 +32,6 @@ export default function NavbarMain() {
 function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
   const [active, setActive] = useState(null);
 
-  // Close mobile menu when a link is clicked
   const handleMobileMenuItemClick = () => {
     setIsMobileMenuOpen(false);
     setActive(null);
@@ -44,68 +42,103 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
       {/* Desktop Menu */}
       <div
         className={cn(
-          "fixed top-10 inset-x-0 shadow-lg mx-auto z-50 hidden md:block ",
+          "fixed top-10 inset-x-0 shadow-lg mx-auto z-50 hidden md:block  ",
           className
         )}
       >
         <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Home" />
-          <MenuItem setActive={setActive} active={active} item="About" />
+          <MenuItem active={active} href="/" item="Home" />
+          <MenuItem href="/about" active={active} item="About" />
 
-          <MenuItem setActive={setActive} active={active} item="Services">
-            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+          <MenuItem
+            setActive={setActive}
+            href="/services"
+            active={active}
+            item="Services"
+          >
+            <div className="text-sm grid grid-cols-2 gap-6 p-4 max-w-4xl mx-auto">
               <ProductItem
-                title="Algochurn"
-                href="https://algochurn.com"
-                src="/future-legacy.jpg"
-                description="Prepare for tech interviews like never before."
+                title="Finance & Accounting"
+                href="/services/finance-and-accounting"
+                src="/serv/financeAcc.jpg"
+                description="Discover our finance and accounting services."
               />
               <ProductItem
-                title="Tailwind Master Kit"
-                href="https://tailwindmasterkit.com"
-                src="/future-legacy.jpg"
-                description="Production ready Tailwind css components for your next project"
+                title="Technology"
+                href="/services/technology"
+                src="/serv/tech.jpg"
+                description="Discover our technology services."
               />
               <ProductItem
-                title="Moonbeam"
-                href="https://gomoonbeam.com"
-                src="/future-legacy.jpg"
-                description="Never write from scratch again. Go from idea to blog in minutes."
+                title="Consultancy & Projects"
+                href="/services/consultancy-and-projects"
+                src="/serv/projects.jpg"
+                description="Discover our consultancy & projects services."
               />
               <ProductItem
-                title="Rogue"
-                href="https://userogue.com"
-                src="/future-legacy.jpg"
-                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                title="Australian Accounting & Financial Services"
+                href="/services/australian-finance-and-accounting"
+                src="/serv/aus.jpg"
+                description="Discover our Australian accounting & financial Services."
+              />
+              <ProductItem
+                title="Admin Support"
+                href="/services/admin-support"
+                src="/serv/admin.jpg"
+                description="Discover our admin support services."
+              />
+              <ProductItem
+                title="Digital Marketing"
+                href="/services/digital-marketing"
+                src="/serv/DigitalMarketing.jpg"
+                description="Discover our digital marketing services."
+              />
+              <ProductItem
+                title="Human Resources"
+                href="/services/human-resources"
+                src="/serv/HumanResources.jpg"
+                description="Discover our human resources services."
+              />
+              <ProductItem
+                title="Remote Teams"
+                href="/services/remote-teams"
+                src="/serv/remote.jpg"
+                description="Discover our remote teams services."
               />
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Contact" />
-
-          {/* <MenuItem setActive={setActive} active={active} item="Pricing">
+          <MenuItem setActive={setActive} active={active} item="Careers">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/hobby">Hobby</HoveredLink>
-              <HoveredLink href="/individual">Individual</HoveredLink>
-              <HoveredLink href="/team">Team</HoveredLink>
-              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+              <HoveredLink href="/join-us">Join Us</HoveredLink>
+              <HoveredLink href="/life-at-hci">Life at HCI</HoveredLink>
             </div>
-          </MenuItem> */}
+          </MenuItem>
+          <MenuItem href="/contact" active={active} item="Contact" />
         </Menu>
       </div>
 
-      {/* Mobile Menu Hamburger */}
+      {/* Mobile Menu Hamburger with Side Logo */}
       <div
         className={cn(
-          "fixed top-10 inset-x-0 z-50 md:hidden flex justify-between items-center px-4  bg-white",
+          "fixed top-10 inset-x-0 z-50 md:hidden flex items-center px-4 bg-white",
           className
         )}
       >
-        <div className="flex-grow "></div>
+        <div className="w-32 h-32">
+          <a href="/" className="inline-block">
+            <img
+              src="/logo/2.png"
+              alt="Company Logo"
+              className="h-32 w-auto object-contain"
+            />
+          </a>
+        </div>
+        <div className="flex-grow"></div>
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="z-60 relative"
         >
-          <div className="w-20 h-20  bg-white">
+          <div className="w-20 h-20 bg-white">
             <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"
@@ -137,7 +170,7 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-white/90 z-40 md:hidden overflow-y-auto"
+          className="fixed inset-0 bg-white z-40 md:hidden overflow-y-auto"
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div
@@ -145,54 +178,77 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
             onClick={(e) => e.stopPropagation()}
           >
             <MobileSectionAccordion
-              title="Services"
+              title="Home"
+              href="/"
               onItemClick={handleMobileMenuItemClick}
-            >
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">
-                Interface Design
-              </HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
-            </MobileSectionAccordion>
+            />
+            <MobileSectionAccordion
+              title="About"
+              href="/about"
+              onItemClick={handleMobileMenuItemClick}
+            />
 
             <MobileSectionAccordion
-              title="Products"
+              title="Services"
               onItemClick={handleMobileMenuItemClick}
             >
               <div className="space-y-4">
                 <ProductItemMobile
-                  title="Algochurn"
-                  href="https://algochurn.com"
-                  description="Prepare for tech interviews like never before."
+                  title="Finance & Accounting"
+                  href="/services/finance-and-accounting"
+                  description="Discover our finance and accounting services."
                 />
                 <ProductItemMobile
-                  title="Tailwind Master Kit"
-                  href="https://tailwindmasterkit.com"
-                  description="Production ready Tailwind css components for your next project"
+                  title="Technology"
+                  href="/services/technology"
+                  description="Discover our technology services."
                 />
                 <ProductItemMobile
-                  title="Moonbeam"
-                  href="https://gomoonbeam.com"
-                  description="Never write from scratch again. Go from idea to blog in minutes."
+                  title="Consultancy & Projects"
+                  href="/services/consultancy-and-projects"
+                  description="Discover our consultancy & projects services."
                 />
                 <ProductItemMobile
-                  title="Rogue"
-                  href="https://userogue.com"
-                  description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                  title="Australian Accounting & Financial Services"
+                  href="/services/australian-finance-and-accounting"
+                  description="Discover our Australian accounting & financial Services."
+                />
+                <ProductItemMobile
+                  title="Admin Support"
+                  href="/services/admin-support"
+                  description="Discover our admin support services."
+                />
+                <ProductItemMobile
+                  title="Digital Marketing"
+                  href="/services/digital-marketing"
+                  description="Discover our digital marketing services."
+                />
+                <ProductItemMobile
+                  title="Human Resources"
+                  href="/services/human-resources"
+                  description="Discover our human resources services."
+                />
+                <ProductItemMobile
+                  title="Remote Teams"
+                  href="/services/remote-teams"
+                  description="Discover our remote teams services."
                 />
               </div>
             </MobileSectionAccordion>
 
             <MobileSectionAccordion
-              title="Pricing"
+              title="Careers"
               onItemClick={handleMobileMenuItemClick}
             >
-              <HoveredLink href="/hobby">Hobby</HoveredLink>
-              <HoveredLink href="/individual">Individual</HoveredLink>
-              <HoveredLink href="/team">Team</HoveredLink>
-              <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+              <HoveredLink href="/join-us">Join Us</HoveredLink>
+              <HoveredLink href="/life-at-hci">Life at HCI</HoveredLink>
             </MobileSectionAccordion>
+
+            <MobileSectionAccordion
+              title="Contact"
+              href="/contact"
+              onItemClick={handleMobileMenuItemClick}
+            />
           </div>
         </div>
       )}
@@ -200,20 +256,28 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
   );
 }
 
-// Mobile Accordion Component
-function MobileSectionAccordion({ title, children, onItemClick }) {
+function MobileSectionAccordion({ title, children, href, onItemClick }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    if (!children) {
+      window.location.href = href;
+      onItemClick();
+    } else {
+      setIsOpen(!isOpen);
+    }
+  };
 
   return (
     <div className="border-b pb-2">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={handleClick}
         className="w-full text-left font-semibold text-xl flex justify-between items-center"
       >
         {title}
-        <span>{isOpen ? "−" : "+"}</span>
+        {children && <span>{isOpen ? "−" : "+"}</span>}
       </button>
-      {isOpen && (
+      {isOpen && children && (
         <div
           className="mt-4 space-y-3"
           onClick={() => {
@@ -228,7 +292,6 @@ function MobileSectionAccordion({ title, children, onItemClick }) {
   );
 }
 
-// Mobile Product Item Component
 function ProductItemMobile({ title, href, description }) {
   return (
     <a

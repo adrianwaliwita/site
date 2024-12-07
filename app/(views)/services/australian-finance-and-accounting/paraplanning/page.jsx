@@ -1,24 +1,31 @@
 import ServiceBeyond from "app/components/ServiceBeyond";
-import CalltoAction from "app/sections/CTA";
+import CTA from "app/sections/CTA";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 
 const logos = [
   {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
+    name: "myob",
+    url: "/suite-logo/adviser.png",
   },
   {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
+    name: "myob",
+    url: "/suite-logo/midwinter.png",
   },
   {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
+    name: "myob",
+    url: "/suite-logo/xplan.png",
   },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
+];
+
+const suite = [
+  { img: "/suite-logo/myob.png" },
+  { img: "/suite-logo/qb.png" },
+  { img: "/suite-logo/accurri.png" },
+  { img: "/suite-logo/xero.png" },
+  { img: "/suite-logo/reckon.png" },
+  { img: "/suite-logo/power-bi.png" },
+  { img: "/suite-logo/xero.png" },
+  { img: "/suite-logo/ACL.png" },
 ];
 
 const serviceBorders = [
@@ -85,7 +92,7 @@ const Paraplanning = () => {
         <div className="mx-auto ">
           <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
             <section>
-              <div className="max-w-screen-xl mx-auto  px-4  lg:px-6 mt-[4vh]">
+              <div className="max-w-screen-xl mx-auto  px-4  lg:px-6 mt-[4vh]  mb-[-5vh]">
                 <div className="mx-auto-sm text-center mb-8 lg:mb-16">
                   <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black ">
                     OUR{" "}
@@ -104,12 +111,12 @@ const Paraplanning = () => {
               </div>
               <div className="w-full">
                 <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-6 ">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-x-6 ">
                     {logos.map((logo, key) => (
                       <img
                         key={key}
                         src={logo.url}
-                        className="h-[15vh] md:h-[20vh]  w-full object-contain"
+                        className="h-[15vh] md:h-[30vh]  w-full object-contain"
                         alt={`${logo.name}`}
                       />
                     ))}
@@ -122,10 +129,12 @@ const Paraplanning = () => {
       </section>
 
       <div className=" pt-[5vh] md:pt-[10vh]">
-        <CalltoAction
+        <CTA
           title="READY TO DELIVER FROM DAY ONE"
           description="Get in touch to learn more about our services and how we can help you grow your business."
-        ></CalltoAction>
+          href={"/contact"}
+          text={"Get in touch"}
+        ></CTA>
       </div>
     </div>
   );

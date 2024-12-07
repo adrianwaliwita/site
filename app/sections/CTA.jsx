@@ -1,5 +1,5 @@
 import Button from "app/components/Button";
-const CalltoAction = ({ title, description }) => {
+const CalltoAction = ({ title, description, text, href }) => {
   return (
     <div className=" h-auto ">
       <section>
@@ -19,12 +19,13 @@ const CalltoAction = ({ title, description }) => {
                 <div className="flex justify-center font-medium text-md">
                   <form className="mt-6 flex flex-col items-center sm:flex-row sm:gap-x-3">
                     <div className="sm:pt-0 pt-3">
-                      <Button />
+                      <Button text={text} href={href} />
                     </div>
                   </form>
                 </div>
               </div>
               <img
+                alt="Wave"
                 src="/wave-dark.jpg"
                 decoding="async"
                 data-nimg="1"

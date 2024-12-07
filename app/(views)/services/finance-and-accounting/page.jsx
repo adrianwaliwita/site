@@ -1,63 +1,43 @@
 "use client";
-import Reveal from "app/components/Reveal";
 import HoverCard3 from "app/components/HoverCard3";
 import MarqueeHori from "app/components/MarqueeHori";
-import Button from "app/components/Button";
-import IconCloud from "app/components/LogoCloud";
-import CalltoAction from "app/sections/CTA";
-import Security from "app/components/security";
-import ServiceBeyond from "app/components/ServiceBeyond";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import MarqueeHoriLogo from "app/components/MarqueeHoriLogo";
+import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 
-const logos = [
-  {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
-  },
-  {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
-  },
-  {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
-  },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
-];
-const slugs = [
-  "oracle",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
+import CTA from "app/sections/CTA";
+import PartnershipFeatures from "app/components/PartnershipFeatures";
+import SecuringInterests from "app/components/SecuringInterests";
+import TopTierTalent from "app/components/TopTierTalent";
+import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
+import ProvenProcesses from "app/components/ProvenProcesses";
+
+import LandingPageInner from "app/sections/LandingPageInner";
+import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
+import Link from "next/link";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+import {
+  DividerBlueCenter,
+  DividerBlueLeft,
+  DividerWhiteLeft,
+  DividerWhiteCenter,
+} from "app/components/Divider";
+
+const suite = [
+  { img: "/suite-logo/oracle.png" },
+  { img: "/suite-logo/sap.png" },
+  { img: "/suite-logo/oracle-hyperion.png" },
+  { img: "/suite-logo/acumatica.png" },
+  { img: "/suite-logo/fathom.png" },
+  { img: "/suite-logo/maxio.png" },
+  { img: "/suite-logo/microsoft-dynamic.png" },
+  { img: "/suite-logo/monday.png" },
+  { img: "/suite-logo/myob.png" },
+  { img: "/suite-logo/power-bi.png" },
+  { img: "/suite-logo/qb.png" },
+  { img: "/suite-logo/sage.png" },
+  { img: "/suite-logo/salesforce.png" },
+  { img: "/suite-logo/stripe.png" },
+  { img: "/suite-logo/xero.png" },
 ];
 
 const accredit = [
@@ -116,7 +96,7 @@ const sec = [
 
 const FinanceAccounting = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-[10vh] md:pt-[10vh]">
       <section className="flex flex-col items-center w-full ">
         {/* Content Section */}
         <div className="w-full px-[5vw] pt-[5vh]  text-center">
@@ -138,12 +118,10 @@ const FinanceAccounting = () => {
 
                 {/* Main Heading */}
 
-                <h1 className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold">
-                  <Reveal boxColor={"#5046e6"} duration={0.4898}>
-                    <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                      TRANSFORM
-                    </span>
-                  </Reveal>{" "}
+                <h1 className={headingStyles.LargeHeading}>
+                  <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                    TRANSFORM
+                  </span>
                   YOUR{" "}
                   <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                     <br />
@@ -153,7 +131,7 @@ const FinanceAccounting = () => {
 
                 {/* Description */}
 
-                <div className="font-arial text-sm md:text-base xl:text-xl  text-black py-[2vh] md:pb-0">
+                <div className={bodyTextStyles.descriptionCenter}>
                   Boost your bottom line, build a stronger business, and stay
                   ahead of the curve.{" "}
                 </div>
@@ -161,109 +139,119 @@ const FinanceAccounting = () => {
             </header>
           </div>
         </div>{" "}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw] mt-[2vh] md:mt-0">
           <HoverCard3
             title={"Accounts Payable"}
             description={
-              <div>
-                <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                  Learn More
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  className="w-5 h-5 fill-current "
-                >
-                  <path
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"
-                  />
-                </svg>
-              </div>
+              <a href="/services/finance-and-accounting/accounts-payable">
+                <div>
+                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                    Learn More
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 25"
+                    className="w-5 h-5 fill-current "
+                  >
+                    <path
+                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                      data-name="Right"
+                    />
+                  </svg>
+                </div>
+              </a>
             }
             img={"/F&A-services/AP.jpg"}
           />
           <HoverCard3
             title={"Invoice to Cash"}
             description={
-              <div>
-                <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                  Learn More
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  className="w-5 h-5 fill-current "
-                >
-                  <path
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"
-                  />
-                </svg>
-              </div>
+              <a href="/services/finance-and-accounting/invoice-to-cash-services">
+                <div>
+                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                    Learn More
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 25"
+                    className="w-5 h-5 fill-current "
+                  >
+                    <path
+                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                      data-name="Right"
+                    />
+                  </svg>
+                </div>
+              </a>
             }
             img={"/F&A-services/invoCash.jpg"}
           />
           <HoverCard3
             title={"Record to Report"}
             description={
-              <div>
-                <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                  Learn More
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  className="w-5 h-5 fill-current "
-                >
-                  <path
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"
-                  />
-                </svg>
-              </div>
+              <a href="/services/finance-and-accounting/record-to-report-services">
+                <div>
+                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                    Learn More
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 25"
+                    className="w-5 h-5 fill-current "
+                  >
+                    <path
+                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                      data-name="Right"
+                    />
+                  </svg>
+                </div>
+              </a>
             }
             img={"/F&A-services/RecRep.jpg"}
           />
           <HoverCard3
             title={"Enterprise Performance Management"}
             description={
-              <div>
-                <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                  Learn More
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  className="w-5 h-5 fill-current "
-                >
-                  <path
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"
-                  />
-                </svg>
-              </div>
+              <a href="/services/finance-and-accounting/enterprise-performance-systems">
+                <div>
+                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                    Learn More
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 25"
+                    className="w-5 h-5 fill-current "
+                  >
+                    <path
+                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                      data-name="Right"
+                    />
+                  </svg>
+                </div>
+              </a>
             }
             img={"/F&A-services/EPM.jpg"}
           />
           <HoverCard3
-            title={"F & A Consulting"}
+            title={"F&A Consulting"}
             description={
-              <div>
-                <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                  Learn More
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 25 25"
-                  className="w-5 h-5 fill-current "
-                >
-                  <path
-                    d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                    data-name="Right"
-                  />
-                </svg>
-              </div>
+              <a href="/services/finance-and-accounting/finance-and-accounts-consulting">
+                <div>
+                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                    Learn More
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 25 25"
+                    className="w-5 h-5 fill-current "
+                  >
+                    <path
+                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                      data-name="Right"
+                    />
+                  </svg>
+                </div>
+              </a>
             }
             img={"/F&A-services/F&A-Consulting.jpg"}
           />
@@ -277,36 +265,43 @@ const FinanceAccounting = () => {
       <section className="bg-white dark:bg-gray-900 pt-[5vh] md:pt-[10vh] ">
         <div className=" px-4 mx-auto  lg:px-6">
           <div className="mx-auto-sm text-center mb-8 ">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black   ">
+            <div className={headingStyles.primaryCenter}>
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 ELEVATED FINANCE
               </span>{" "}
               ACROSS INDUSTRIES
             </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-              Driven by our company values our experienced specialists guarantee
-              clients access to top-tier talent with a strong emphasis on
-              building lasting relationships
+            <div className=" lg:mb-[-1vh]">
+              {" "}
+              <DividerBlueCenter />
+            </div>
+            <div className={bodyTextStyles.descriptionCenter}>
+              We see finance professionals as integral strategic partners in
+              driving business success. Accordingly, our experts bring finance
+              transformation, analytics, automation and industry-leading
+              solutions to clients across industries.
             </div>
           </div>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw] mt-[2vh] md:mt-0">
             <HoverCard3
               title={"Healthcare"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/HealthCare.jpg"}
@@ -315,19 +310,21 @@ const FinanceAccounting = () => {
               title={"Apparel"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/Apparel.jpg"}
@@ -336,19 +333,21 @@ const FinanceAccounting = () => {
               title={"Insurance & Financial Services"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/insuranceFinance.jpg"}
@@ -357,19 +356,21 @@ const FinanceAccounting = () => {
               title={"Engineering & Construction"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/EngineeringConstruction.jpg"}
@@ -378,19 +379,21 @@ const FinanceAccounting = () => {
               title={"Information Technology"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/IT.jpg"}
@@ -399,19 +402,21 @@ const FinanceAccounting = () => {
               title={"Retail & Ecommerce"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/retail.jpg"}
@@ -420,19 +425,21 @@ const FinanceAccounting = () => {
               title={"Telecommunications"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/Telecommunication.jpg"}
@@ -441,19 +448,21 @@ const FinanceAccounting = () => {
               title={"Shipping & Logistics"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/Shipping.jpg"}
@@ -462,19 +471,21 @@ const FinanceAccounting = () => {
               title={"Travel & Leisure"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/TravelLeisure.jpg"}
@@ -483,19 +494,21 @@ const FinanceAccounting = () => {
               title={"Real Estate"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/about">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/industries/10.jpg"}
@@ -505,277 +518,98 @@ const FinanceAccounting = () => {
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]"></div>
       </section>
 
-      <section>
-        <div className="max-w-screen-xl mx-auto pb-8 px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black ">
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                TOP TIER
-              </span>{" "}
-              TALENT
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl text-black">
-              Driven by our company values our experienced specialists guarantee
-              clients access to top-tier talent with a strong emphasis on
-              building lasting relationships
-            </div>
-          </div>
-          <div className="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-14 h-14"
-                >
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-                  <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                CERTIFIED
-              </h3>
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                Every member of our team holds a relevant finance certification.
-              </div>
-            </div>
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-14 h-14"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
-                  />
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                DRIVEN
-              </h3>{" "}
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                {" "}
-                Our relentless pursuit of excellence is contagious
-              </div>
-            </div>
-            <div className="grid gap-4 justify-items-center text-center md:flex-1">
-              <div className="rounded-full border-4 border-[#0c0cc9] p-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#000000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-14 h-14"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </div>
-              <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
-                EXPERTLY TRAINED
-              </h3>{" "}
-              <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
-                With regular training to ensure they are always at the top of
-                their game.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TopTierTalent></TopTierTalent>
 
       <section>
         <div className=" mx-auto  px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
           <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black  ">
+            <div className={headingStyles.primaryCenter}>
               COMMITMENT TO{" "}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 EXCELLENCE
               </span>{" "}
+              <div className=" lg:mb-[-1vh]">
+                {" "}
+                <DividerBlueCenter />
+              </div>
             </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              Driven by our company values our experienced specialists guarantee
-              clients access to top-tier talent with a strong emphasis on
-              building lasting relationships
+
+            <div className={bodyTextStyles.descriptionCenter}>
+              As recognized employer and training partners of all relevant
+              institutions, we guarantee the intake of the best talent. This
+              also facilitates the ongoing development of our existing
+              professionals, ensuring compliance with global standards and
+              keeping your team at the forefront of industry practices and
+              innovations.{" "}
             </div>
           </div>
-          <MarqueeHori items={accredit}> </MarqueeHori>
+          <MarqueeHoriLogoSingle items={accredit}> </MarqueeHoriLogoSingle>
         </div>
       </section>
 
-      <section>
-        <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  m font-bold tracking-normal text-black  ">
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                SECURING
-              </span>{" "}
-              YOUR INTERESTS
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              We have a comprehensive system with controls that protect your
-              data with the utmost diligence.
-            </div>
-          </div>
-          <div className="mx-auto mt-[-4vh] m-10">
-            <Security features={sec} />
-          </div>
-          <div className="font-arial text-sm md:text-base text-center xl:text-xl mt-2 text-black pb-5">
-            We strictly adhere to all applicable laws and regulations in every
-            region we operate.
-          </div>
-          <div className="w-full pt-[2vh]">
-            <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-              <div className="grid grid-cols-3 gap-x-6 md:grid-cols-4">
-                {logos.map((logo, key) => (
-                  <img
-                    key={key}
-                    src={logo.url}
-                    className="h-[30vh] w-full object-contain"
-                    alt={`${logo.name}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="">
-        <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black text-center  ">
-              SERVICE{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                BEYOND BORDERS
-              </span>
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              Experience a new level of partnership where professionalism meets
-              accessibility. No red tape, just results. Our client-first
-              philosophy drives everything we do, from concierge-level service
-              to personalized attention. You'll work with real people who are
-              committed to your success. Your dedicated relationship manager
-              will ensure your needs are met promptly and efficiently.{" "}
-            </div>
-          </div>
-          <div className="mx-auto ">
-            <div className="flex mx-auto justify-center ">
-              <ServiceBeyond features={serviceBorders} />
-            </div>
-            <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders2} />
-            </div>
-            <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"></div>
-          </div>
-        </div>
-      </section>
+      <SecuringInterests></SecuringInterests>
+
+      <ServiceBeyondBorders></ServiceBeyondBorders>
 
       <section>
         <div className=" max-w-screen-xl mx-auto px-4 pt-[5vh] md:pt-[10vh] pb-[5vh]  md:pb-[10vh]">
           <div className="mx-auto-sm text-center  ">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black text-center  ">
+            <div className={headingStyles.primaryCenter}>
               OUR{" "}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 COMPREHENSIVE
               </span>{" "}
               SUITE
             </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
+            <div className=" lg:mb-[-1vh]">
+              {" "}
+              <DividerBlueCenter />
+            </div>
+            <div className={bodyTextStyles.descriptionCenter}>
               We are equipped with the right tools for the right job
             </div>
           </div>
           <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 relative">
             <div className=" flex justify-center ">
               <div className=" justify-center">
-                <IconCloud iconSlugs={slugs}></IconCloud>
+                <div className="pt-[3vh]">
+                  <MarqueeHoriLogo items={suite}> </MarqueeHoriLogo>
+                </div>
+
+                {/* <IconCloud
+                  iconSlugs={["react", "typescript"]}
+                  customPngIcons={[
+                    { src: "/suite-logo/oracle.png" },
+                    { src: "/suite-logo/sap.png" },
+                    { src: "/suite-logo/oracle-hyperion.png" },
+                    { src: "/suite-logo/acumatica.png" },
+                    { src: "/suite-logo/fathom.png" },
+                    { src: "/suite-logo/maxio.png" },
+                    { src: "/suite-logo/microsoft-dynamic.png" },
+                    { src: "/suite-logo/monday.png" },
+                    { src: "/suite-logo/myob.png" },
+                    { src: "/suite-logo/power-bi.png" },
+                    { src: "/suite-logo/qb.png" },
+                    { src: "/suite-logo/sage.png" },
+                    { src: "/suite-logo/salesforce.png" },
+                    { src: "/suite-logo/stripe.png" },
+                    { src: "/suite-logo/xero.png" },
+                  ]}
+                /> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
-        <div className=" max-w-screen-xl mx-auto px-4 pt-[5vh] md:pt-[10vh] pb-[5vh]  md:pb-[10vh]">
-          <div className="mx-auto-sm text-center  ">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black text-center  ">
-              THE POWER OF{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                PROVEN PROCESSES
-              </span>{" "}
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-              We are equipped with the right tools for the right job
-            </div>
-          </div>
-          <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 relative">
-            <div className="md:w-2/3 lg:w-1/2 mt-12 text-gray-100"></div>
-            <div className="grid divide-x divide-y divide-[0000ff] bg-transparent overflow-hidden rounded-xl border-[blue-500] text-blue-600 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
-              {[
-                {
-                  title: "5-step Transition Plan",
-                  description:
-                    "Our structured onboarding ensures a seamless integration, so you can hit the ground running",
-                },
-                {
-                  title: "Business Continuity Plan",
-                  description:
-                    "Our BCP is designed to protect your business from disruptions and ensure continuity.",
-                },
-                {
-                  title: "State-of-the-art office",
-                  description:
-                    "Our office space offers the perfect blend of functionality and prestige",
-                },
-                {
-                  title: "In-house training and development",
-                  description:
-                    "Our dedicated training teams ensure your team is equipped with the latest skills through ongoing development",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="group relative transition hover:z-[1] hover:shadow-2xl  hover:shadow-gray-600/10   "
-                >
-                  <div className="relative space-y-8 py-12 px-8">
-                    <div className="space-y-2">
-                      <h5 className="font-GTAmerica font-bold text-xl md:text-[2vw] md:leading-[2.3vw]  bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        {item.title}
-                      </h5>
-                      <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
-                        {item.description}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <ProvenProcesses></ProvenProcesses>
 
-      <CalltoAction
-        title="READY TO DELIVER FROM DAY ONE"
-        description="Get in touch to learn more about our services and how we can help you grow your business."
-      ></CalltoAction>
+      <CTA
+        title="READY FOR THAT UPGRADE?"
+        description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
+        href={"/contact"}
+        text={"Get in touch"}
+      ></CTA>
     </div>
   );
 };

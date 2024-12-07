@@ -1,6 +1,14 @@
 "use client";
+import { DividerBlueCenter, DividerBlueLeft } from "app/components/Divider";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
-import { Card } from "../components/Card";
+const commonStyles = {
+  title:
+    "font-GTAmerica text-4xl md:text-[4.6vw] md:leading-[4.6vw] font-bold tracking-normal text-black",
+  blueGradient:
+    "bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent",
+  description: "font-arial text-sm md:text-base xl:text-xl text-gray-700",
+};
 
 const SectionTextRight = ({
   titleBeforeBlue,
@@ -10,23 +18,28 @@ const SectionTextRight = ({
   component,
 }) => {
   return (
-    <section className="h:20vh md:h-[87vh] flex items-center justify-center md:pt-[5%] md:pb-[5%] px-[2%]">
-      <div className="flex flex-col w-full">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 items-center">
-          {/* Left side: Component or default Card */}
-          <div className="h-full w-full order-first md:order-none flex justify-center">
-            {component || <Card />}
+    <section className="md:px-[7%] mx-auto py-20 md:pb-0 h:20vh md:h-[87vh]  ">
+      <div className="flex flex-col md:flex-row items-center w-full h-full">
+        <div className="flex justify-start items-center w-full md:w-[50%] md:order-first md:mb-[10vh] md:px-[%]">
+          {component}
+        </div>
+
+        <div className="flex flex-col justify-center items-center md:justify-start md:items-start w-full md:w-[50%] md:order-last">
+          <div
+            className={`${headingStyles.primaryLeft} text-left md:text-left pt-8 md:py-0`}
+          >
+            {titleBeforeBlue}
+            <span className={`${commonStyles.blueGradient}`}>{blueTitle}</span>
+            {titleAfterBlue}
           </div>
 
-          {/* Right side: Text content */}
           <div>
-            {/* Title text */}
+            <DividerBlueLeft />
 
-            {/* Description */}
-            <div className="pr-0 sm:pr-[5vw] px-8 md:px-0">
-              <p className="font-arial text-sm md:text-base xl:text-xl text-black text-center md:text-left w-[90%]">
-                {description}
-              </p>
+            <div
+              className={`${bodyTextStyles.descriptionLeft} text-center md:text-left mt-4`}
+            >
+              {description}
             </div>
           </div>
         </div>

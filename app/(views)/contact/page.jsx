@@ -10,8 +10,9 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xpwzbynw"); // Replace with your actual Formspree form ID
 
   return (
-    <div className="relative min-h-[110vh] flex items-center pt-[10vh]">
+    <div className="relative min-h-[135vh] md:min-h-[110vh] flex items-center pt-[10vh]">
       <img
+        alt="background"
         src="/blue-waves-abstract.jpg"
         decoding="async"
         data-nimg="1"
@@ -19,7 +20,7 @@ const Contact = () => {
         loading="lazy"
         style={{ color: "transparent" }}
       />
-      <div className="relative max-w-7xl mx-auto p-16">
+      <div className="relative max-w-7xl mx-auto p-6">
         <section
           className="rounded-xl"
           id="contact"
@@ -35,7 +36,7 @@ const Contact = () => {
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
             {/* Contact Heading */}
             <div className="mb-4 text-center">
-              <h2 className="text-white font-GTAmerica text-4xl sm:text-5xl md:text-[6vw] font-bold">
+              <h2 className="text-[13vw] leading-[13vw] md:text-[8vw] lg:text-[6vw] font-GTAmerica md:leading-[7.5vw] font-bold mt-[3vh] md:mt-0 text-white">
                 GET IN <span className="text-white">TOUCH</span>
               </h2>
               <div className="w-40 h-[2px] bg-white mt-8 mx-auto"></div>
@@ -46,7 +47,7 @@ const Contact = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Contact Details */}
                 <div className="h-full pr-6">
-                  <p className="mt-3 mb-12 text-lg text-white ">
+                  <p className="mt-3 mb-12 text-lg text-white text-center md:text-left ">
                     You can find most answers to your questions in our FAQ
                     section. But do feel free to reach out for further
                     information.
@@ -119,7 +120,7 @@ const Contact = () => {
                 <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
                   {state.succeeded ? (
                     <div className="text-black text-2xl text-center font-arial bg-white rounded p-10">
-                      Thanks for your message! We'll get back to you soon.
+                      Thanks for your message! We&apos;ll get back to you soon.
                     </div>
                   ) : (
                     <>

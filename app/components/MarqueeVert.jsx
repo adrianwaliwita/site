@@ -27,7 +27,7 @@ export default function MarqueeVert({ items = [] }) {
   const thirdRow = items.slice(Math.floor((2 * items.length) / 6));
 
   return (
-    <div className="relative flex h-[30vh] md:h-[80vh]  w-full md:w-[100%] flex-row items-center justify-center overflow-hidden rounded-lg  bg-[#2e2e5300] ">
+    <div className="relative flex h-[40vh]  md:h-[80vh]  w-full md:w-[100%] flex-row items-center justify-center overflow-hidden rounded-lg  bg-[#2e2e5300] px-10">
       <Marquee pauseOnHover vertical className="[--duration:60s]">
         {firstRow.map((item, index) => (
           <ReviewCard key={index} {...item} />

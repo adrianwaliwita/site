@@ -41,21 +41,6 @@ const Footer = () => {
                     />
                   </svg>
                 </a>
-                <a
-                  href=""
-                  target="_blank"
-                  className="text-gray-200 hover:text-gray-200"
-                >
-                  <span className="sr-only">Twitter</span>
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    className="h-6 w-6"
-                    aria-hidden="true"
-                  >
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </a>
               </div>
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 col-span-2 mt-0">
@@ -67,7 +52,7 @@ const Footer = () => {
                   <ul role="list" className="mt-6 space-y-4">
                     <li>
                       <a
-                        href="/aiplatform"
+                        href="/services/finance-and-accounting"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Finance and Accounting
@@ -75,7 +60,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/aialgorithms"
+                        href="/services/technology"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Technology
@@ -83,7 +68,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industryapplications"
+                        href="/services/consultancy-and-projects"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Consulting and Projects
@@ -91,7 +76,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industryapplications"
+                        href="/services/australian-finance-and-accounting"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Australian Accounting and Financial Services
@@ -99,7 +84,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industryapplications"
+                        href="/services/admin-support"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Admin Support
@@ -107,7 +92,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industryapplications"
+                        href="/services/digital-marketing"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Digital Marketing
@@ -115,7 +100,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="/industryapplications"
+                        href="/services/remote-teams"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
                         Human Resources
@@ -125,7 +110,38 @@ const Footer = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
+                <div className="mt-10 md:mt-0">
+                  <h3 className="text-md font-semibold leading-6 text-white">
+                    Company
+                  </h3>
+                  <ul role="list" className="mt-6 space-y-4">
+                    <li>
+                      <a
+                        href="/about"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        About Us
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/join-us"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Careers
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/contact"
+                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
+                      >
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                {/* <div>
                   <h3 className="text-md font-semibold leading-6 text-white">
                     Resources
                   </h3>
@@ -171,38 +187,7 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
-                </div>
-                <div className="mt-10 md:mt-0">
-                  <h3 className="text-md font-semibold leading-6 text-white">
-                    Company
-                  </h3>
-                  <ul role="list" className="mt-6 space-y-4">
-                    <li>
-                      <a
-                        href="/aboutus"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/careers"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="/contactus"
-                        className="text-md leading-6 text-gray-300 hover:text-gray-50"
-                      >
-                        Contact Us
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

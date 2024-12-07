@@ -1,10 +1,13 @@
 import Container from "app/sections/Container";
-import MarqueeVert from "app/components/MarqueeVert";
-import { Card } from "app/components/Card";
-import Footer from "app/sections/Footer";
-import GrowWithoutLimits from "../../components/GrowWithoutLimits";
 import HoverCard3 from "app/components/HoverCard3";
-import Button from "app/components/Button";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+import {
+  DividerBlueCenter,
+  DividerBlueLeft,
+  DividerWhiteLeft,
+  DividerWhiteCenter,
+} from "app/components/Divider";
+
 const progressImages = [
   { img: "/progress/1.jpg" },
   {
@@ -77,36 +80,36 @@ const services2 = [
 ];
 const Services = () => {
   return (
-    <div className="">
+    <div className="pt-[10vh] md:pt-[10vh]">
       <section className="flex flex-wrap">
         <div className="w-full sm:w-8/12 mb-10">
           <div className="container mx-auto h-full p-4 sm:p-10">
-            <header className="flex flex-col lg:flex-row items-center  lg:space-x-8 h-full mt-10 lg:mt-0">
+            <header className="flex flex-col md:flex-row items-center  lg:space-x-8 h-full mt-10 lg:mt-0">
               <div className="w-full">
                 <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">
-                  <div className="w-full lg:w-[80%]"></div>
-                  <div className="flex flex-col md:flex-row justify-start space-y-3 md:space-y-0 md:space-x-3 max-w-9">
-                    <p className="font-GTAmerica font-bold text-5xl lg:text-[6vw] tracking-normal text-balance">
-                      BETT
-                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        ER.
-                      </span>
-                    </p>
-                    <p className="font-GTAmerica font-bold text-5xl lg:text-[6vw]  tracking-normal text-balance">
-                      FAST
-                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        ER.
-                      </span>
-                    </p>
-                    <p className="font-GTAmerica font-bold text-5xl lg:text-[6vw] tracking-normal text-balance">
-                      SMART
-                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        ER.
-                      </span>
-                    </p>
+                  SERVICES
+                  <span className="bg-gradient-to-bl from-[#27253c] to-[#0000ff] bg-clip-text text-transparent">
+                    .
+                  </span>
+                  <div className="flex justify-start md:justify-start w-full  md:pr-10 ">
+                    <div className="w-20 md:w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-4"></div>
                   </div>
-
-                  <div className="w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-8"></div>
+                </div>
+                <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">
+                  <div className="w-full lg:w-[80%]"></div>
+                  <div className="flex  md:flex-row justify-start space-y-3 md:space-y-0 md:space-x-3 max-w-9">
+                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
+                      BETTER.
+                    </div>
+                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
+                      FASTER.
+                    </div>
+                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
+                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                        SMARTER.
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <p className="text-lg sm:text-xl font-arial mt-7 mb-10 leading-relaxed">
                   We deliver exceptional value through tailored services for
@@ -119,41 +122,43 @@ const Services = () => {
         <img
           src="/serv/main.jpg"
           alt="wave"
-          className="w-full sm:w-4/12 h-64 sm:h-screen object-cover rounded-md"
+          className="w-full sm:w-4/12 h-64sm:h-screen object-cover rounded-md"
         />
       </section>
 
       <section className="bg-white dark:bg-gray-900 pt-[5vh] md:pt-[5vh]">
         <div className="py-8 px-4 mx-auto  lg:py-16 lg:px-6">
           <div className="mx-auto-sm text-center mb-8 ">
-            <p className="font-GTAmerica text-4xl md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw] lg:leading-[4.6vw]  font-bold tracking-normal ">
+            <div className={headingStyles.primaryCenter}>
               OUR
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 {" "}
                 VALUE-ADDED
               </span>{" "}
               SERVICES
-            </p>
-            <div className="w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-[4vh] mx-auto"></div>
+            </div>
+            <DividerBlueCenter />
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4  px-[5vw]">
             <HoverCard3
               title={"Finance & Accounting"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/finance-and-accounting">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/financeAcc.jpg"}
@@ -162,19 +167,21 @@ const Services = () => {
               title={"Technology"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/technology">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/tech.jpg"}
@@ -183,19 +190,21 @@ const Services = () => {
               title={"Consultancy & Projects"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/consultancy-and-projects">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/projects.jpg"}
@@ -204,19 +213,21 @@ const Services = () => {
               title={"Australian Accounting & Financial Services"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/australian-finance-and-accounting">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/aus.jpg"}
@@ -225,19 +236,21 @@ const Services = () => {
               title={"Admin Support"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/admin-support">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/admin.jpg"}
@@ -246,19 +259,21 @@ const Services = () => {
               title={"Digital Marketing"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/digital-marketing">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/DigitalMarketing.jpg"}
@@ -267,19 +282,21 @@ const Services = () => {
               title={"Human Resources"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/human-resources">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/HumanResources.jpg"}
@@ -288,19 +305,21 @@ const Services = () => {
               title={"Remote Teams"}
               description={
                 <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
+                  <a href="/services/remote-teams">
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </a>
                 </div>
               }
               img={"/serv/remote.jpg"}
@@ -314,13 +333,15 @@ const Services = () => {
         <section className=" text-black  min-h-[60vh] rounded-md">
           <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
             <div className="flex justify-center pb-10">
-              <p className="font-GTAmerica text-4xl md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw] lg:leading-[4.6vw]  font-bold tracking-normal  ">
+              <p className={headingStyles.primaryCenter}>
                 FREQUENTLY ASKED
                 <span className="bg-gradient-to-bl from-[#17197a] to-[#0000ff] bg-clip-text text-transparent">
                   {"  "} QUESTIONS {"  "}
                 </span>
+                <DividerBlueCenter />
               </p>
             </div>
+
             <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 text-black">
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
@@ -328,11 +349,11 @@ const Services = () => {
                 </summary>
                 <div className="px-4 pb-4">
                   <p>
-                    You can easily place an order on our website by browsing our
-                    product catalog, selecting the items you want, and adding
-                    them to your cart. Then, proceed to checkout, where you can
-                    provide your shipping and payment information to complete
-                    the order.
+                    You can outsource any back-office function including Finance
+                    & Accounting, Human Resources, Technology Services, and
+                    Marketing. You can either hire dedicated resources for
+                    specialized, high-demand niches or hire entire teams to
+                    completely outsource your function.
                   </p>
                 </div>
               </details>
@@ -342,112 +363,19 @@ const Services = () => {
                 </summary>
                 <div className="px-4 pb-4">
                   <p>
-                    We accept various payment methods, including credit cards,
-                    debit cards, net banking, and mobile wallet payments. You
-                    can choose the payment option that is most convenient for
-                    you during the checkout process.
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How do you ensure the security of my financial data?{" "}
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    Shipping times may vary depending on your location and the
-                    shipping method chosen. Typically, orders are processed
-                    within 1-2 business days, and delivery can take 3-7 business
-                    days within India. You will receive a tracking notification
-                    once your order is shipped.
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How Do You Handle Time Zone Differences?{" "}
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    Yes, we have a hassle-free return policy. If you are not
-                    satisfied with your purchase, you can initiate a return
-                    within 30 days of receiving the product. Please contact our
-                    customer support at{" "}
-                    <a href="" className="underline">
-                      example@gmail.com
-                    </a>{" "}
-                    for assistance.
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Do You Offer Any Guarantees or Service Level Agreements
-                  (SLAs)?{" "}
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    Currently, we only provide shipping services within India.
-                    However, we may consider expanding our shipping options to
-                    international locations in the future. Please stay updated
-                    with our website for any changes in shipping destinations.
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Where are your offices located?{" "}
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    If you have any questions, concerns, or need assistance, you
-                    can reach our customer support team at 9911083755 during our
-                    business hours, Monday to Saturday from 10 am to 6 pm. You
-                    can also contact us via email at{" "}
-                    <a href="" className="underline">
-                      example@gmail.com
-                    </a>
-                    .
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Can you tailor your services to meet my specific business
-                  needs?{" "}
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    You can find our detailed terms and conditions by visiting
-                    our{" "}
-                    <a href="" className="underline">
-                      Terms of Service
-                    </a>{" "}
-                    page on our website. It includes information about our
-                    policies, user guidelines, and more.
-                  </p>
-                </div>
-              </details>
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  What do I gain by outsourcing?
-                </summary>
-                <div className="px-4 pb-4">
-                  <p>
-                    • Reduce overhead costs: Outsourcing non-core functions can
+                    - Reduce overhead costs: Outsourcing non-core functions can
                     significantly reduce your expenses related to hiring,
                     training, and managing in-house staff. This can be as much
-                    as 60-70%. • Access to specialized expertise: We have
-                    deep-domain expertise in specific business processes,
-                    allowing them to deliver high-quality services efficiently.
-                    • Improve scalability: We can help you scale their
-                    operations quickly and flexibly to meet changing demands. •
+                    as 60-70%. <br />
+                    - Access to specialized expertise: We have deep-domain
+                    expertise in specific business processes.
+                    <br />- Improve scalability: We can help you scale their
+                    operations quickly and flexibly to meet changing demands. 
                     Focus on growth: By outsourcing you can concentrate on
                     growing your business with our support
                   </p>
                 </div>
               </details>
-
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
                   What roles can I outsource?
@@ -528,12 +456,12 @@ const Services = () => {
                   Where are your offices located?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We are equipped with two cutting-edge facilities—one
-                    situated at the World Trade Centre in Colombo's financial
-                    hub, and the other conveniently located just 5 kilometers
-                    away from it in the heart of Colombo.
-                  </p>
+                    situated at the World Trade Centre in Colombo&apos;s
+                    financial hub, and the other conveniently located just 5
+                    kilometers away from it in the heart of Colombo.
+                  </div>
                 </div>
               </details>
 

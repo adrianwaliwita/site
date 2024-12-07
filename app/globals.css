@@ -76,3 +76,22 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* In styles/globals.css or styles/team.css */
+.team-img {
+  object-fit: cover;
+
+  min-width: 30vh;
+  max-width: 30vh;
+  height: 30vh; /* Or your desired height in pixels */
+  border-radius: 8px; /* Add any other styling you want */
+}
+
+@media (max-width: 640px) {
+  .team-img {
+    min-width: 100vw;
+    min-height: 100vw;
+
+    /* Set width to auto for larger screens if needed */
+  }
+}

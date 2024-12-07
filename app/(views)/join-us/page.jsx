@@ -3,6 +3,8 @@ import { Card } from "app/components/Card";
 import GrowWithoutLimits from "../../components/GrowWithoutLimits";
 import MarqueeVert from "app/components/MarqueeVert";
 import CTA from "app/sections/CTA";
+import AwardWinning from "app/components/AwardWinning";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
 import MarqueeHori from "app/components/MarqueeHori";
 const progressImages = [
@@ -81,7 +83,7 @@ const JoinUs = () => {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="text-5xl md:text-[6vw] font-GTAmerica font-bold text-center md:text-left pr-2">
+                <h1 className={headingStyles.LargeHeading}>
                   BE A PART OF THE <br />
                   <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                     DIFFERENCE
@@ -89,9 +91,9 @@ const JoinUs = () => {
                 </h1>
 
                 {/* Description */}
-                <p className="text-sm md:text-base xl:text-xl font-arial mt-7 text-center md:text-left">
-                  We deliver exceptional value through tailored services for
-                  better outcomes, faster results, and smarter decisions.
+                <p className={bodyTextStyles.descriptionLeft}>
+                  A culture that allows you to be unapologetically you and the
+                  support you need to thrive.
                 </p>
               </div>
             </header>
@@ -106,60 +108,15 @@ const JoinUs = () => {
           />
         </div>
       </section>
-      <div className="">
-        <div className="px-8 pb-24 mx-auto mt-[-50px]  bg-white">
-          <div className="flex flex-col">
-            {/* Starts component */}
-            <div className="mt-6 pt-12">
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-1 md:gap-24 items-center text-center">
-                {/* Marquee comes first on mobile */}
-
-                <div>
-                  <p className="font-GTAmerica font-bold text-6xl md:text-7xl mt-8 tracking-normal text-balance ">
-                    AN{" "}
-                    <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                      AWARD-WINNING
-                    </span>{" "}
-                    CULTURE{" "}
-                  </p>
-
-                  <p className="text-base mt-4 text-gray-700 text-balance">
-                    We are a leading provider of BPO services, recognized for
-                    delivering a comprehensive range of solutions, including
-                    finance and accounting, procurement, technology, and
-                    marketing as a service. Our team is committed to innovation
-                    and excellence and continues to set new standards in the
-                    outsourcing industry.
-                  </p>
-                </div>
-              </div>
-              <div className="pt-10">
-                <div className="w-full py-8">
-                  <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-                    <div className="grid grid-cols-2 gap-x-6 md:grid-cols-2 ">
-                      {logos.map((logo, key) => (
-                        <img
-                          key={key}
-                          src={logo.url}
-                          className="h-[300px] w-[300px] border-gray-300 border-1 "
-                          alt={`${logo.name}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>{" "}
-              </div>
-            </div>
-            {/* Ends component 1 */}
-          </div>
-        </div>
+      <div className="mb-[5vh] md:mb-[10vh]">
+        <AwardWinning />
       </div>
 
       <CTA
-        title="Ready to be part of the team?"
-        description="Join an environment where your ideas can thrive and make a difference.
-        "
-      />
+        title={"Ready to be part of the team?"}
+        href={"/contact"}
+        text={"Get in touch"}
+      ></CTA>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import ServiceBeyond from "app/components/ServiceBeyond";
-import CalltoAction from "app/sections/CTA";
+import CTA from "app/sections/CTA";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
+import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 
 const logos = [
   {
@@ -19,6 +20,14 @@ const logos = [
     name: "PrivacyActi",
     url: "/DataProtection/PrivacyAct.jpg",
   },
+];
+
+const suite = [
+  { img: "/suite-logo/fuse.png" },
+  { img: "/suite-logo/fyi.png" },
+  { img: "/suite-logo/cas360.png" },
+  { img: "/suite-logo/xero.png" },
+  { img: "/suite-logo/simple360.png" },
 ];
 
 const serviceBorders = [
@@ -123,23 +132,8 @@ const BusinessServices = () => {
                   <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0 ">
                     We are equipped with the right tools for the right job
                   </div>
-                </div>
-                <div className="flex justify-center ">
-                  <div className=" justify-center"></div>
-                </div>
-              </div>
-              <div className="w-full">
-                <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-x-6 ">
-                    {logos.map((logo, key) => (
-                      <img
-                        key={key}
-                        src={logo.url}
-                        className="h-[15vh] md:h-[20vh]  w-full object-contain"
-                        alt={`${logo.name}`}
-                      />
-                    ))}
-                  </div>
+                  <div className="mt-[5vh]"></div>
+                  <MarqueeHoriLogoSingle items={suite}> </MarqueeHoriLogoSingle>
                 </div>
               </div>
             </section>
@@ -148,10 +142,12 @@ const BusinessServices = () => {
       </section>
 
       <div className=" pt-[5vh] md:pt-[10vh]">
-        <CalltoAction
+        <CTA
           title="READY TO DELIVER FROM DAY ONE"
           description="Get in touch to learn more about our services and how we can help you grow your business."
-        ></CalltoAction>
+          href={"/contact"}
+          text={"Get in touch"}
+        ></CTA>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const HoverCard = ({ title, description, img }) => {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 ease-in-out group-hover:bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-0 transition-all duration-500 ease-in-out group-hover:bg-opacity-70"></div>
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col justify-end p-8  text-white">
@@ -21,9 +21,9 @@ const HoverCard = ({ title, description, img }) => {
 
           {/* Description */}
           {description && (
-            <p className="opacity-0  md:text-[1vw] lg:text-[1vw] translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="opacity-0  md:text-[1vw] lg:text-[1vw] translate-y-8 transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-y-0">
               {description}
-            </p>
+            </div>
           )}
         </div>
       </article>

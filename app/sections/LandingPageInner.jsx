@@ -1,3 +1,5 @@
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+
 const LandingPageInner = ({
   titleBeforeBlue,
   titleAfterBlue,
@@ -7,10 +9,10 @@ const LandingPageInner = ({
   ImgUrl,
 }) => {
   return (
-    <section className="flex flex-wrap flex-col-reverse sm:flex-row">
+    <section className="flex flex-wrap flex-col-reverse sm:flex-row pt-[14vh] md:pt-[5vh]">
       {/* Text Content */}
-      <div className="w-full sm:w-8/12  ">
-        <div className="container mx-auto lg:px-20 h-[50vh] md:h-dvh ">
+      <div className="w-full md:w-8/12  ">
+        <div className="container mx-auto lg:px-20 h-[30vh] md:h-dvh ">
           <div className="container px-4 flex flex-col justify-center items-center h-full lg:mt-0 ">
             <div className="w-full text-center md:text-left ">
               <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">
@@ -22,16 +24,16 @@ const LandingPageInner = ({
                   <div className="w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-4"></div>
                 </div>
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-[6vw] font-GTAmerica font-bold text-center md:text-left pr-2">
+              <h1 className={headingStyles.LargeHeading}>
                 {titleBeforeBlue}
                 <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                   {blueTitle}
                 </span>
                 <br /> {titleAfterBlue}
               </h1>
-              <p className="text-sm md:text-base xl:text-xl font-arial mt-7 text-center md:text-left">
+              <div className={bodyTextStyles.descriptionLeft}>
                 {description}
-              </p>
+              </div>
             </div>
           </div>
         </div>
