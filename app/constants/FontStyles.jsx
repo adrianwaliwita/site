@@ -1,6 +1,6 @@
 export const headingStyles = {
   LargeHeading:
-    "text-[13vw] leading-[13vw]  md:text-[8vw] md:leading-[8vw] lg:text-[6vw] lg:leading-[6vw] font-GTAmerica font-bold",
+    "text-[15.5vw] leading-[15.5vw]  md:text-[8vw] md:leading-[8vw] lg:text-[6vw] lg:leading-[6vw] font-GTAmerica font-bold",
   primaryCenter:
     "font-GTAmerica text-4xl  md:text-[7vw] md:leading-[7.5vw] lg:text-[4.6vw] font-bold tracking-normal text-black text-center",
   primaryLeft:

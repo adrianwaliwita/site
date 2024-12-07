@@ -39,7 +39,7 @@ const accredit = [
 
 const About = () => {
   return (
-    <div className="w-full pt-[5vh] md:pt-[10vh]">
+    <div className="w-full pt-[15vh] md:pt-[10vh]">
       <section className="flex flex-col items-center w-full ">
         {/* Content Section */}
         <div className="w-full px-[5vw] pt-[5vw] text-center">
@@ -77,30 +77,30 @@ const About = () => {
         </div>
 
         {/* Marquee Section */}
-        <div className="w-full max-w-8xl ">
+        <div className="w-full max-w-8xl mt-[4vh]   ">
           <MarqueeHori items={progressImages} />
         </div>
       </section>
 
-      <div className="pt-[5vh] md:pt-[8vh]"></div>
+      <div className="py-[5vh] md:pt-[8vh] "></div>
 
-      <section className="  bg-white h-[30vh] flex items-end">
+      <section className="  bg-white h-[30vh] flex items-end xl:mb-[10vh]">
         <div className=" text-black flex flex-col items-center justify-center  md:px-[10vw] ">
           <div className="text-center space-y-6 ">
-            <div className="text-3xl md:text-[3vw] font-GTAmerica font-bold text-center md:text-left w-[100%] md:w-[100%]">
+            <div className="text-3xl md:text-[3.5vw] font-GTAmerica font-bold text-center md:text-left w-[100%] md:w-[100%]">
               WE ARE{" "}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                 H CONNECT INTERNATIONAL
               </span>{" "}
             </div>
-            <div className="font-arial text-sm md:text-base mt-4 mb-4 text-black">
+            <div className="font-arial text-sm md:text-base xl:py-[5vh] mt-4 mb-4 text-black">
               A leader in transforming business operations for the better
               through people, process, and technical brilliance. We champion
               growth and innovation through expert advice, dedicated back-end
               teams, and outsourced operations. From planning to execution, we
               offer guidance and support across all business functions.
             </div>
-            <div className="text-3xl md:text-[3vw] font-GTAmerica font-bold text-center md:text-right w-[100%] md:w-[100%]">
+            <div className="text-3xl md:text-[3.5vw] font-GTAmerica font-bold text-center md:text-right w-[100%] md:w-[100%]">
               WE ARE A{" "}
               <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text  text-transparent">
                 TRUE EXTENSION
@@ -111,7 +111,7 @@ const About = () => {
         </div>
       </section>
 
-      <div className="pt-[5vh] md:pt-0 ">
+      <div className=" md:pt-0 ">
         <SectionTextRight
           blueTitle={"ROOTED IN LEGACY"}
           titleAfterBlue={

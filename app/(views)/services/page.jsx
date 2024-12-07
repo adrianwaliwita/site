@@ -80,49 +80,46 @@ const services2 = [
 ];
 const Services = () => {
   return (
-    <div className="pt-[10vh] md:pt-[10vh]">
-      <section className="flex flex-wrap">
-        <div className="w-full sm:w-8/12 mb-10">
-          <div className="container mx-auto h-full p-4 sm:p-10">
-            <header className="flex flex-col md:flex-row items-center  lg:space-x-8 h-full mt-10 lg:mt-0">
-              <div className="w-full">
+    <div className="pt-[10vh] md:pt-[5vh]">
+      <section className="flex flex-wrap flex-col-reverse sm:flex-row pt-[14vh] md:pt-[5vh]">
+        {/* Text Content */}
+        <div className="w-full md:w-8/12  ">
+          <div className="container mx-auto lg:px-20 h-[30vh] md:h-dvh ">
+            <div className="container px-4 flex flex-col justify-center items-center h-full lg:mt-0 ">
+              <div className="w-full text-center md:text-left ">
                 <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">
                   SERVICES
                   <span className="bg-gradient-to-bl from-[#27253c] to-[#0000ff] bg-clip-text text-transparent">
                     .
                   </span>
-                  <div className="flex justify-start md:justify-start w-full  md:pr-10 ">
-                    <div className="w-20 md:w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-4"></div>
+                  <div className="flex justify-center md:justify-start w-full">
+                    <div className="w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-4"></div>
                   </div>
                 </div>
-                <div className="text-2xl lg:text-3xl tracking-widest font-GTAmerica font-bold">
-                  <div className="w-full lg:w-[80%]"></div>
-                  <div className="flex  md:flex-row justify-start space-y-3 md:space-y-0 md:space-x-3 max-w-9">
-                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
-                      BETTER.
-                    </div>
-                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
-                      FASTER.
-                    </div>
-                    <div className="text-5xl md:text-[8vw] lg:text-[6vw]  font-GTAmerica font-bold text-balance">
-                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                        SMARTER.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-lg sm:text-xl font-arial mt-7 mb-10 leading-relaxed">
+                <h1 className={headingStyles.LargeHeading}>
+                  BETTER. <br />
+                  FASTER.
+                  <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                    {" "}
+                    <br />
+                    SMARTER.
+                  </span>
+                  <br />
+                </h1>
+                <div className={bodyTextStyles.descriptionLeft}>
                   We deliver exceptional value through tailored services for
                   better outcomes, faster results, and smarter decisions.
-                </p>
+                </div>
               </div>
-            </header>
+            </div>
           </div>
         </div>
+
+        {/* Image */}
         <img
-          src="/serv/main.jpg"
-          alt="wave"
-          className="w-full sm:w-4/12 h-64sm:h-screen object-cover rounded-md"
+          src={"/serv/main.jpg"}
+          alt="Finance Reports"
+          className="w-full sm:h-screen sm:w-4/12 object-cover hidden md:block"
         />
       </section>
 
@@ -333,13 +330,13 @@ const Services = () => {
         <section className=" text-black  min-h-[60vh] rounded-md">
           <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
             <div className="flex justify-center pb-10">
-              <p className={headingStyles.primaryCenter}>
+              <div className={headingStyles.primaryCenter}>
                 FREQUENTLY ASKED
                 <span className="bg-gradient-to-bl from-[#17197a] to-[#0000ff] bg-clip-text text-transparent">
                   {"  "} QUESTIONS {"  "}
                 </span>
                 <DividerBlueCenter />
-              </p>
+              </div>
             </div>
 
             <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700 text-black">
@@ -348,13 +345,13 @@ const Services = () => {
                   What roles can I outsource?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     You can outsource any back-office function including Finance
                     & Accounting, Human Resources, Technology Services, and
                     Marketing. You can either hire dedicated resources for
                     specialized, high-demand niches or hire entire teams to
                     completely outsource your function.
-                  </p>
+                  </div>
                 </div>
               </details>
               <details>
@@ -362,7 +359,7 @@ const Services = () => {
                   What do I gain by outsourcing?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     - Reduce overhead costs: Outsourcing non-core functions can
                     significantly reduce your expenses related to hiring,
                     training, and managing in-house staff. This can be as much
@@ -373,7 +370,7 @@ const Services = () => {
                     operations quickly and flexibly to meet changing demands. 
                     Focus on growth: By outsourcing you can concentrate on
                     growing your business with our support
-                  </p>
+                  </div>
                 </div>
               </details>
               <details>
@@ -381,13 +378,13 @@ const Services = () => {
                   What roles can I outsource?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     You can outsource any back-office function including Finance
                     & Accounting, Human Resources, Technology Services, and
                     Marketing. You can either hire dedicated resources for
                     specialized, high-demand niches or hire entire teams to
                     completely outsource your function,
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -396,11 +393,11 @@ const Services = () => {
                   How do you ensure the security of my financial data?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We adhere to all global standards such as GDPR, DPA, and
                     Australian Privacy Act, and we are also an ISO 27001
                     certified organization.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -409,14 +406,14 @@ const Services = () => {
                   How Do You Handle Time Zone Differences?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We work around your preferred time zone to ensure seamless
                     collaboration. Our infrastructure is designed for 24/7
                     operations, so no matter the time, we’re available when you
                     need us. Additionally, our labor laws are flexible and
                     industry-adapted, allowing us to accommodate your specific
                     scheduling requirements without disruption.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -426,12 +423,12 @@ const Services = () => {
                   (SLAs)?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     Yes, we are confident in the quality of our services and
                     offer a Service Level Agreement that outlines our commitment
                     to you. The SLA specifies key performance indicators (KPIs)
                     to ensure your satisfaction and accountability.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -441,13 +438,13 @@ const Services = () => {
                   needs?{" "}
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     Absolutely! We create customized solutions tailored to your
                     business goals. With experience across various industries,
                     we collaborate closely with you to understand your unique
                     requirements and deliver a solution that perfectly fits your
                     needs.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -471,12 +468,12 @@ const Services = () => {
                   to other outsourcing companies?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We adopt a transparent pricing structure that considers the
                     complexity of each job. For further details, feel free to
                     reach out to us, and we will provide you with access to our
                     pricing information.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -486,13 +483,13 @@ const Services = () => {
                   substantial cost savings?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     Sri Lanka offers a highly skilled talent pool, a 91%
                     literacy rate, and a flexible education system. Combined
                     with lower living costs and a favorable exchange rate,
                     businesses can achieve significant cost reductions while
                     maintaining high quality and productivity.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -501,11 +498,11 @@ const Services = () => {
                   How do I get started with BPO?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We recommend a free consultation with us to assess your
                     needs and recommend the best possible approach that fits
                     your needs.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -514,12 +511,12 @@ const Services = () => {
                   Will BPO replace my employees?{" "}
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     BPO is designed to improve processes, not replace employees.
                     You will have an off-shore team at H Connect International,
                     who can free up your on-shore team to focus on higher-value
                     tasks.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -528,12 +525,12 @@ const Services = () => {
                   Is BPO complex to implement?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We have a comprehensive 5-staged BPO onboarding process in
                     place to ensure smooth implementation. We offer change
                     management services to make the transition as smooth as
                     possible.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -542,14 +539,14 @@ const Services = () => {
                   How can I measure the success of BPO?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     We believe in transparency. We have data and analytics in
                     place to track improvements in efficiency, cost savings,
                     time savings, and other key metrics. We have quarterly
                     service reviews with our clients. These sessions allow us to
                     fine-tune our strategies, address any concerns, and reaffirm
                     our commitment to exceeding expectations.
-                  </p>
+                  </div>
                 </div>
               </details>
 
@@ -558,11 +555,11 @@ const Services = () => {
                   How long does it take to setup an offshore team?
                 </summary>
                 <div className="px-4 pb-4">
-                  <p>
+                  <div>
                     Our sourcing and onboarding process typically takes 6-8
                     weeks. This is complete with induction and relevant
                     training.
-                  </p>
+                  </div>
                 </div>
               </details>
             </div>

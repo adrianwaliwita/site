@@ -6,7 +6,7 @@ const ItemCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "relative w-[50vw] h-[50vw] md:w-[15vw] md:h-[15vw] cursor-pointer overflow-hidden rounded-xl border",
+        "relative w-[50vw] h-[50vw] md:w-[20vw] md:h-[20vw] cursor-pointer overflow-hidden rounded-xl border",
         // light styles
         "border-[#ffffff] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles

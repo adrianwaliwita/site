@@ -35,7 +35,7 @@ const accredit = [
 
 const LifeAtHci = () => {
   return (
-    <div className="w-full pt-[10vh] md:pt-[10vh]">
+    <div className="w-full pt-[15vh] md:pt-[10vh]">
       <section className="flex flex-col items-center w-full ">
         {/* Content Section */}
         <div className="w-full px-[5vw] pt-[5vw] text-center">
@@ -66,7 +66,9 @@ const LifeAtHci = () => {
 
                 {/* Description */}
 
-                <div className={bodyTextStyles.descriptionCenter}>
+                <div
+                  className={`${bodyTextStyles.descriptionCenter} pb-10 md:pb-0`}
+                >
                   Where every day is a chance to learn, laugh, and fall in love
                   with what you do.
                 </div>
@@ -99,51 +101,52 @@ const LifeAtHci = () => {
         </div>{" "}
         {/* Marquee Section */}
       </section>
-      <section className="px-4 sm:px-[5%] h:20vh md:h-[100vh] mx-auto flex items-center justify-center mb-[-10vh] ">
-        <div className="flex flex-col w-full">
-          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 items-center ">
-            <div className="w-full ">
-              <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-2 gap-2">
-                <HoverCard2
-                  title={"Stronger Together"}
-                  description={'"To us, challenges are best tackled as a team"'}
-                  img={"/people/1.jpg"}
-                />
-                <HoverCard2
-                  title={"Personal Journeys"}
-                  description={
-                    '"We measure people against their past selves, not each other"'
-                  }
-                  img={"/people/2.jpg"}
-                />
-                <HoverCard2
-                  title={"Open Door Policy"}
-                  description={`"Our doors are open to all team member's ideas and perspectives."'`}
-                  img={"/people/3.jpg"}
-                />
-                <HoverCard2
-                  title={"Continuous Improvement"}
-                  description={
-                    ' "We collectively work towards small improvements which make a big impact over time"'
-                  }
-                  img={"/people/4.jpg"}
-                />
+      <section className="px-4 sm:px-[5%] h-auto md:h-screen flex items-center justify-center mb-[-10vh] py-12 md:py-0">
+        <div className="w-full max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+            {/* Text Section - First on Mobile, Second on Desktop */}
+            <div className="order-1 md:order-2 flex items-center">
+              <div className="text-black text-center md:text-left">
+                <h2 className="font-GTAmerica text-3xl sm:text-4xl md:text-[4vw] lg:text-[3.5vw] font-bold leading-tight tracking-normal">
+                  EVERY SINGLE DAY, <br />
+                  OUR TEAM CLOCKS IN WITH A{" "}
+                  <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                    PASSION
+                  </span>{" "}
+                  FOR THE WORK THEY DO
+                </h2>
               </div>
             </div>
 
-            <div className=" flex items-center  ">
-              <div className="font-GTAmerica text-[4vw] leading-[4vw] font-bold tracking-normal text-black text-left md:text-left">
-                EVERY SINGLE DAY, <br />
-                OUR TEAM CLOCKS IN WITH A
-                <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent ml-[12px]">
-                  PASSION
-                </span>{" "}
-                FOR THE WORK THEY DO
+            {/* Cards Grid - Second on Mobile, First on Desktop */}
+            <div className="order-2 md:order-1 w-full">
+              <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6">
+                <HoverCard2
+                  title="Stronger Together"
+                  description="To us, challenges are best tackled as a team"
+                  img="/people/1.jpg"
+                />
+                <HoverCard2
+                  title="Personal Journeys"
+                  description="We measure people against their past selves, not each other"
+                  img="/people/2.jpg"
+                />
+                <HoverCard2
+                  title="Open Door Policy"
+                  description="Our doors are open to all team member's ideas and perspectives"
+                  img="/people/3.jpg"
+                />
+                <HoverCard2
+                  title="Continuous Improvement"
+                  description="We collectively work towards small improvements which make a big impact over time"
+                  img="/people/4.jpg"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="mt-[10vh]"></div>
       <CTA
         title={"Ready to be part of the team?"}
         description={

@@ -120,16 +120,16 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
       {/* Mobile Menu Hamburger with Side Logo */}
       <div
         className={cn(
-          "fixed top-10 inset-x-0 z-50 md:hidden flex items-center px-4 bg-white",
+          "fixed top-10 inset-x-0 z-50 md:hidden flex items-center px-4 bg-white shadow-lg ",
           className
         )}
       >
-        <div className="w-32 h-32">
+        <div className="w-20 h-20 ">
           <a href="/" className="inline-block">
             <img
               src="/logo/2.png"
               alt="Company Logo"
-              className="h-32 w-auto object-contain"
+              className="h-20  w-auto object-contain" // Adjusted height
             />
           </a>
         </div>
@@ -138,7 +138,9 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="z-60 relative"
         >
-          <div className="w-20 h-20 bg-white">
+          <div className="w-16 h-12 bg-white">
+            {" "}
+            {/* Adjusted height */}
             <div className="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <span
                 aria-hidden="true"
@@ -190,9 +192,15 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
 
             <MobileSectionAccordion
               title="Services"
+              href="/services"
               onItemClick={handleMobileMenuItemClick}
             >
               <div className="space-y-4">
+                <ProductItemMobile
+                  title="All Services"
+                  href="/services"
+                  description="Discover all our services."
+                />
                 <ProductItemMobile
                   title="Finance & Accounting"
                   href="/services/finance-and-accounting"
@@ -240,8 +248,13 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               title="Careers"
               onItemClick={handleMobileMenuItemClick}
             >
-              <HoveredLink href="/join-us">Join Us</HoveredLink>
-              <HoveredLink href="/life-at-hci">Life at HCI</HoveredLink>
+              <ProductItemMobile
+                title="Join Us"
+                href="/join-us"
+              ></ProductItemMobile>
+              <ProductItemMobile title="Life at HCI" href="/life-at-hci">
+                Life at HCI
+              </ProductItemMobile>
             </MobileSectionAccordion>
 
             <MobileSectionAccordion

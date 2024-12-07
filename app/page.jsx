@@ -107,7 +107,7 @@ export default function Home() {
         </div>
       </Container>
 
-      <div className="pt-[10vh] md:pt-[10vh] mb-[-5vh] md:mb-[-15vh]">
+      <div className="mt-[-5vh] md:pt-[10vh] mb-[-5vh] md:mb-[-15vh]">
         <SectionTextRightLong
           titleBeforeBlue={"A "}
           blueTitle={"PATH"}
@@ -280,9 +280,9 @@ export default function Home() {
           </div>{" "}
         </div>
         <div className="bg-white">
-          <section className="max-w-5xl mx-auto w-full px-10 py-10">
+          <section className="max-w-5xl mx-auto w-full md:px-10 py-10">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 w-full">
-              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
+              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50  col-span-3 md:col-span-2 flex flex-col gap-y-10 justify-between">
                 <div className="flex flex-col gap-y-3.5">
                   <div className="font-medium text-white">
                     It&apos;s been an amazing experience working with H Connect
@@ -349,11 +349,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50 col-span-2 flex flex-col gap-y-10 justify-between">
+              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50 col-span-3 md:col-span-2 flex flex-col gap-y-10 justify-between">
                 <div className="flex flex-col gap-y-3.5">
-                  <div className="font-bold text-xl text-white">
-                    Reliable service uptime
-                  </div>
                   <div className="font-medium text-white">
                     We are incredibly grateful to have worked with our team at H
                     Connect International these past few years. They&apos;ve

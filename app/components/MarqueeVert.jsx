@@ -12,7 +12,11 @@ const ReviewCard = ({ img, name, username, body }) => {
         "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
       )}
     >
-      <img className=" w-full h-full object-cover " alt="" src={img} />
+      <img
+        className=" h-[15vh] w-[80vh]   md:w-full md:h-full object-cover "
+        alt=""
+        src={img}
+      />
     </figure>
   );
 };

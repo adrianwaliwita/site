@@ -127,13 +127,13 @@ export const ProductItem = ({
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
-      <Image
+      {/* <Image
         src={src}
         width={100}
         height={70}
         alt={title}
         className="flex-shrink-0 rounded-md shadow-2xl"
-      />
+      /> */}
       <div>
         <h4 className="text-xl font-bold mb-1 bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
           {title}

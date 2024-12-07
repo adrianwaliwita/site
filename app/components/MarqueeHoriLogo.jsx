@@ -25,7 +25,7 @@ export default function MarqueeDemo({ items }) {
   const secondRow = items.slice(Math.ceil(items.length / 2));
 
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg">
+    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg max-w-[100vw]">
       <Marquee pauseOnHover className="[--duration:80s]">
         {/* Combine firstRow and secondRow */}
         {[...firstRow].map((item, index) => (
