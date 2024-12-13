@@ -109,7 +109,14 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
           </MenuItem>
           <MenuItem setActive={setActive} active={active} item="Careers">
             <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/join-us">Join Us</HoveredLink>
+              <HoveredLink
+                href="/join-us"
+                setActive={setActive}
+                active={active}
+                item="Careers"
+              >
+                Join Us
+              </HoveredLink>
               <HoveredLink href="/life-at-hci">Life at HCI</HoveredLink>
             </div>
           </MenuItem>

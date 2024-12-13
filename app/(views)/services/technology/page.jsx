@@ -75,31 +75,38 @@ const FinanceAccounting = () => {
       />
       <SectionTextRightDesc
         description={
-          <>
-            We partner with leading enterprises to drive the future of smart and
-            scalable product development. <br />
-            Whether it’s reimagining infrastructure or crafting connected
-            products, we focus on delivering tailored, high-impact solutions.
-            <br />
-            With proven engineering leadership, we provide comprehensive,
-            end-to-end digital and product engineering solutions that
-            consistently unlock new levels of value and position businesses at
-            the forefront of industry innovation.
-            <br /> By blending our technical depth with a tailored combination
-            of advanced technology and human expertise, our engineers enable
-            enterprises to innovate with confidence and execute with excellence.
-            This refined focus, backed by strategic insight, positions us as not
-            just a service provider, but as a partner in your journey to market
-            leadership, supporting businesses from across industries in
-            achieving long-term success through engineering ingenuity.
-          </>
+          <div className="space-y-4">
+            <div>
+              We partner with leading enterprises to drive the future of smart
+              and scalable product development. Whether it’s reimagining
+              infrastructure or crafting connected products, we focus on
+              delivering tailored, high-impact solutions.
+              <br />
+            </div>
+            <div>
+              With proven engineering leadership, we provide comprehensive,
+              end-to-end digital and product engineering solutions that
+              consistently unlock new levels of value and position businesses at
+              the forefront of industry innovation.By blending our technical
+              depth with a tailored combination of advanced technology and human
+              expertise, our engineers enable enterprises to innovate with
+              confidence and execute with excellence.
+            </div>
+
+            <div>
+              This refined focus, backed by strategic insight, positions us as
+              not just a service provider, but as a partner in your journey to
+              market leadership, supporting businesses from across industries in
+              achieving long-term success through engineering ingenuity.{" "}
+            </div>
+          </div>
         }
         component={
           <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw] my-8 md:m-6 pt-[5vh]  ">
             <div
               className={
                 ("group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                "bg-[url('/tech-Images/tech-desc.png')] bg-cover aspect-square")
+                "bg-[url('/BPO/tech-2.jpg')] bg-cover aspect-square")
                 // Preload hover image
               }
             ></div>
@@ -119,7 +126,7 @@ const FinanceAccounting = () => {
                   <br />
                   <span className="text-white font-medium text-[2.5vw] md:text-[1vw]   transition-all duration-300 ease-in-out group-hover:translate-x-2">
                     We&apos;ve got you covered from single projects to entire
-                    teams dedicated to you.{" "}
+                    teams dedicated to you{" "}
                   </span>
                 </div>
               }
@@ -187,7 +194,7 @@ const FinanceAccounting = () => {
                   <br />
                   <span className="text-white font-medium text-[2.5vw] md:text-[1vw]   transition-all duration-300 ease-in-out group-hover:translate-x-2">
                     Every line of code is aligned with security standards, best
-                    practices, and strategic goals.{" "}
+                    practices, and strategic goals{" "}
                   </span>
                 </div>
               }
@@ -221,7 +228,7 @@ const FinanceAccounting = () => {
                   <br />
                   <span className="text-white font-medium text-[2.5vw] md:text-[1vw] transition-all duration-300 ease-in-out group-hover:translate-x-2">
                     Our teams are built to handle intensity without compromising
-                    quality.{" "}
+                    qualitys{" "}
                   </span>
                 </div>
               }
@@ -289,7 +296,11 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalent></TopTierTalent>
+      <TopTierTalent
+        description="
+Our team holds a minimum of a bachelor’s degree along with relevant qualifications, ensuring that they bring the highest standards of expertise and professionalism to the table.
+"
+      ></TopTierTalent>
 
       <SecuringInterests></SecuringInterests>
 

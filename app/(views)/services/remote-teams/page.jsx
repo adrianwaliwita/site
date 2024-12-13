@@ -180,26 +180,39 @@ const HR4 = [
 ];
 const RemoteTeams = () => {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="">
-        <LandingPageInner
-          subtitle="REMOTE TEAMS"
-          titleBeforeBlue="YOUR GATEWAY TO "
-          blueTitle=" BEST-IN-CLASS TALENT"
-          titleAfterBlue="
-        "
-          description=" We provide access to dedicated resources for specialized positions with a customized approach which ensures the perfect fit for any job. We handle the entire process, end-to-end, including sourcing, onboarding, initial set-up and infrastructure.
-        Retain full control over daily operations while benefiting from our cost-effective solutions.
-        ."
-          ImgUrl="/service-images/HR.jpg"
-        />
+        <div className="mb-[20vh]  md:my-0">
+          <LandingPageInner
+            subtitle="REMOTE TEAMS"
+            titleBeforeBlue={
+              <div>
+                YOUR GATEWAY TO <br />{" "}
+              </div>
+            }
+            blueTitle=" BEST-IN-CLASS TALENT "
+            titleAfterBlue=""
+            description={
+              <div>
+                We provide access to dedicated resources for specialized
+                positions with a customized approach which ensures the perfect
+                fit for any job. We handle the entire process, end-to-end,
+                including sourcing, onboarding, initial set-up and
+                infrastructure. <br />
+                <div className="">
+                  Retain full control over daily operations while benefiting
+                  from our cost-effective solutions.
+                </div>{" "}
+              </div>
+            }
+            ImgUrl="/service-images/HR.jpg"
+          />
+        </div>
       </div>
-
       <CTA
-        title="READY TO DELIVER FROM DAY ONE"
-        description="Get in touch to learn more about our services and how we can help you grow your business."
+        title="SCHEDULE A FREE CONSULTATION"
         href={"/contact"}
-        text={"Get in touch"}
+        text={"START NOW"}
       ></CTA>
     </div>
   );

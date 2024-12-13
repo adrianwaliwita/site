@@ -21,7 +21,7 @@ const sec = [
   {
     title: "24/7 IT Support",
     description:
-      " Our dedicated team provides round-the-clock support to ensure your systems are always running smoothly.",
+      " Our dedicated team provides round-the-clock support to ensure your systems are always running smoothly",
   },
 ];
 const logos = [

@@ -70,24 +70,24 @@ const AS = [
   {
     title: "Customer Service Support",
     description:
-      "Provide comprehensive customer service support through email, phone, and other designated channels, ensuring prompt and professional resolution of client",
+      "Provide comprehensive customer service support through email, phone, and other designated channels, ensuring prompt and professional resolution of client inquiries ",
   },
   {
     title: "Order Processing & Status Updates",
     description:
-      " Manage the order processing lifecycle, including order intake, data entry, status updates, and clear communication with clients to maintain transparency throughout the fulfillment",
+      " Manage the order processing lifecycle, including order intake, data entry, status updates, and clear communication with clients to maintain transparency throughout the fulfillment process",
   },
   {
     title: "Help Desk Support",
     description:
-      " Offer efficient technical support by fielding inquiries, troubleshooting issues with established protocols, and resolving client-reported problems professionally.",
+      " Offer efficient technical support by fielding inquiries, troubleshooting issues with established protocols, and resolving client-reported problems professionally",
   },
 ];
 const AS2 = [
   {
     title: "Bookkeeping",
     description:
-      " Maintain accurate financial records, including invoicing, expense tracking, and reconciliation, to support financial reporting and analysis.",
+      " Maintain accurate financial records, including invoicing, expense tracking, and reconciliation, to support financial reporting and analysis",
   },
   {
     title: "Document Creation & Editing",
@@ -97,19 +97,19 @@ const AS2 = [
   {
     title: "Risk Management Services",
     description:
-      "  Equip your clients with the tools to identify, assess, and effectively mitigate financial, operational, and strategic risks.",
+      "  Equip your clients with the tools to identify, assess, and effectively mitigate financial, operational, and strategic risks",
   },
 ];
 const AS3 = [
   {
     title: "Data Cleansing & Verification",
     description:
-      " Enhance data accuracy and organization by performing data entry, cleaning, and verification tasks.",
+      " Enhance data accuracy and organization by performing data entry, cleaning, and verification tasks",
   },
   {
     title: "Financial Statement Preparation",
     description:
-      " Leverage our expertise to create accurate and reliable financial statements for your clients, ensuring they adhere to all applicable accounting standards.",
+      " Leverage our expertise to create accurate and reliable financial statements for your clients, ensuring they adhere to all applicable accounting standards",
   },
 ];
 
@@ -160,7 +160,7 @@ const FinanceAccounting = () => {
             <div
               className={
                 ("group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                "bg-[url('/admin-desc.jpg')] bg-cover aspect-square")
+                "bg-[url('/BPO/admin-2.jpg')] bg-cover aspect-square")
                 // Preload hover image
               }
             ></div>
@@ -178,7 +178,7 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalent />
+      <TopTierTalent description="Our team holds a minimum of a bachelor’s degree along with relevant qualifications, ensuring that they bring the highest standards of expertise and professionalism to the table." />
 
       <SecuringInterests></SecuringInterests>
 
@@ -188,7 +188,6 @@ const FinanceAccounting = () => {
 
       <CTA
         title="READY TO DELIVER FROM DAY ONE"
-        description="Get in touch to learn more about our services and how we can help you grow your business."
         href={"/contact"}
         text={"Get in touch"}
       ></CTA>

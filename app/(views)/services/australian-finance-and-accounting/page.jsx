@@ -1,14 +1,13 @@
 "use client";
-
+import { cn } from "@/lib/utils";
 import HoverCard3 from "app/components/HoverCard3";
-import MarqueeHori from "app/components/MarqueeHori";
-import MarqueeHoriLogo from "app/components/MarqueeHoriLogo";
+
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 
 import CTA from "app/sections/CTA";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 import SecuringInterests from "app/components/SecuringInterests";
-import TopTierTalentAus from "app/components/TopTierTalentAus";
+import TopTierTalent from "app/components/TopTierTalent";
 import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
 import ProvenProcesses from "app/components/ProvenProcesses";
 
@@ -19,7 +18,7 @@ import {
   DividerWhiteLeft,
   DividerWhiteCenter,
 } from "app/components/Divider";
-
+import SectionTextRight from "app/sections/SectionTextRight";
 const suite = [
   { img: "/suite-logo/oracle.png" },
   { img: "/suite-logo/sap.png" },
@@ -85,13 +84,13 @@ const AusFinance = () => {
                 </h1>
 
                 {/* Description */}
-                <div className="mt-[3vh]">
+                {/* <div className="mt-[3vh]">
                   {" "}
                   <DividerBlueCenter />
-                </div>
+                </div> */}
 
                 <div
-                  className={`${bodyTextStyles.descriptionCenterAus} mb-[-4vh]`}
+                  className={`${bodyTextStyles.descriptionCenterAus} mb-[-4vh] md:mb-[-6vh] mt-[4vh]`}
                 >
                   We have established a dedicated department focused on
                   supporting accounting firms, business accountants, and
@@ -120,11 +119,6 @@ const AusFinance = () => {
               </span>{" "}
             </div>
             <DividerBlueCenter />
-
-            <div className={bodyTextStyles.descriptionCenter}>
-              We expertly navigate regional nuances across Australia to ensure
-              full compliance in every state.
-            </div>
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]">
             <HoverCard3
@@ -199,21 +193,23 @@ const AusFinance = () => {
             <HoverCard3
               title={"SMSF"}
               description={
-                <div>
-                  <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                    Learn More
-                  </span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 25 25"
-                    className="w-5 h-5 fill-current "
-                  >
-                    <path
-                      d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                      data-name="Right"
-                    />
-                  </svg>
-                </div>
+                <a href="/services/australian-finance-and-accounting/smsf">
+                  <div>
+                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Learn More
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 25 25"
+                      className="w-5 h-5 fill-current "
+                    >
+                      <path
+                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                        data-name="Right"
+                      />
+                    </svg>
+                  </div>
+                </a>
               }
               img={"/AUS-Services/SMSF.jpg"}
             />
@@ -266,69 +262,45 @@ const AusFinance = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalentAus />
+      <TopTierTalent description="We’re your premier source for exceptional talent. Our experts, with their deep understanding of Australian accounting and financial services are the perfect fit for your team." />
 
-      <section
+      <div className=" md:pt-0 ">
+        <SectionTextRight
+          titleBeforeBlue={<>ONE OF THE </>}
+          blueTitle={"FIRST FOUR"}
+          titleAfterBlue={
+            <>
+              {" "}
+              <br />
+              <span className={headingStyles.gradient}> CPA </span> RECOGNIZED
+              EMPLOYER PARTNERS IN SRI LANKA.
+            </>
+          }
+          component={
+            <div>
+              <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw]  px-[2vw] ">
+                <div
+                  className={cn(
+                    "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 ",
+                    "bg-[url('/cpa-fin.jpg')] bg-cover aspect-square"
+                  )}
+                ></div>
+              </div>
+            </div>
+          }
+        ></SectionTextRight>
+      </div>
+
+      {/* <section
         className="relative h-[50vh] w-full bg-fixed bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/AUS-Services/cpa-zec.png')",
         }}
-      ></section>
+      ></section> */}
 
       <SecuringInterests></SecuringInterests>
 
       <ServiceBeyondBorders></ServiceBeyondBorders>
-
-      <section>
-        <div className=" max-w-screen-xl mx-auto px-4 pt-[5vh] md:pt-[10vh] pb-[5vh]  md:pb-[10vh]">
-          <div className="mx-auto-sm text-center  ">
-            <div className={headingStyles.primaryCenter}>
-              OUR{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                COMPREHENSIVE
-              </span>{" "}
-              SUITE
-            </div>
-            <div className=" lg:mb-[-1vh]">
-              {" "}
-              <DividerBlueCenter />
-            </div>
-            <div className={bodyTextStyles.descriptionCenter}>
-              We are equipped with the right tools for the right job
-            </div>
-          </div>
-          <div className="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 relative">
-            <div className=" flex justify-center ">
-              <div className=" justify-center">
-                <div className="pt-[3vh]">
-                  <MarqueeHoriLogo items={suite}> </MarqueeHoriLogo>
-                </div>
-
-                {/* <IconCloud
-                  iconSlugs={["react", "typescript"]}
-                  customPngIcons={[
-                    { src: "/suite-logo/oracle.png" },
-                    { src: "/suite-logo/sap.png" },
-                    { src: "/suite-logo/oracle-hyperion.png" },
-                    { src: "/suite-logo/acumatica.png" },
-                    { src: "/suite-logo/fathom.png" },
-                    { src: "/suite-logo/maxio.png" },
-                    { src: "/suite-logo/microsoft-dynamic.png" },
-                    { src: "/suite-logo/monday.png" },
-                    { src: "/suite-logo/myob.png" },
-                    { src: "/suite-logo/power-bi.png" },
-                    { src: "/suite-logo/qb.png" },
-                    { src: "/suite-logo/sage.png" },
-                    { src: "/suite-logo/salesforce.png" },
-                    { src: "/suite-logo/stripe.png" },
-                    { src: "/suite-logo/xero.png" },
-                  ]}
-                /> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <ProvenProcesses></ProvenProcesses>
 

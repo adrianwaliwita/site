@@ -1,10 +1,10 @@
 const HoverCard2 = ({ title, description, img }) => {
   return (
-    <div className="flex items-center justify-center w-full h-[35dvh]">
+    <div className="flex items-center justify-center w-full h-[40dvh] ">
       <article className="group relative aspect-video h-full w-full max-w-[32rem] cursor-pointer overflow-hidden rounded-lg ">
         {/* Background Image */}
         <img
-          className="absolute inset-0 h-[35dvh] w-full object-cover opacity-90 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+          className="absolute inset-0 h-[40dvh] w-full object-cover opacity-90 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
           src={img}
           alt=""
         />

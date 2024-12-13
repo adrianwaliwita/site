@@ -60,7 +60,7 @@ const ProvenProcesses = () => {
                     <h5 className="font-GTAmerica font-bold text-xl md:text-[2vw] md:leading-[2.3vw]  bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                       {item.title}
                     </h5>
-                    <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black">
+                    <div className="font-arial text-base text-black dark:text-neutral-300 max-w-[100%] relative z-10 ">
                       {item.description}
                     </div>
                   </div>

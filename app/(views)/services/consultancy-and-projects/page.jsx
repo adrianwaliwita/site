@@ -488,7 +488,11 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalent></TopTierTalent>
+      <TopTierTalent
+        description="
+Our team holds a minimum of a bachelor’s degree along with relevant qualifications, ensuring that they bring the highest standards of expertise and professionalism to the table.
+"
+      ></TopTierTalent>
 
       <SecuringInterests></SecuringInterests>
 
@@ -498,7 +502,6 @@ const FinanceAccounting = () => {
 
       <CTA
         title="READY TO DELIVER FROM DAY ONE"
-        description="Get in touch to learn more about our services and how we can help you grow your business."
         href={"/contact"}
         text={"Get in touch"}
       ></CTA>

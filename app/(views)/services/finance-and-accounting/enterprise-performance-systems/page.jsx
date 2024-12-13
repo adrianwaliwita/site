@@ -1,6 +1,7 @@
 "use client";
 import LandingPageInner from "../../../../sections/LandingPageInner";
 import CTA from "app/sections/CTA";
+import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
 
 import SectionTextRight from "app/sections/SectionTextRight";
 import SectionTextLeft from "app/sections/SectionTextLeft";
@@ -18,9 +19,8 @@ const InvoiceToCash = () => {
            "
         titleAfterBlue="PERFORMANCE 
         MANAGEMENT (EPM)"
-        description=" We maximize the value of your finance function by driving sustainable growth, 
-        optimizing cash flow, and enhancing governance.
-        "
+        description=" Improve your reporting, planning, and forecasting capabilities to become a
+        strategic business partner. "
         ImgUrl="/fa-services/epm.jpg"
       />
       <SectionTextRightLong
@@ -42,17 +42,18 @@ const InvoiceToCash = () => {
               decisions. Our approach begins with establishing a robust EPM
               Center of Excellence (CoE), followed by the integration of
               predictive intelligence into your reporting, financial planning
-              and analysis, and enterprise performance management. Our
-              deep-rooted EPM expertise, combined with cutting-edge digital and
-              analytics capabilities, enables us to uncover actionable insights.
-              Our consultancy approach leverages proven transformation
+              and analysis, and enterprise performance management. you.
+            </div>
+            <div>
+              Our deep-rooted EPM expertise, combined with cutting-edge digital
+              and analytics capabilities, enables us to uncover actionable
+              insights. Our consultancy approach leverages proven transformation
               frameworks to deliver world-class EPM solutions, tailor made for
-              you.
             </div>
           </div>
         }
         component={
-          <div className="max-w-[60vw] w-[60vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
             <div
               className={cn(
                 "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
@@ -63,12 +64,25 @@ const InvoiceToCash = () => {
         }
       />
 
-      <CTA
-        title="READY FOR THAT UPGRADE?"
-        description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
-        href={"/contact"}
-        text={"Get in touch"}
-      ></CTA>
+      <SectionTextLeftLongBlue
+        text={"Start Now"}
+        title={
+          <>
+            Boost your data to decision cycle with our EPM and FP&A capabilities
+          </>
+        }
+        description="Unlock the full potential of your financial data with our advanced EPM and FP&A solutions. Streamline your processes, enhance forecasting accuracy, and make informed decisions faster than ever before. Empower your finance teams to act with agility and precision in an ever-changing market."
+        component={
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+            <div
+              className={cn(
+                "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
+                "bg-[url('/R2R-3.png')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+              )}
+            />
+          </div>
+        }
+      />
     </div>
   );
 };

@@ -37,12 +37,12 @@ const HR = [
   {
     title: "Recruitment & Staffing",
     description:
-      "Find the perfect talent for your team through targeted recruitment and efficient onboarding",
+      "Find the perfect talent for your team through targeted recruitment and efficient onboarding processes",
   },
   {
     title: "Streamlined Payroll Processing",
     description:
-      " Ensure accurate and on-time payroll for your employees, eliminating administrative burdens",
+      " Ensure accurate and on-time payroll for your employees, eliminating administrative burdens ",
   },
   {
     title: "Employee Onboarding",
@@ -64,7 +64,7 @@ const HR2 = [
   {
     title: "Customizable HR Policy",
     description:
-      "  Development Create policies and procedures tailored to your company culture and business needs",
+      "  Create policies and procedures tailored to your company culture and business needs",
   },
 ];
 const HR3 = [
@@ -76,23 +76,23 @@ const HR3 = [
   {
     title: "Employee Off-boarding",
     description:
-      " Manage the offboarding process efficiently, ensuring a positive final experience for departing employees.",
+      " Manage the offboarding process efficiently, ensuring a positive final experience for departing employees",
   },
   {
     title: "Centralized Database Management",
     description:
-      "   Maintain accurate and organized employee data in a secure and accessible database.",
+      "   Maintain accurate and organized employee data in a secure and accessible database",
   },
 ];
 const HR4 = [
   {
     title: "Automated HR Processes",
-    description: " Save time and resources by automating repetitive HR tasks.",
+    description: " Save time and resources by automating repetitive HR tasks",
   },
   {
     title: "Employee Relations",
     description:
-      " Conflict resolution that builds trust and commitment to cultivating a positive company culture where every voice is heard.",
+      " Conflict resolution that builds trust and commitment to cultivating a positive company culture where every voice is heard",
   },
 ];
 const FinanceAccounting = () => {
@@ -142,7 +142,7 @@ const FinanceAccounting = () => {
             <div
               className={
                 ("group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                "bg-[url('/HR-desc.jpg')] bg-cover aspect-square")
+                "bg-[url('/BPO/HR-2.jpg')] bg-cover aspect-square")
                 // Preload hover image
               }
             ></div>
@@ -160,7 +160,7 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalent></TopTierTalent>
+      <TopTierTalent description="Our team holds a minimum of a bachelor’s degree along with relevant qualifications, ensuring that they bring the highest standards of expertise and professionalism to the table."></TopTierTalent>
 
       <SecuringInterests></SecuringInterests>
 

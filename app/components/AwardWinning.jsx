@@ -33,10 +33,7 @@ const logos = [
     name: "GPTW-WOMEN",
     url: "/accredit/GPTW-WOMEN.jpg",
   },
-  {
-    name: "SATYN-1",
-    url: "/accredit/SATYN-1.jpg",
-  },
+
   {
     name: "SATYN-2",
     url: "/accredit/SATYN-2.jpg",
@@ -57,7 +54,7 @@ const SecuringInterests = () => {
 
         <div className="w-full pt-[2vh]">
           <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
-            <div className="grid grid-cols-2 gap-x-4 md:gap-x-16 md:grid-cols-4">
+            <div className="grid grid-cols-2 gap-x-4 md:gap-x-16 md:grid-cols-3">
               {logos.map((logo, key) => (
                 <img
                   key={key}

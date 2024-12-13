@@ -7,15 +7,17 @@ import { cn } from "@/lib/utils";
 import SectionTextRight from "app/sections/SectionTextRight";
 import SectionTextLeft from "app/sections/SectionTextLeft";
 import SectionTextRightLong from "app/sections/SectionTextRightLong";
+import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
+
 const InvoiceToCash = () => {
   return (
     <div className="">
       <LandingPageInner
-        subtitle="INVOICE-TO-CASH SERVICES"
+        subtitle="INVOICE-TO-CASH"
         titleBeforeBlue=""
         blueTitle=" ACCELERATE  "
         titleAfterBlue="INVOICE-TO-CASH"
-        description=" We optimize the accounts receivable process by creating in-depth visibility, enabling better decisions, improving user experiences, and boosting cash flow"
+        description=" We optimize the accounts receivable process by creating in-depth visibility, enabling better decisions, improving user experiences, and boosting cash flow."
         ImgUrl="/F&A-services/invoCash.jpg"
       />
       <div className="pt-[5vh] md:pt-[10vh]"></div>
@@ -38,7 +40,10 @@ const InvoiceToCash = () => {
               optimize value, Accounts Receivable teams must prioritize
               functional expertise and analytics automation to streamline
               processes, optimize transactions, and unlock predictive insights
-              faster. We specialize in transforming AR functions into agile,
+              faster.
+            </div>
+            <div className="">
+              We specialize in transforming AR functions into agile,
               future-ready operations. Our teams will enable you to navigate the
               complexities of the business landscape and ehance your
               invoice-to-cash process for maximum efficiency and profitability.
@@ -46,23 +51,44 @@ const InvoiceToCash = () => {
           </div>
         }
         component={
-          <div className="max-w-[60vw] w-[60vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
             <div
               className={cn(
                 "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
-                "bg-[url('/InvoiceCash-desc.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+                "bg-[url('/ic2.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
               )}
             />
           </div>
         }
       />
 
-      <CTA
-        title="READY FOR THAT UPGRADE?"
-        description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
-        href={"/contact"}
-        text={"Get in touch"}
-      ></CTA>
+      <SectionTextLeftLongBlue
+        text={"Start Now"}
+        title={
+          <>
+            Take your first step towards an agile and future-ready business{" "}
+            <br />
+          </>
+        }
+        titleBeforeBlue={null}
+        titleAfterBlue={
+          <>
+            {" "}
+            AP <br /> SOLUTIONS
+          </>
+        }
+        description="Accelerate your cash flow, reduce payment cycles, and optimize working capital with our streamlined Invoice-to-Cash solutions. Enhance visibility, minimize risks, and empower your finance team to drive efficient collections for sustained business growth."
+        component={
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+            <div
+              className={cn(
+                "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
+                "bg-[url('/ic3.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+              )}
+            />
+          </div>
+        }
+      />
     </div>
   );
 };

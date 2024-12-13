@@ -15,7 +15,7 @@ import {
 } from "app/components/Divider";
 
 import SectionTextLeft from "app/sections/SectionTextLeft";
-
+import ProgressSection from "app/sections/progressSection";
 import SectionTextLeftBlue from "app/sections/SectionTextLeftBlue";
 
 import { useEffect } from "react";
@@ -24,21 +24,6 @@ import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 import MarqueeVert from "./components/MarqueeVert";
 import MarqueeHori from "./components/MarqueeHori";
 import Button from "./components/Button";
-
-const progressImages = [
-  { img: "/progress/1.jpg" },
-  { img: "/progress/10.jpg" },
-  { img: "/progress/2.jpg" },
-  { img: "/progress/9.jpg" },
-  { img: "/progress/3.jpg" },
-  { img: "/progress/8.jpg" },
-  { img: "/progress/4.jpg" },
-  { img: "/progress/9.jpg" },
-  { img: "/progress/5.jpg" },
-  { img: "/progress/10.jpg" },
-  { img: "/progress/11.jpg" },
-  { img: "/progress/12.jpg" },
-];
 
 const accredit = [
   { img: "/accredit/ACCA.jpg" },
@@ -92,7 +77,7 @@ export default function Home() {
               agility, resilience, and efficiency. We provide tailored solutions
               for a transforming world.
             </div>
-            <Button text="Get in Touch" href="/contact" />
+            <Button text="Learn More" href="/about" />
           </div>
         </div>
 
@@ -107,38 +92,8 @@ export default function Home() {
         </div>
       </Container>
 
-      <div className="mt-[-5vh] md:pt-[10vh] mb-[-5vh] md:mb-[-15vh]">
-        <SectionTextRightLong
-          titleBeforeBlue={"A "}
-          blueTitle={"PATH"}
-          titleAfterBlue={" TO PROGRESS"}
-          description={
-            <div className={`space-y-4  ${bodyTextStyles.descriptionLeft}`}>
-              <div>
-                We are a leading provider of BPO services, recognized for
-                delivering a comprehensive range of solutions, including finance
-                and accounting, procurement, technology, and marketing as a
-                service. Our team is committed to innovation and excellence and
-                continues to set new standards in the outsourcing industry.
-              </div>
-              <div>
-                We build lasting partnerships through exceptional service and
-                tailored solutions that meet the unique needs of our global
-                partners.
-              </div>
-              <div>
-                By embracing industry best practices and leveraging cutting-edge
-                technologies, our team drives optimal performance and
-                sustainable growth for every client.
-              </div>
-              <div>
-                We are H Connect International, a trusted partner for businesses
-                worldwide, empowering them to thrive in an ever-evolving market.
-              </div>
-            </div>
-          }
-          component={<MarqueeVert items={progressImages} />}
-        ></SectionTextRightLong>
+      <div className="mt-[-5vh] md:pt-[10vh] mb-[-5vh] md:mb-[-15vh] mr-[5%]">
+        <ProgressSection></ProgressSection>
       </div>
 
       <Container>
@@ -230,14 +185,6 @@ export default function Home() {
                         BY THE BEST{" "}
                       </div>
                       <DividerBlueCenter />
-                      <div className={bodyTextStyles.descriptionCenter}>
-                        We are a leading provider of BPO services, recognized
-                        for delivering a comprehensive range of solutions,
-                        including finance and accounting, procurement,
-                        technology, and marketing as a service. Our team is
-                        committed to innovation and excellence and continues to
-                        set new standards in the outsourcing industry.
-                      </div>
                     </div>
                   </div>
                   <div className="pt-[5vh]">

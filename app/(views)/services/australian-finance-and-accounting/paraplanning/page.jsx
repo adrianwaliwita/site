@@ -131,9 +131,8 @@ const Paraplanning = () => {
       <div className=" pt-[5vh] md:pt-[10vh]">
         <CTA
           title="READY TO DELIVER FROM DAY ONE"
-          description="Get in touch to learn more about our services and how we can help you grow your business."
           href={"/contact"}
-          text={"Get in touch"}
+          text={"Start Now"}
         ></CTA>
       </div>
     </div>

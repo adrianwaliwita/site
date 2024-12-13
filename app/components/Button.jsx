@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ text, href = "#" }) => {
+const Button = ({ text, href }) => {
   // Provide default props and basic validation
   if (!text) {
     console.warn("Button component requires a text prop");

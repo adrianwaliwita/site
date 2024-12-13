@@ -43,29 +43,24 @@ const serviceBorders2 = [
       "We manage your payroll processing, ensuring your employees are paid accurately and on time, while also handling all tax-related obligations to keep your business compliant",
   },
   {
-    title: "Coordinate Auditing:",
-    description:
-      "We coordinate annual audits by efficiently organizing your documents, ensuring all necessary information is provided for the auditor",
-  },
-];
-const serviceBorders3 = [
-  {
     title: "Financial Statement Preparation",
     description:
       "We prepare accurate and compliant financial statements, providing you with a clear and detailed overview of your company’s financial performance, supporting informed decision-making",
   },
+];
+const serviceBorders3 = [
   {
     title: "Individual Income Tax Preparation",
     description:
       "Whether your end client is a freelancer, self-employed, or a traditional employee, we can handle all their tax filing needs",
   },
-];
-const serviceBorders4 = [
   {
     title: "Company, Trust & Partnership Income Tax Return Preparation",
     description:
       "From sole proprietorships to complex partnerships and corporations, we provide business tax filings for any entity",
   },
+];
+const serviceBorders4 = [
   {
     title: "Fringe Benefits Tax (FBT) Management",
     description:
@@ -147,7 +142,6 @@ const AccountingAndTax = () => {
       <div className=" pt-[5vh] md:pt-[10vh]">
         <CTA
           title="READY TO DELIVER FROM DAY ONE"
-          description="Get in touch to learn more about our services and how we can help you grow your business."
           href={"/contact"}
           text={"Get in touch"}
         ></CTA>

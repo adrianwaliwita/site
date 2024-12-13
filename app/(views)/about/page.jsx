@@ -77,7 +77,7 @@ const About = () => {
         </div>
 
         {/* Marquee Section */}
-        <div className="w-full max-w-8xl mt-[4vh]   ">
+        <div className="w-full max-w-8xl mt-[4vh] mb-[15vh] md:mb-0   ">
           <MarqueeHori items={progressImages} />
         </div>
       </section>
@@ -171,14 +171,10 @@ const About = () => {
               className={`space-y-4 w-[90%]  ${bodyTextStyles.descriptionLeft} ${bodyTextStyles.white}`}
             >
               <div>
-                As a Hirdaramani Group venture, we are backed by one of Sri
-                Lanka&apos;s most reputed conglomerates, boasting a legacy of
-                over 100 years across diversified industries, including luxury,
-                leisure, apparel, and energy.
-              </div>
-              <div>
-                With a strong foundation, we remain focused on creating the
-                future with bold thinking and transformative approaches.
+                By combining people, process, and technical expertise we
+                optimize efficiency, reduce costs, and drive tangible results.
+                Our focus on absolute value means every interaction is a step
+                toward your long-term success.
               </div>
             </div>
           }
@@ -217,59 +213,94 @@ const About = () => {
                 name: "Deshaka Perera",
                 position: "CEO",
                 img: "/team/1.jpg",
+                email: "deshaka.perera@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/deshaka-perera-3102011b/",
               },
               {
                 name: "Arshad Booso",
                 position: "Head of BPM",
                 img: "/team/2.jpg",
+                email: "arshad.booso@hconnectint.com",
+                linkedin: "https://www.linkedin.com/in/arshadbooso/",
               },
-
-              ,
               {
                 name: "Shachithra Gunesekara",
                 position: "Head of HR",
                 img: "/team/3.jpg",
+                email: "shachithra.gunesekara@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/shachithra-gunasekara-33879272/",
               },
               {
                 name: "Pasindu Liyanage",
                 position: "Lead - IT & Compliance",
                 img: "/team/4.jpg",
+                email: "pasindu.liyanage@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/pasindu-sajith-liyanage/",
               },
               {
                 name: "Natali Jayatilaka",
                 position: "Lead - Sales & Marketing",
                 img: "/team/5.jpg",
+                email: "natali.jayatilaka@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
               },
               {
                 name: "Krishmilla Minoli",
                 position: "Lead - Operations",
                 img: "/team/6.jpg",
+                email: "krishmilla.minoli@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/krishmila-minoli-778b5b125/",
               },
-
               {
                 name: "Rukshala Bulathsinghala",
                 position: "Manager - Operations",
                 img: "/team/7.jpg",
+                email: "rukshala.bulathsinghala@hconnectint.com",
+                linkedin: "https://www.linkedin.com/in/rukshalabulathsinghala/",
               },
               {
                 name: "Asela Kuruppu",
                 position: "Senior Accountant",
                 img: "/team/8.jpg",
+                email: "asela.kuruppu@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/nadishan-asela-87050aba/",
               },
               {
                 name: "Mariam Husni",
                 position: "Manager Operations - Paraplanning",
                 img: "/team/9.jpg",
+                email: "mariam.husni@hconnectint.com",
+                linkedin: "https://www.linkedin.com/in/mariam-husni-b20583b9/",
               },
               {
                 name: "Dinithi Ranasinghe",
                 position: "Accountant",
                 img: "/team/10.jpg",
+                email: "dinithi.ranasinghe@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/dinithi-ranasinghe-878925208/",
               },
               {
-                name: "Mareene Salgado ",
+                name: "Mareene Salgado",
                 position: "Assistant Manager - Sales & Marketing",
                 img: "/team/11.jpg",
+                email: "mareene.salgado@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/mareene-salgado-b7a33b243/",
+              },
+              {
+                name: "Ahamed Suhair",
+                position: "Associate Manager - Customer Experience",
+                img: "/team/12.jpg",
+                email: "ahamed.suhair@hconnectint.com",
+                linkedin:
+                  "https://www.linkedin.com/in/ahamed-suhair-199829240/?originalSubdomain=lk/",
               },
             ].map((teamMember, index) => (
               <div
@@ -296,8 +327,10 @@ const About = () => {
                   <ul className="flex space-x-4 sm:mt-0">
                     <li>
                       <a
-                        href="#"
+                        href={teamMember.linkedin}
                         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <svg
                           className="w-5 h-5"
@@ -305,17 +338,13 @@ const About = () => {
                           viewBox="0 0 24 24"
                           aria-hidden="true"
                         >
-                          <path
-                            fillRule="evenodd"
-                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                            clipRule="evenodd"
-                          />
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
                         </svg>
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href={`mailto:${teamMember.email}`}
                         className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
                       >
                         <svg
@@ -324,11 +353,10 @@ const About = () => {
                           viewBox="0 0 24 24"
                           aria-hidden="true"
                         >
-                          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                         </svg>
                       </a>
                     </li>
-                    {/* Additional icons go here */}
                   </ul>
                 </div>
               </div>
@@ -374,7 +402,7 @@ const About = () => {
       </section>
 
       <section className="bg-white dark:bg-gray-900 pt-[5vh] md:pt-[5vh]">
-        <div className="py-8 px-4 mx-auto  lg:pt-16 lg:px-6">
+        <div className="px-4 mx-auto  lg:pt-16 lg:px-6">
           <div className="mx-auto-sm text-center mb-8 ">
             <p className={headingStyles.primaryCenter}>
               OUR
@@ -382,7 +410,7 @@ const About = () => {
             </p>
             <div className="w-40 h-[2px] bg-gradient-to-bl from-[#27253c] to-[#0000ff] my-[2vh] mx-auto"></div>
           </div>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4  px-[5vw]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4  px-[1vw]">
             <HoverCard4
               title={"Believe We Can"}
               description={
@@ -392,7 +420,7 @@ const About = () => {
                   </span>
                 </div>
               }
-              img={"/values/believe.jpg"}
+              img={"/values/we-can.jpg"}
             />
             <HoverCard4
               title={"Create the Future"}
@@ -426,7 +454,7 @@ const About = () => {
                   </span>
                 </div>
               }
-              img={"/serv/aus.jpg"}
+              img={"/values/better.jpg"}
             />
             <HoverCard4
               title={"Stronger Together"}
@@ -438,7 +466,7 @@ const About = () => {
                   </span>
                 </div>
               }
-              img={"/serv/admin.jpg"}
+              img={"/values/together.jpg"}
             />
           </div>
         </div>
@@ -462,7 +490,7 @@ const About = () => {
 
             {/* Card Section */}
             <div className="order-2 md:order-1 w-full">
-              <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 gap-2">
                 <HoverCard2
                   title={"Stronger Together"}
                   description={'"To us, challenges are best tackled as a team"'}
@@ -506,7 +534,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <div className="mt-[5vh]"></div>
       <AwardWinning />
 
       <section>
@@ -546,7 +574,7 @@ const About = () => {
                   </ul>
                 </div>
               }
-              img={"/sustainability/Our-People.jpg"}
+              img={"/sustainability/people.jpg"}
             />
             <HoverCard
               title={"Our Environment"}
@@ -567,7 +595,7 @@ const About = () => {
                   </ul>
                 </div>
               }
-              img={"/sustainability/Our-Environment.jpg"}
+              img={"/sustainability/env.jpg"}
             />{" "}
             <HoverCard
               title={"Our Community"}
@@ -591,7 +619,7 @@ const About = () => {
                   </ul>
                 </div>
               }
-              img={"/sustainability/Our-Community.jpg"}
+              img={"/sustainability/com.jpg"}
             />
           </div>
         </div>

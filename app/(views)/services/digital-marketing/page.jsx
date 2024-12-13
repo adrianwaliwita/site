@@ -96,29 +96,29 @@ const DM = [
   {
     title: "Strategic Social Media Management",
     description:
-      "Cultivating online communities where your brand thrives, from curated content to targeted engagement strategies.",
+      "Cultivating online communities where your brand thrives, from curated content to targeted engagement strategies",
   },
   {
     title: "Performance Analytics and Reporting",
     description:
-      " Using data-driven insights to optimize your campaigns for peak performance.",
+      " Using data-driven insights to optimize your campaigns for peak performance",
   },
   {
     title: "Email Marketing",
     description:
-      " Creating targeted email campaigns backed by analytics and tracking to build",
+      " Creating targeted email campaigns backed by analytics and tracking to build relationships and drive action ",
   },
 ];
 const DM2 = [
   {
     title: "Content Creation",
     description:
-      " Crafting high-quality, on-brand engaging content across multiple social media channels.",
+      " Crafting high-quality, on-brand engaging content across multiple social media channels",
   },
   {
     title: "Search Engine Optimization (SEO) Marketing",
     description:
-      " Climbing the SERP ladder, ensuring your brand is seen by the right people at the right moment by on-page and off-page SEO optimization, and in-depth keyword research and",
+      " Climbing the SERP ladder, ensuring your brand is seen by the right people at the right moment by on-page and off-page SEO optimization, and in-depth keyword research and analysis",
   },
   {
     title: "Web & Creative services",
@@ -135,7 +135,7 @@ const DM3 = [
   {
     title: "Paid Advertising",
     description:
-      " Precisely targeting your ideal customers through paid search advertising, display advertising, social media advertising, and Ad copywriting to drive",
+      " Precisely targeting your ideal customers through paid search advertising, display advertising, social media advertising, and Ad copywriting to drive conversions",
   },
 ];
 
@@ -176,7 +176,7 @@ const FinanceAccounting = () => {
                 wasted spend and maximize your return on investment (ROI).
                 Whether it&apos;s social media, SEO, paid ads, or content
                 marketing, we ensure that every move is strategic, purposeful,
-                and aligned with your long-term.
+                and aligned with your long-term success.
               </div>{" "}
             </div>
           </>
@@ -186,7 +186,7 @@ const FinanceAccounting = () => {
             <div
               className={
                 ("group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                "bg-[url('/DM-desc.jpg')] bg-cover aspect-square")
+                "bg-[url('/BPO/DM-2.jpg')] bg-cover aspect-square")
                 // Preload hover image
               }
             ></div>
@@ -204,7 +204,7 @@ const FinanceAccounting = () => {
         <PartnershipFeatures />
       </div>
 
-      <TopTierTalent></TopTierTalent>
+      <TopTierTalent description="Our team holds a minimum of a bachelor’s degree along with relevant qualifications, ensuring that they bring the highest standards of expertise and professionalism to the table."></TopTierTalent>
 
       <SecuringInterests></SecuringInterests>
 
@@ -265,7 +265,6 @@ const FinanceAccounting = () => {
 
       <CTA
         title="READY TO DELIVER FROM DAY ONE"
-        description="Get in touch to learn more about our services and how we can help you grow your business."
         href={"/contact"}
         text={"Get in touch"}
       ></CTA>

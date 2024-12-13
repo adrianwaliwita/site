@@ -16,7 +16,7 @@ const LandingPageInner = ({
   ImgUrl,
 }) => {
   return (
-    <div className="pt-[10vh] md:pt-[5vh]">
+    <div className="pt-[30px] md:pt-[5vh]">
       <section className="flex flex-wrap flex-col-reverse sm:flex-row pt-[14vh] md:pt-[5vh]">
         {/* Text Content */}
         <div className="w-full md:w-8/12  ">

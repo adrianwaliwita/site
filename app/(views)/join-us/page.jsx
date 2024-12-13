@@ -24,7 +24,7 @@ const JoinUs = () => {
   return (
     <div className="w-full">
       <LandingPageInner
-        subtitle="JOIN US "
+        subtitle="JOIN US"
         titleBeforeBlue="BE A PART OF THE"
         blueTitle=" DIFFERENCE "
         description="                A culture that allows you to be unapologetically you and the

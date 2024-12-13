@@ -1,6 +1,6 @@
 const HoverCard4 = ({ title, description, img }) => {
   return (
-    <div className="flex items-center justify-center w-full h-[40dvh]">
+    <div className="flex items-center justify-center w-full h-[50dvh]">
       <article className="group relative aspect-video h-full w-full max-w-[32rem] cursor-pointer overflow-hidden rounded-lg ">
         {/* Background Image */}
         <img

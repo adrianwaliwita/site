@@ -1,5 +1,7 @@
 "use client";
+import HoverCard5 from "app/components/HoverCard5";
 import HoverCard3 from "app/components/HoverCard3";
+
 import MarqueeHori from "app/components/MarqueeHori";
 import MarqueeHoriLogo from "app/components/MarqueeHoriLogo";
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
@@ -44,10 +46,7 @@ const accredit = [
   { img: "/accredit/ACCA.jpg" },
   { img: "/accredit/CIMA.jpg" },
   { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
   { img: "/accredit/CPA.jpg" },
-
-  { img: "/accredit/GPTW-WOMEN.jpg" },
 ];
 
 const serviceBorders = [
@@ -120,7 +119,7 @@ const FinanceAccounting = () => {
 
                 <h1 className={headingStyles.LargeHeading}>
                   <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                    TRANSFORM
+                    TRANSFORM{" "}
                   </span>
                   YOUR{" "}
                   <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
@@ -166,7 +165,7 @@ const FinanceAccounting = () => {
           <HoverCard3
             title={"Invoice to Cash"}
             description={
-              <a href="/services/finance-and-accounting/invoice-to-cash-services">
+              <a href="/services/finance-and-accounting/invoice-to-cash">
                 <div>
                   <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
                     Learn More
@@ -189,7 +188,7 @@ const FinanceAccounting = () => {
           <HoverCard3
             title={"Record to Report"}
             description={
-              <a href="/services/finance-and-accounting/record-to-report-services">
+              <a href="/services/finance-and-accounting/record-to-report">
                 <div>
                   <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
                     Learn More
@@ -283,242 +282,46 @@ const FinanceAccounting = () => {
             </div>
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw] mt-[2vh] md:mt-0">
-            <HoverCard3
+            <HoverCard5
               title={"Healthcare"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/HealthCare.jpg"}
             />
-            <HoverCard3
-              title={"Apparel"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
-              img={"/industries/Apparel.jpg"}
-            />
-            <HoverCard3
+            <HoverCard5 title={"Apparel"} img={"/industries/Apparel.jpg"} />
+            <HoverCard5
               title={"Insurance & Financial Services"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/insuranceFinance.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Engineering & Construction"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/EngineeringConstruction.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Information Technology"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/IT.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Retail & Ecommerce"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/retail.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Telecommunications"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/Telecommunication.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Shipping & Logistics"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
-              img={"/industries/Shipping.jpg"}
+              img={"/industries/shipping.jpg"}
             />
-            <HoverCard3
+            <HoverCard5
               title={"Travel & Leisure"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
               img={"/industries/TravelLeisure.jpg"}
             />
-            <HoverCard3
-              title={"Real Estate"}
-              description={
-                <div>
-                  <a href="/about">
-                    <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
-                      Learn More
-                    </span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 25 25"
-                      className="w-5 h-5 fill-current "
-                    >
-                      <path
-                        d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-                        data-name="Right"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              }
-              img={"/industries/10.jpg"}
-            />
+            <HoverCard5 title={"Real Estate"} img={"/industries/10.jpg"} />
           </div>
         </div>
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]"></div>
       </section>
 
-      <TopTierTalent></TopTierTalent>
+      <TopTierTalent description="We’re your premier source for exceptional financial talent. All our professionals hold a minimum of a bachelor’s degree along with relevant qualifications, including CIMA, AICPA, ACCA, CA, and CPA, ensuring that they bring the highest standards of expertise and professionalism to your organization."></TopTierTalent>
 
       <section>
         <div className=" mx-auto  px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
@@ -605,8 +408,7 @@ const FinanceAccounting = () => {
       <ProvenProcesses></ProvenProcesses>
 
       <CTA
-        title="READY FOR THAT UPGRADE?"
-        description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
+        title="Ready to deliver from day one"
         href={"/contact"}
         text={"Get in touch"}
       ></CTA>

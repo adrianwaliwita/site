@@ -5,7 +5,7 @@ import {
   DividerWhiteLeft,
   DividerWhiteCenter,
 } from "app/components/Divider";
-const TopTierTalent = () => {
+const TopTierTalent = ({ description }) => {
   return (
     <section>
       <div className="max-w-screen-xl mx-auto pb-8 px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
@@ -21,11 +21,8 @@ const TopTierTalent = () => {
             <DividerBlueCenter />
           </div>
           <div className={bodyTextStyles.descriptionCenter}>
-            We&apos;re your premier source for exceptional financial talent. All
-            our professionals hold a minimum of a bachelor&apos;s degree along
-            with relevant qualifications, including CIMA, AICPA, ACCA, CA, and
-            CPA, ensuring that they bring the highest standards of expertise and
-            professionalism to your
+            {description ||
+              "We're your premier source for exceptional financial talent. All our professionals hold a minimum of a bachelor's degree along with relevant qualifications, including CIMA, AICPA, ACCA, CA, and CPA, ensuring that they bring the highest standards of expertise and professionalism to your organization"}
           </div>
         </div>
         <div className="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
@@ -50,7 +47,7 @@ const TopTierTalent = () => {
             <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
               CERTIFIED
             </h3>
-            <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
+            <div className="font-font-arial text-sm md:text-base  text-black">
               Every member of our team holds a relevant finance certification
             </div>
           </div>
@@ -74,7 +71,7 @@ const TopTierTalent = () => {
             <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
               DRIVEN
             </h3>{" "}
-            <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
+            <div className="font-font-arial text-sm md:text-base  text-black">
               {" "}
               Our relentless pursuit of excellence is contagious
             </div>
@@ -102,7 +99,7 @@ const TopTierTalent = () => {
             <h3 className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent font-GTAmerica font-bold text-2xl md:text-[1.8vw] pb-3">
               EXPERTLY TRAINED
             </h3>{" "}
-            <div className="font-arial text-sm md:text-base xl:text-xl  text-black">
+            <div className="font-font-arial text-sm md:text-base  text-black ">
               With regular training to ensure they are always at the top of
               their game
             </div>

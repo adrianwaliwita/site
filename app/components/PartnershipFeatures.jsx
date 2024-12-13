@@ -5,6 +5,8 @@ import {
   DividerWhiteLeft,
   DividerWhiteCenter,
 } from "app/components/Divider";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+
 const PartnershipFeatures = () => {
   const features = [
     {
@@ -144,7 +146,7 @@ const PartnershipFeatures = () => {
           {" "}
           <DividerBlueCenter />
         </div>
-        <div className="font-arial text-sm md:text-base xl:text-xl mt-4 text-black px-4 md:px-0">
+        <div className={bodyTextStyles.descriptionCenter}>
           Partnering with us delivers a distinct advantage, driving growth,
           reducing costs, and providing reliable support.
         </div>

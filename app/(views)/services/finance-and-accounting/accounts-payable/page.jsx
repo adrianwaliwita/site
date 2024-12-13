@@ -6,13 +6,15 @@ import CTA from "app/sections/CTA";
 import { cn } from "@/lib/utils";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 import { DividerBlueCenter } from "app/components/Divider";
-
+import SectionTextRightLong from "app/sections/SectionTextRightLong";
+import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
+import ButtonHead from "app/components/ButtonHead";
 import SectionTextLeftBlue from "app/sections/SectionTextLeftBlue";
 
 const AccountsPayable = () => {
   return (
     <div>
-      <div className="pt-[5vh] md:pt-[10vh]">
+      <div className="">
         <LandingPageInner
           subtitle="ACCOUNTS PAYABLE"
           titleBeforeBlue="ADD"
@@ -23,8 +25,8 @@ const AccountsPayable = () => {
           ImgUrl="https://mrwallpaper.com/images/hd/colorful-finance-reports-and-charts-sjfl27ehdupf10xz.jpg"
         />
       </div>
-      <SectionTextRight
-        blueTitle={<> TRANSFORMED </>}
+      <SectionTextRightLong
+        blueTitle={<> &nbsp;TRANSFORMED </>}
         titleBeforeBlue={<>AP </>}
         titleAfterBlue={null}
         description={
@@ -37,27 +39,38 @@ const AccountsPayable = () => {
             <div>
               In a time of volatile supply chains and fluctuating demand, a
               streamlined AP process enhances financial resilience and is
-              essential to build strong supplier relationships.{" "}
+              essential to build strong supplier relationships.
+            </div>
+            <div>
+              AP teams serve a strategic purpose, supporting their businesses
+              with efficient and effective supplier payments that safeguard
+              operations and enhance corporate reputation. By adopting agility,
+              automation, and data-driven insights through advanced
+              technologies, AP will become a resilient, future-proof function.
             </div>
           </div>
         }
         component={
-          <div>
-            <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw]  px-[2vw]  ">
-              <div
-                className={cn(
-                  "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 ",
-                  "bg-[url('/ap-inner-services/AP-2.jpg')] bg-cover aspect-square"
-                )}
-              ></div>
-            </div>
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+            <div
+              className={cn(
+                "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
+                "bg-[url('/ap-inner-services/AP-2.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+              )}
+            />
           </div>
         }
       />
       <div className="mb-[-5vh] md:mb-0"></div>
 
-      <SectionTextLeft
-        blueTitle={<>TAILORED</>}
+      <SectionTextLeftLongBlue
+        text={"Start Now"}
+        title={
+          <>
+            TAILORED <br />
+            AP SOLUTIONS
+          </>
+        }
         titleBeforeBlue={null}
         titleAfterBlue={
           <>
@@ -65,35 +78,20 @@ const AccountsPayable = () => {
             AP <br /> SOLUTIONS
           </>
         }
-        description="As the role of the CFO evolves from a purely financial
-    function to a strategic driver of innovation and growth, AP
-    has emerged as a strategic lever driving profit and
-    progress. In a time of volatile supply chains and
-    fluctuating demand, a streamlined AP process enhances
-    financial resilience and is essential to build strong
-    supplier relationships."
+        description="Our AP solutions are crafted with a deep understanding of finance processes, leveraging cutting-edge automation technology to streamline operations. At H Connect International, our team works closely with you to eliminate silos between AP and procurement, enabling improved business results and enhancing the experience for both suppliers and employees"
         component={
-          <div>
-            <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw]  px-[2vw]  ">
-              <div
-                className={cn(
-                  "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 ",
-                  "bg-[url('/ap-inner-services/AP-3.jpg')] bg-cover aspect-square"
-                )}
-              ></div>
-            </div>
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+            <div
+              className={cn(
+                "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
+                "bg-[url('/ap-inner-services/AP-3.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+              )}
+            />
           </div>
         }
       />
 
       <div className="md:mb-[10vh]"></div>
-
-      <CTA
-        title="READY FOR THAT UPGRADE?"
-        description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
-        href={"/contact"}
-        text={"Get in touch"}
-      ></CTA>
     </div>
   );
 };

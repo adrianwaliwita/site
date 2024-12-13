@@ -77,7 +77,6 @@ const suite = [
   { img: "/suite-logo/qb.png" },
   { img: "/suite-logo/accurri.png" },
   { img: "/suite-logo/xero.png" },
-  { img: "/suite-logo/reckon.png" },
   { img: "/suite-logo/power-bi.png" },
   { img: "/suite-logo/xero.png" },
   { img: "/suite-logo/ACL.png" },
@@ -150,9 +149,8 @@ const AuditAndAssurance = () => {
       <div className=" pt-[5vh] md:pt-[10vh]">
         <CTA
           title="READY TO DELIVER FROM DAY ONE"
-          description="Get in touch to learn more about our services and how we can help you grow your business."
           href={"/contact"}
-          text={"Get in touch"}
+          text={"Start Now"}
         ></CTA>
       </div>
     </div>

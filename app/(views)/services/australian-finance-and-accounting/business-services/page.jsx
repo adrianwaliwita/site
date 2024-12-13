@@ -30,7 +30,7 @@ const suite = [
   { img: "/suite-logo/simple360.png" },
 ];
 
-const serviceBorders = [
+const BS1 = [
   {
     title: "Virtual Assistant",
     description:
@@ -43,7 +43,7 @@ const serviceBorders = [
   },
 ];
 
-const serviceBorders2 = [
+const BS2 = [
   {
     title: "Compliance Monitoring",
     description:
@@ -55,7 +55,7 @@ const serviceBorders2 = [
       "We help implement the right software for your business with expert guidance and training, boosting efficiency and accuracy",
   },
 ];
-const serviceBorders3 = [
+const BS3 = [
   {
     title: "Invoicing Management",
     description:
@@ -67,11 +67,28 @@ const serviceBorders3 = [
       "We verify data accuracy against source documents and external systems, resolving discrepancies to maintain data integrity",
   },
 ];
-const serviceBorders4 = [
+const BS4 = [
   {
     title: "Data Cleansing",
     description:
       "We perform regular audits to identify and correct data errors, inconsistencies, and duplicates, ensuring data quality and consistency across platforms like Xero",
+  },
+  {
+    title: "Data Integration and Migration",
+    description:
+      "We assist with data migration and integration projects, ensuring accurate data transfer and consistency between systems and Xero",
+  },
+];
+const BS5 = [
+  {
+    title: "ASIC Administrative Support",
+    description:
+      "Our administrative assistance includes managing correspondence, schedules, and maintaining systems like CAS 360 and Infinity to ensure data accuracy and optimal functionality",
+  },
+  {
+    title: "Superannuation Compilation",
+    description:
+      "We streamline your superannuation obligations with accurate and efficient superfund compilation services",
   },
 ];
 
@@ -98,16 +115,19 @@ const BusinessServices = () => {
           </div>
           <div className="mx-auto ">
             <div className="flex mx-auto justify-center ">
-              <ServiceBeyond features={serviceBorders} />
+              <ServiceBeyond features={BS1} />
             </div>
             <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders2} />
+              <ServiceBeyond features={BS2} />
             </div>
             <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders3} />
+              <ServiceBeyond features={BS3} />
             </div>
             <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders4} />
+              <ServiceBeyond features={BS4} />
+            </div>
+            <div className="flex justify-center ">
+              <ServiceBeyond features={BS5} />
             </div>
             <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"></div>
           </div>
@@ -144,7 +164,6 @@ const BusinessServices = () => {
       <div className=" pt-[5vh] md:pt-[10vh]">
         <CTA
           title="READY TO DELIVER FROM DAY ONE"
-          description="Get in touch to learn more about our services and how we can help you grow your business."
           href={"/contact"}
           text={"Get in touch"}
         ></CTA>

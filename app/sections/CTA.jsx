@@ -1,38 +1,47 @@
 import Button from "app/components/Button";
+import {
+  DividerBlueCenter,
+  DividerBlueLeft,
+  DividerWhiteLeft,
+  DividerWhiteCenter,
+} from "app/components/Divider";
+import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+
 const CalltoAction = ({ title, description, text, href }) => {
   return (
     <div className=" h-auto ">
       <section>
-        <div className="relative">
-          <div className="relative">
-            <div className="custom-screen py-28 relative">
-              <div className="relative z-10 duration-1000 delay-150 opacity-1">
-                <div className="max-w-[70vw] text-4xl md:text-4xl lg:text-7xl mx-auto text-center">
-                  <h1 className="text-4xl md:text-4xl lg:text-7xl text-white font-bold font-GTAmerica">
-                    {title}
-                  </h1>
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 mt-[7vh]">
+          <div className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
+            <div className=" mx-auto">
+              <h2
+                className={`${headingStyles.primaryCenter} ${headingStyles.white}`}
+              >
+                {title}{" "}
+              </h2>
+            </div>
+            <div className="mt-[1vh] lg:mt-[-2vh]">
+              <DividerWhiteCenter />
+            </div>
+            {description && (
+              <p className="my-[2vh] mb-[5vh] font-arial text-white">
+                {description}
+              </p>
+            )}
 
-                  <div className=" text-gray-300 text-sm py-3 md:py-5 md:text-base leading-normal ">
-                    {description}
-                  </div>
-                </div>
-                <div className="flex justify-center font-medium text-md">
-                  <form className="mt-6 flex flex-col items-center sm:flex-row sm:gap-x-3">
-                    <div className="sm:pt-0 pt-3">
-                      <Button text={text} href={href} />
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <img
-                alt="Wave"
-                src="/wave-dark.jpg"
-                decoding="async"
-                data-nimg="1"
-                className="w-full h-full object-fit absolute inset-0 pointer-events-none"
-                loading="lazy"
-                style={{ color: "transparent" }}
-              />
+            <div className="flex flex-col justify-center gap-4 mt-8 sm:flex-row sm:items-center sm:gap-5">
+              <a
+                className={`inline-flex items-center justify-center bg-white ${bodyTextStyles.cta} text-indigo-700 shadow-sm transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
+                href={href}
+              >
+                {text}
+              </a>
+              <a
+                className={`inline-flex items-center justify-center bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] ${bodyTextStyles.cta} text-white shadow-sm ring-1 ring-inset ring-white transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-800`}
+                href="/about"
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </div>
@@ -42,3 +51,7 @@ const CalltoAction = ({ title, description, text, href }) => {
 };
 
 export default CalltoAction;
+
+// {title}
+// {description}
+// <Button text={text} href={href} />

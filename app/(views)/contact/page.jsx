@@ -10,7 +10,7 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xpwzbynw"); // Replace with your actual Formspree form ID
 
   return (
-    <div className="relative min-h-[135vh] md:min-h-[110vh] flex items-center pt-[10vh]">
+    <div className="relative min-h-[135vh] md:min-h-[150vh] flex items-center pt-[10vh]">
       <img
         alt="background"
         src="/blue-waves-abstract.jpg"
@@ -33,7 +33,7 @@ const Contact = () => {
             border: "1px solid rgba(255, 255, 255, 0.18)",
           }}
         >
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 md:max-w-[80vw]">
             {/* Contact Heading */}
             <div className="mb-4 text-center">
               <h2 className="text-[13vw] leading-[13vw] md:text-[8vw] lg:text-[6vw] font-GTAmerica md:leading-[7.5vw] font-bold mt-[3vh] md:mt-0 text-white">
@@ -54,7 +54,7 @@ const Contact = () => {
                   </p>
                   <ul className="mb-6 md:mb-0 space-y-6 md:space-y-4">
                     <li className="flex items-start space-x-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded text-white">
+                      <div className="flex h-10 w-10 items-center justify-center rounded text-white md:mr-[-12px]">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -101,8 +101,7 @@ const Contact = () => {
                           strokeLinejoin="round"
                           className="h-6 w-6"
                         >
-                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
-                          <path d="M12 7v5l3 3"></path>
+                          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
                         </svg>
                       </div>
                       <div className="ml-4 mb-4">

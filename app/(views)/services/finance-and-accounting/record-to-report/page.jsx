@@ -1,8 +1,8 @@
 import { Card } from "app/components/Card";
-import SectionTextRight from "../../../../sections/SectionTextRight";
-import SectionTextRightLong from "../../../../sections/SectionTextRightLong";
 
-import SectionTextLeft from "../../../../sections/SectionTextLeft";
+import SectionTextRight from "app/sections/SectionTextRight";
+import SectionTextRightLong from "app/sections/SectionTextRightLong";
+import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
 import LandingPageInner from "../../../../sections/LandingPageInner";
 import CTA from "../../../../sections/CTA";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
@@ -12,11 +12,11 @@ const RecordToReport = () => {
   return (
     <div>
       <LandingPageInner
-        subtitle="RECORD TO REPORT SERVICES"
+        subtitle="RECORD TO REPORT"
         blueTitle="UPGRADE"
         titleAfterBlue="YOUR RECORD-TO-REPORT CAPABILITIES"
         description=" Our proven frameworks and expert team deliver a faster, error-free financial close, every time."
-        ImgUrl="/R2R.jpg"
+        ImgUrl="/R2R-Main.png"
       />
 
       <SectionTextRightLong
@@ -31,39 +31,51 @@ const RecordToReport = () => {
               regulations, and the increasing demand for data-driven insights.
               Legacy systems, manual processes, and disparate data sources often
               hinder the ability to deliver timely, accurate, and strategic
-              financial information.
+              financial information.To overcome these challenges, CFOs must
+              prioritize the transformation of their record-to-report functions,
+              leveraging technology and talent to drive efficiency, improve
+              compliance, and support data-driven decision-making.
             </div>
             <div>
-              To overcome these challenges, CFOs must prioritize the
-              transformation of their record-to-report functions, leveraging
-              technology and talent to drive efficiency, improve compliance, and
-              support data-driven decision-making. Leveraging our proven R2R
-              solutions and frameworks, we design tailored processes to
-              streamline your operations and deliver deeper insights. Our unique
-              blend of design thinking and deep-rooted finance expertise ensures
-              that our solutions are not only efficient but also aligned with
-              your strategic goals.
+              Leveraging our proven R2R solutions and frameworks, we design
+              tailored processes to streamline your operations and deliver
+              deeper insights. Our unique blend of design thinking and
+              deep-rooted finance expertise ensures that our solutions are not
+              only efficient but also aligned with your strategic goals.
             </div>
           </div>
         }
         component={
-          <div className="max-w-[60vw] w-[60vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
             <div
               className={cn(
                 "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
-                "bg-[url('/F&A-services/RecRep.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+                "bg-[url('/R2R-2.png')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
               )}
             />
           </div>
         }
       />
 
-      <CTA
-        title="READY FOR THAT UPGRADE?"
+      <SectionTextLeftLongBlue
+        text={"Start Now"}
+        title={
+          <>
+            Ready for that <br /> upgrade?
+          </>
+        }
         description="Elevate your financial insights and streamline compliance with our Record-to-Report solutions. Achieve faster closes, ensure accuracy, and empower your team to make data-driven decisions with confidence for sustainable growth."
-        href={"/contact"}
-        text={"Get in touch"}
-      ></CTA>
+        component={
+          <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
+            <div
+              className={cn(
+                "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
+                "bg-[url('/R2R-3.png')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+              )}
+            />
+          </div>
+        }
+      />
     </div>
   );
 };

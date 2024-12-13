@@ -18,28 +18,32 @@ const SectionTextRightLong = ({
   component,
 }) => {
   return (
-    <section className="md:px-[7%] mx-auto py-20 md:my-[8vh] h:20vh md:h-[100vh]    ">
-      <div className="flex flex-col md:flex-row items-center w-full h-full">
-        <div className="flex justify-start items-center w-full md:w-[50%] md:order-first md:mb-[10vh] md:px-[%]">
-          {component}
-        </div>
-
-        <div className="flex flex-col justify-center items-center md:justify-start md:items-start w-full md:w-[50%] md:order-last">
-          <div
-            className={`${headingStyles.primaryLeft} text-left md:text-left pt-8 md:py-0`}
-          >
-            {titleBeforeBlue}
-            <span className={`${commonStyles.blueGradient}`}>{blueTitle}</span>
-            {titleAfterBlue}
+    <section className="bg-white px-[2vh]">
+      <div className="md:px-[7%] mx-auto py-20 md:my-[8vh] h:20vh md:h-[100vh]    ">
+        <div className="flex flex-col md:flex-row items-center w-full h-full">
+          <div className="flex justify-start items-center w-full md:w-[50%] md:order-first md:mb-[10vh] md:px-[%]">
+            {component}
           </div>
 
-          <div>
-            <DividerBlueLeft />
-
+          <div className="flex flex-col justify-center items-center md:justify-start md:items-start w-full md:w-[50%] md:order-last">
             <div
-              className={`${bodyTextStyles.descriptionLeft} text-center md:text-left mt-4`}
+              className={`${headingStyles.primaryLeft} text-left md:text-left pt-8 md:py-0`}
             >
-              {description}
+              {titleBeforeBlue}
+              <span className={`${commonStyles.blueGradient}`}>
+                {blueTitle}
+              </span>
+              {titleAfterBlue}
+            </div>
+
+            <div>
+              <DividerBlueLeft />
+
+              <div
+                className={`${bodyTextStyles.descriptionLeft} text-center md:text-left mt-4`}
+              >
+                {description}
+              </div>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "cursor-pointer overflow-hidden rounded-xl border",
+        "cursor-pointer overflow-hidden rounded-xl border md:h-[20vh] md:w-[11.5vw]",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -20,31 +20,32 @@ const ReviewCard = ({ img, name, username, body }) => {
     </figure>
   );
 };
-
 export default function MarqueeVert({ items = [] }) {
-  // Calculate indices for three rows
-  const firstRow = items.slice(0, Math.floor(items.length / 3));
-  const secondRow = items.slice(
-    Math.floor(items.length / 3),
-    Math.floor((2 * items.length) / 3)
-  );
-  const thirdRow = items.slice(Math.floor((2 * items.length) / 6));
+  // Ensure we have at least 3 items to distribute
+  if (items.length < 3) {
+    return null;
+  }
+
+  // Distribute items more evenly across three rows
+  const firstRow = items.filter((_, index) => index % 3 === 0);
+  const secondRow = items.filter((_, index) => index % 3 === 1);
+  const thirdRow = items.filter((_, index) => index % 3 === 2);
 
   return (
-    <div className="relative flex h-[40vh]  md:h-[80vh]  w-full md:w-[100%] flex-row items-center justify-center overflow-hidden rounded-lg  bg-[#2e2e5300] px-10">
-      <Marquee pauseOnHover vertical className="[--duration:60s]">
+    <div className="relative flex h-[40vh] md:h-[80vh] w-full md:w-[100%] flex-row items-center  overflow-hidden rounded-lg bg-[#2e2e5300] ">
+      <Marquee pauseOnHover vertical className="[--duration:70s]">
         {firstRow.map((item, index) => (
-          <ReviewCard key={index} {...item} />
+          <ReviewCard key={`first-${index}`} {...item} />
         ))}
       </Marquee>
-      <Marquee reverse pauseOnHover vertical className="[--duration:60s]">
+      <Marquee reverse pauseOnHover vertical className="[--duration:70s]">
         {secondRow.map((item, index) => (
-          <ReviewCard key={index} {...item} />
+          <ReviewCard key={`second-${index}`} {...item} />
         ))}
       </Marquee>
-      <Marquee pauseOnHover vertical className="[--duration:60s]">
+      <Marquee pauseOnHover vertical className="[--duration:70s]">
         {thirdRow.map((item, index) => (
-          <ReviewCard key={index} {...item} />
+          <ReviewCard key={`third-${index}`} {...item} />
         ))}
       </Marquee>
 

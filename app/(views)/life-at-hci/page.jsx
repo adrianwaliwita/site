@@ -1,19 +1,13 @@
 "use client";
-import Container from "app/sections/Container";
-import { Card } from "app/components/Card";
-import GrowWithoutLimits from "../../components/GrowWithoutLimits";
-import MarqueeVert from "app/components/MarqueeVert";
+
+import { CarouselUse } from "app/components/CarouselUse";
 import CTA from "app/sections/CTA";
-import Reveal from "app/components/Reveal";
-import HyperText from "app/components/HyperText";
-import ScrollReveal from "app/components/ScrollReveal";
-import SectionTextRight from "app/sections/SectionTextRight";
 import HoverCard from "app/components/HoverCard";
 import HoverCard2 from "app/components/HoverCard2";
-import Button from "app/components/Button";
-import MarqueeHori from "app/components/MarqueeHori";
+import HoverCard5 from "app/components/HoverCard5";
+import AwardWinning from "app/components/AwardWinning";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-
+import { DividerWhiteLeft, DividerBlueCenter } from "app/components/Divider";
 const progressImages = [
   { img: "/about/1.jpg" },
   { img: "/about/2.jpg" },
@@ -36,7 +30,7 @@ const accredit = [
 const LifeAtHci = () => {
   return (
     <div className="w-full pt-[15vh] md:pt-[10vh]">
-      <section className="flex flex-col items-center w-full ">
+      <section className="flex flex-col items-center w-full mb-[12vh] ">
         {/* Content Section */}
         <div className="w-full px-[5vw] pt-[5vw] text-center">
           <div className="container mx-auto h-full sm:p-10">
@@ -67,7 +61,7 @@ const LifeAtHci = () => {
                 {/* Description */}
 
                 <div
-                  className={`${bodyTextStyles.descriptionCenter} pb-10 md:pb-0`}
+                  className={`${bodyTextStyles.descriptionCenterAus} pb-10 md:pb-0`}
                 >
                   Where every day is a chance to learn, laugh, and fall in love
                   with what you do.
@@ -77,83 +71,107 @@ const LifeAtHci = () => {
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4  px-[5vw]">
             <HoverCard
-              title={"Our People"}
+              title={"We Celebrate You"}
               description={
-                "We are focused on creating a workplace that is safe, inclusive, and reflects the diversity of the communities we serve with: Diversity, Equity, and Inclusion (DEl) Programs Employee Well-being Programs Leadership training initiatives"
+                " We celebrate individuality and appreciate quirks. We want you to be your authentic self."
               }
-              img={"/sustainability/Our-People.jpg"}
+              img={"/life-at-hci/celebrate.jpg"}
             />
             <HoverCard
-              title={"Our Environment"}
+              title={"We Invest in You"}
               description={
-                "We're committed to reducing our environmental footprint and promoting sustainable practices with: Waste Reduction and Recycling, Programs, Environmental Conservation, Campaigns, Ocean Clean Up Initiatives"
+                "We provide training, and create opportunities for you to grow, whether it's technical, creative, or anything in between."
               }
-              img={"/sustainability/Our-Environment.jpg"}
+              img={"/life-at-hci/invest.jpg"}
             />{" "}
             <HoverCard
-              title={"Our Community"}
+              title={"We Listen to You"}
               description={
-                "We are dedicated to giving back to our community and positively impacting the lives of those around us through: Donation Drives, Uplifting Programs, Food Distribution, and Annual Christmas Charity"
+                "Your title and tenure don't define your opportunities. Your voice will always be heard."
               }
-              img={"/sustainability/Our-Community.jpg"}
+              img={"/life-at-hci/listen.jpg"}
             />
           </div>
         </div>{" "}
         {/* Marquee Section */}
       </section>
-      <section className="px-4 sm:px-[5%] h-auto md:h-screen flex items-center justify-center mb-[-10vh] py-12 md:py-0">
+      <section className="px-4 sm:px-[5%] h-auto md:h-screen flex items-center justify-center mb-[-10vh] py-12 md:py-0 bg-gradient-to-bl from-[#2e2e53] to-[#0000ff]">
         <div className="w-full max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Text Section - First on Mobile, Second on Desktop */}
-            <div className="order-1 md:order-2 flex items-center">
-              <div className="text-black text-center md:text-left">
-                <h2 className="font-GTAmerica text-3xl sm:text-4xl md:text-[4vw] lg:text-[3.5vw] font-bold leading-tight tracking-normal">
-                  EVERY SINGLE DAY, <br />
-                  OUR TEAM CLOCKS IN WITH A{" "}
-                  <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                    PASSION
-                  </span>{" "}
-                  FOR THE WORK THEY DO
-                </h2>
+            {/* Text Section - Second on Mobile, First on Desktop */}
+            <div className="order-1 flex items-center">
+              <div className="flex flex-col justify-center items-center md:items-start w-full md:w-[48%] md:order-first ">
+                <div
+                  className={`${headingStyles.WhiteCenter} text-center md:text-left pt-8 md:py-0`}
+                >
+                  CONTINUOUS
+                  <br /> LEARNING
+                </div>
+
+                <div className="w-[80vw] text-center md:text-left md:w-[40vw]">
+                  <DividerWhiteLeft />
+
+                  <div className={`${bodyTextStyles.white} `}>
+                    Every day, you'll be at the forefront of the industry,
+                    connecting with international clients, experts, and leaders.
+                    Our comprehensive training programs equip you for this with
+                    personalized programs and ongoing guidance. With us, you'll
+                    not only excel in your role but also unlock your full
+                    potential, positioning yourself for a successful and
+                    rewarding career, wherever you are.{" "}
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Cards Grid - Second on Mobile, First on Desktop */}
-            <div className="order-2 md:order-1 w-full">
+            {/* Cards Grid - First on Mobile, Second on Desktop */}
+            <div className="order-1 md:order-2 w-full">
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6">
-                <HoverCard2
-                  title="Stronger Together"
-                  description="To us, challenges are best tackled as a team"
-                  img="/people/1.jpg"
+                <HoverCard5
+                  title="Expert-led Technical Training Programs"
+                  img="/con-learning/expert-lead.jpg"
                 />
-                <HoverCard2
-                  title="Personal Journeys"
-                  description="We measure people against their past selves, not each other"
-                  img="/people/2.jpg"
+                <HoverCard5
+                  title="Interpersonal Skill Development Initiatives"
+                  img="/con-learning/skill-dev.jpg"
                 />
-                <HoverCard2
-                  title="Open Door Policy"
-                  description="Our doors are open to all team member's ideas and perspectives"
-                  img="/people/3.jpg"
+                <HoverCard5
+                  title="Inter-team Cross Training"
+                  img="/con-learning/inter-team.jpg"
                 />
-                <HoverCard2
-                  title="Continuous Improvement"
-                  description="We collectively work towards small improvements which make a big impact over time"
-                  img="/people/4.jpg"
+                <HoverCard5
+                  title="Designated Online Learning Portal"
+                  img="/con-learning/learning.jpg"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
+      <div className="pt-[10vh] md:pt-[4vh] mb-[5vh] md:mb-[10vh]"></div>
+      <section>
+        <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[6.2vh] lg:px-6">
+          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+            <div className={headingStyles.primaryCenter}>
+              WORK HARD.{" "}
+              <span className={headingStyles.gradient}>PLAY HARD. </span>{" "}
+            </div>
+            <DividerBlueCenter />
+          </div>
+        </div>
+
+        <div className="flex justify-center">
+          <CarouselUse />
+        </div>
+      </section>
+      <div className="pt-[10vh] md:pt-[4vh] mb-[5vh] md:mb-[10vh]">
+        <AwardWinning />
+      </div>
       <div className="mt-[10vh]"></div>
       <CTA
-        title={"Ready to be part of the team?"}
-        description={
-          "Join an environment where your ideas can thrive and make a difference."
-        }
+        title={<>Ready to be part of the team?</>}
         href={"/contact"}
-        text={"Get in touch"}
+        text={"Join Us"}
       ></CTA>{" "}
     </div>
   );
