@@ -112,12 +112,12 @@ const LifeAtHci = () => {
                   <DividerWhiteLeft />
 
                   <div className={`${bodyTextStyles.white} `}>
-                    Every day, you'll be at the forefront of the industry,
+                    Every day, you&apos;ll be at the forefront of the industry,
                     connecting with international clients, experts, and leaders.
                     Our comprehensive training programs equip you for this with
-                    personalized programs and ongoing guidance. With us, you'll
-                    not only excel in your role but also unlock your full
-                    potential, positioning yourself for a successful and
+                    personalized programs and ongoing guidance. With us,
+                    you&apos;ll not only excel in your role but also unlock your
+                    full potential, positioning yourself for a successful and
                     rewarding career, wherever you are.{" "}
                   </div>
                 </div>

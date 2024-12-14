@@ -38,8 +38,8 @@ const InvoiceToCash = () => {
             <div>
               We leverage advanced analytics, cutting-edge digital technologies,
               and a deep understanding of financial processes to streamline
-              operations and enhance decision-making capabilities. Whether it's
-              optimizing transactional processes or aligning financial
+              operations and enhance decision-making capabilities. Whether
+              it&apos;s optimizing transactional processes or aligning financial
               strategies with business objectives, our team ensures your finance
               function operates with greater agility and precision. Our tailored
               solutions empower CFOs to drive sustainable growth, improve
