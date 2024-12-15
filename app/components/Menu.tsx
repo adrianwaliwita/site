@@ -34,14 +34,13 @@ export const MenuItem = ({
     setActive(item);
   };
 
-  // Check if the item has a dropdown (i.e., has children)
   const hasDropdown = !!children;
 
   return (
     <Link
       href={href || "#"}
       onMouseEnter={handleMouseEnter}
-      className="relative"
+      className="relative cursor-pointer"
     >
       <motion.div
         transition={{ duration: 0.3 }}
@@ -99,13 +98,16 @@ export const Menu = ({ setActive = () => {}, children }: MenuProps) => {
       className="relative border bg-white shadow-input flex justify-between items-center px-[10vw] py-[0.5vh] "
     >
       {/* Logo section */}
-      <div className="flex items-center space-x-2">
-        <img
-          src="/logo/2.png"
-          alt="Logo"
-          className="h-[10vh] w-auto object-contain"
-        />
-      </div>
+      <a href="/" className="cursor-pointer">
+        <div className="flex items-center space-x-2">
+          <img
+            src="/logo/2.png"
+            alt="Logo"
+            className="h-[10vh] w-auto object-contain"
+          />
+        </div>
+      </a>
+
       {/* Menu items */}
       <div className="flex space-x-6 ">{children}</div>
       {/* Button on the right */}
@@ -151,7 +153,7 @@ export const HoveredLink = ({ children, href, ...rest }) => {
     <Link
       href={href}
       {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
+      className="text-neutral-700 dark:text-neutral-200 hover:text-black cursor-pointer"
     >
       {children}
     </Link>
