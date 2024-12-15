@@ -168,7 +168,6 @@ const FinanceAccounting = () => {
         operating model"
         ImgUrl="/service-images/consultancy.jpg"
       />
-
       <SectionTextRightDesc
         description={
           <>
@@ -317,7 +316,7 @@ const FinanceAccounting = () => {
                   </a>
                 </div>
               }
-              img={"/industries/Apparel.jpg"}
+              img={"/industries/apparel.jpg"}
             />
             <HoverCard3
               title={

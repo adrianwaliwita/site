@@ -38,8 +38,8 @@ const logos = [
     url: "/DataProtection/gdpr.jpg",
   },
   {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
+    name: "PrivacyAct",
+    url: "/DataProtection/privacyAct.jpg",
   },
 ];
 const SecuringInterests = () => {

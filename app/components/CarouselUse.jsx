@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./Carousel";
-
 // Event details object
 const events = [
   {

@@ -149,7 +149,7 @@ const FinanceAccounting = () => {
                   </div>
                 </Link>
               }
-              img={"/tech-images/Flexible-Scalable.jpg"}
+              img={"/tech-images/flexible-scalable.jpg"}
             />
             <HoverCard3
               title={

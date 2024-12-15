@@ -4,25 +4,6 @@ import PartnershipFeatures from "app/components/PartnershipFeatures";
 
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 
-const logos = [
-  {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
-  },
-  {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
-  },
-  {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
-  },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
-];
-
 const serviceBorders = [
   {
     title: "Bookkeeping",

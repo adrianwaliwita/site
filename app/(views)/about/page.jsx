@@ -184,7 +184,7 @@ const About = () => {
                 <div
                   className={cn(
                     "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 ",
-                    "bg-[url('/abs.jpg')] bg-cover aspect-square"
+                    "bg-[url('/absolute.jpg')] bg-cover aspect-square"
                   )}
                 ></div>
               </div>
