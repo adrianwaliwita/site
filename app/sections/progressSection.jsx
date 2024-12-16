@@ -50,7 +50,7 @@ const SectionTextRightLong = ({
             <MarqueeVert items={progressImages} />{" "}
           </div>
 
-          <div className="flex flex-col justify-center items-center md:justify-start md:items-start w-full md:w-[50%] md:order-last">
+          <div className="flex flex-col justify-center items-center md:justify-start md:items-start w-full md:w-[50%] md:order-last lg:ml-[8vh]">
             <div
               className={`${headingStyles.primaryLeft} text-left md:text-left pt-8 md:py-0`}
             >

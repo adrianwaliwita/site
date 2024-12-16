@@ -110,15 +110,16 @@ const LifeAtHci = () => {
 
                 <div className="w-[80vw] text-center md:text-left md:w-[40vw]">
                   <DividerWhiteLeft />
-
-                  <div className={`${bodyTextStyles.white} `}>
-                    Every day, you&apos;ll be at the forefront of the industry,
-                    connecting with international clients, experts, and leaders.
-                    Our comprehensive training programs equip you for this with
-                    personalized programs and ongoing guidance. With us,
-                    you&apos;ll not only excel in your role but also unlock your
-                    full potential, positioning yourself for a successful and
-                    rewarding career, wherever you are.{" "}
+                  <div className="xl:pr-[10vw]">
+                    <div className={`${bodyTextStyles.white} `}>
+                      Every day, you&apos;ll be at the forefront of the
+                      industry, connecting with international clients, experts,
+                      and leaders. Our comprehensive training programs equip you
+                      for this with personalized programs and ongoing guidance.
+                      With us, you&apos;ll not only excel in your role but also
+                      unlock your full potential, positioning yourself for a
+                      successful and rewarding career, wherever you are.{" "}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -316,7 +316,7 @@ const FinanceAccounting = () => {
                   </a>
                 </div>
               }
-              img={"/industries/apparel.jpg"}
+              img={"/project-and-consultancy/3.jpg"}
             />
             <HoverCard3
               title={
@@ -350,7 +350,7 @@ const FinanceAccounting = () => {
                   </a>
                 </div>
               }
-              img={"/industries/insuranceFinance.jpg"}
+              img={"/project-and-consultancy/risk.jpg"}
             />
 
             <HoverCard3
@@ -386,7 +386,7 @@ const FinanceAccounting = () => {
                   </a>
                 </div>
               }
-              img={"/industries/IT.jpg"}
+              img={"/project-and-consultancy/strategic.jpg"}
             />
           </div>
         </div>

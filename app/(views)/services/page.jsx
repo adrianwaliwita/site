@@ -8,76 +8,6 @@ import {
   DividerWhiteCenter,
 } from "app/components/Divider";
 
-const progressImages = [
-  { img: "/progress/1.jpg" },
-  {
-    img: "/progress/2.jpg",
-  },
-  {
-    img: "/progress/3.jpg",
-  },
-  {
-    img: "/progress/4.jpg",
-  },
-  {
-    img: "/progress/5.jpg",
-  },
-  {
-    img: "/progress/6.jpg",
-  },
-  {
-    img: "/progress/6.jpg",
-  },
-  {
-    img: "/progress/7.jpg",
-  },
-  {
-    img: "/progress/8.jpg",
-  },
-  {
-    img: "/progress/9.jpg",
-  },
-  {
-    img: "/progress/10.jpg",
-  },
-  {
-    img: "/progress/11.jpg",
-  },
-  {
-    img: "/progress/12.jpg",
-  },
-  {
-    img: "/progress/13.jpg",
-  },
-];
-const services = [
-  {
-    title: "Finance & Accounting",
-  },
-  {
-    title: "Australian Accounting & Financial Services ",
-  },
-  {
-    title: "Consultancy & Projects",
-  },
-  {
-    title: "Technology",
-  },
-];
-const services2 = [
-  {
-    title: "Admin Support",
-  },
-  {
-    title: "Digital Marketing",
-  },
-  {
-    title: "Human Resources",
-  },
-  {
-    title: "Remote Teams",
-  },
-];
 const Services = () => {
   return (
     <div className="pt-[10vh] md:pt-[5vh]">
@@ -346,72 +276,58 @@ const Services = () => {
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    You can outsource any back-office function including Finance
-                    & Accounting, Human Resources, Technology Services, and
-                    Marketing. You can either hire dedicated resources for
-                    specialized, high-demand niches or hire entire teams to
-                    completely outsource your function.
+                    We partner with firms looking to outsource any back-office
+                    function including Finance & Accounting, Human Resources,
+                    Technology, and Marketing as a service. We provide dedicated
+                    resources for specialized, high-demand niches or entire
+                    teams to handle entire business functions.
                   </div>
                 </div>
               </details>
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  What do I gain by outsourcing?
+                  What are the benefits of outsourcing?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    - Reduce overhead costs: Outsourcing non-core functions can
-                    significantly reduce your expenses related to hiring,
-                    training, and managing in-house staff. This can be as much
-                    as 60-70%. <br />
-                    - Access to specialized expertise: We have deep-domain
-                    expertise in specific business processes.
-                    <br />- Improve scalability: We can help you scale their
-                    operations quickly and flexibly to meet changing demands. 
-                    Focus on growth: By outsourcing you can concentrate on
-                    growing your business with our support
+                    <strong> Reduce overhead costs:</strong> Outsourcing
+                    non-core functions can significantly reduce your expenses
+                    related to hiring, training, and managing in-house staff.
+                    This can be as much as 60-70%. <br />
+                    <strong> Access to specialized expertise:</strong> We have
+                    deep-domain expertise in specific business processes.
+                    <br />
+                    <strong> Improve scalability:</strong> We can help you scale
+                    their operations quickly and flexibly to meet changing
+                    demands. <br />
+                    <strong> Focus on growth: </strong> By outsourcing you can
+                    concentrate on growing your business with our support
                   </div>
                 </div>
               </details>
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  What roles can I outsource?
+                  Are there measures to ensure the security of financial data?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    You can outsource any back-office function including Finance
-                    & Accounting, Human Resources, Technology Services, and
-                    Marketing. You can either hire dedicated resources for
-                    specialized, high-demand niches or hire entire teams to
-                    completely outsource your function,
-                  </div>
-                </div>
-              </details>
-
-              <details>
-                <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How do you ensure the security of my financial data?
-                </summary>
-                <div className="px-4 pb-4">
-                  <div>
-                    We adhere to all global standards such as GDPR, DPA, and
-                    Australian Privacy Act, and we are also an ISO 27001
-                    certified organization.
+                    We adhere to all global security standards such as GDPR,
+                    DPA, and the Australian Privacy Act, and we are an ISO 27001
+                    certified organization.{" "}
                   </div>
                 </div>
               </details>
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How Do You Handle Time Zone Differences?
+                  How Can the Time Zone Differences be Managed?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    We work around your preferred time zone to ensure seamless
-                    collaboration. Our infrastructure is designed for 24/7
-                    operations, so no matter the time, we’re available when you
-                    need us. Additionally, our labor laws are flexible and
-                    industry-adapted, allowing us to accommodate your specific
+                    We have teams working multiple calendars and time zones and
+                    our infrastructure is designed for 24/7 operations.
+                    Additionally, our labor laws are flexible and
+                    industry-adapted, allowing us to accommodate any specific
                     scheduling requirements without disruption.
                   </div>
                 </div>
@@ -419,38 +335,35 @@ const Services = () => {
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Do You Offer Any Guarantees or Service Level Agreements
-                  (SLAs)?
+                  Are there any Guarantees or Service Level Agreements (SLAs) in
+                  Place?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    Yes, we are confident in the quality of our services and
-                    offer a Service Level Agreement that outlines our commitment
-                    to you. The SLA specifies key performance indicators (KPIs)
-                    to ensure your satisfaction and accountability.
+                    We have general Service Level Agreements in place that
+                    specify Key Performance Indicators (KPIs) to ensure complete
+                    accountability of deliverables.
                   </div>
                 </div>
               </details>
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Can you tailor your services to meet my specific business
-                  needs?{" "}
+                  Are the services offered customizable?
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    Absolutely! We create customized solutions tailored to your
-                    business goals. With experience across various industries,
-                    we collaborate closely with you to understand your unique
-                    requirements and deliver a solution that perfectly fits your
-                    needs.
+                    We create customized solutions tailored to specific business
+                    goals. With experience across various industries, we
+                    collaborate closely to understand any unique requirements
+                    and deliver personalized solutions.{" "}
                   </div>
                 </div>
               </details>
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Where are your offices located?
+                  Where are the H Connect International offices located?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
@@ -495,7 +408,7 @@ const Services = () => {
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How do I get started with BPO?
+                  How to get started with BPO?
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
@@ -508,14 +421,13 @@ const Services = () => {
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  Will BPO replace my employees?{" "}
+                  How will BPO impact my existing team?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    BPO is designed to improve processes, not replace employees.
-                    You will have an off-shore team at H Connect International,
-                    who can free up your on-shore team to focus on higher-value
-                    tasks.
+                    BPO is designed to augment existing teams. Our team will
+                    take over all back-end tasks and free up the existing
+                    on-shore teams to focus on higher-value processes.
                   </div>
                 </div>
               </details>
@@ -526,33 +438,32 @@ const Services = () => {
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
-                    We have a comprehensive 5-staged BPO onboarding process in
-                    place to ensure smooth implementation. We offer change
-                    management services to make the transition as smooth as
-                    possible.
+                    We have a 5-staged BPO transition process in place to ensure
+                    smooth implementation. We offer change management services
+                    to make the transition as smooth as possible.
                   </div>
                 </div>
               </details>
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How can I measure the success of BPO?
+                  How is the success of BPO measured?
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
                     We believe in transparency. We have data and analytics in
                     place to track improvements in efficiency, cost savings,
-                    time savings, and other key metrics. We have quarterly
-                    service reviews with our clients. These sessions allow us to
-                    fine-tune our strategies, address any concerns, and reaffirm
-                    our commitment to exceeding expectations.
+                    time savings, and other key metrics. Additionally, we have
+                    quarterly service reviews with our clients. These sessions
+                    allow us to fine-tune our strategies, address any concerns,
+                    and reaffirm our commitment to exceeding expectations.
                   </div>
                 </div>
               </details>
 
               <details>
                 <summary className="py-2 outline-none cursor-pointer focus:underline">
-                  How long does it take to setup an offshore team?
+                  How long does it take to set up an offshore team?{" "}
                 </summary>
                 <div className="px-4 pb-4">
                   <div>
