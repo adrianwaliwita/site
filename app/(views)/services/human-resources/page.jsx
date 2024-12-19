@@ -95,7 +95,7 @@ const HR4 = [
       " Conflict resolution that builds trust and commitment to cultivating a positive company culture where every voice is heard",
   },
 ];
-const FinanceAccounting = () => {
+const HumanResources = () => {
   return (
     <div className="w-full">
       <LandingPageInner
@@ -177,4 +177,4 @@ const FinanceAccounting = () => {
   );
 };
 
-export default FinanceAccounting;
+export default HumanResources;

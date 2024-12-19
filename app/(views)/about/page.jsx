@@ -219,14 +219,14 @@ const About = () => {
               },
               {
                 name: "Arshad Booso",
-                position: "Head of BPM",
+                position: "Head of Industry Specific Services",
                 img: "/team/2.jpg",
                 email: "arshad.booso@hconnectint.com",
                 linkedin: "https://www.linkedin.com/in/arshadbooso/",
               },
               {
                 name: "Shachithra Gunesekara",
-                position: "Head of HR",
+                position: "Head of People & Culture",
                 img: "/team/3.jpg",
                 email: "shachithra.gunesekara@hconnectint.com",
                 linkedin:
@@ -248,59 +248,13 @@ const About = () => {
                 linkedin:
                   "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
               },
-              {
-                name: "Krishmilla Minoli",
-                position: "Lead - Operations",
-                img: "/team/6.jpg",
-                email: "krishmilla.minoli@hconnectint.com",
-                linkedin:
-                  "https://www.linkedin.com/in/krishmila-minoli-778b5b125/",
-              },
-              {
-                name: "Rukshala Bulathsinghala",
-                position: "Manager - Operations",
-                img: "/team/7.jpg",
-                email: "rukshala.bulathsinghala@hconnectint.com",
-                linkedin: "https://www.linkedin.com/in/rukshalabulathsinghala/",
-              },
-              {
-                name: "Asela Kuruppu",
-                position: "Senior Accountant",
-                img: "/team/8.jpg",
-                email: "asela.kuruppu@hconnectint.com",
-                linkedin:
-                  "https://www.linkedin.com/in/nadishan-asela-87050aba/",
-              },
+
               {
                 name: "Mariam Husni",
                 position: "Manager Operations - Paraplanning",
                 img: "/team/9.jpg",
                 email: "mariam.husni@hconnectint.com",
                 linkedin: "https://www.linkedin.com/in/mariam-husni-b20583b9/",
-              },
-              {
-                name: "Dinithi Ranasinghe",
-                position: "Accountant",
-                img: "/team/10.jpg",
-                email: "dinithi.ranasinghe@hconnectint.com",
-                linkedin:
-                  "https://www.linkedin.com/in/dinithi-ranasinghe-878925208/",
-              },
-              {
-                name: "Mareene Salgado",
-                position: "Assistant Manager - Sales & Marketing",
-                img: "/team/11.jpg",
-                email: "mareene.salgado@hconnectint.com",
-                linkedin:
-                  "https://www.linkedin.com/in/mareene-salgado-b7a33b243/",
-              },
-              {
-                name: "Ahamed Suhair",
-                position: "Associate Manager - Customer Experience",
-                img: "/team/12.jpg",
-                email: "ahamed.suhair@hconnectint.com",
-                linkedin:
-                  "https://www.linkedin.com/in/ahamed-suhair-199829240/?originalSubdomain=lk/",
               },
             ].map((teamMember, index) => (
               <div

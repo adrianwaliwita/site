@@ -9,7 +9,7 @@ import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 import { cn } from "@/lib/utils";
 import SectionTextRightLong from "app/sections/SectionTextRightLong";
 
-const InvoiceToCash = () => {
+const EPM = () => {
   return (
     <div className="">
       <LandingPageInner
@@ -21,7 +21,7 @@ const InvoiceToCash = () => {
         MANAGEMENT (EPM)"
         description=" Improve your reporting, planning, and forecasting capabilities to become a
         strategic business partner. "
-        ImgUrl="/fa-services/epm.jpg"
+        ImgUrl="/service-images/epm-main.jpg"
       />
       <SectionTextRightLong
         blueTitle={<> NEURAL NETWORK </>}
@@ -57,7 +57,7 @@ const InvoiceToCash = () => {
             <div
               className={cn(
                 "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
-                "bg-[url('/epm-desc.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+                "bg-[url('/service-images/epm-2.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
               )}
             />
           </div>
@@ -77,7 +77,7 @@ const InvoiceToCash = () => {
             <div
               className={cn(
                 "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 mt-[7vh] ",
-                "bg-[url('/R2R-3.png')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
+                "bg-[url('/service-images/epm-3.jpg')] bg-cover bg-center h-[80vh]" // Changed aspect ratio
               )}
             />
           </div>
@@ -87,4 +87,4 @@ const InvoiceToCash = () => {
   );
 };
 
-export default InvoiceToCash;
+export default EPM;

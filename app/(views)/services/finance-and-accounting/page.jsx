@@ -286,7 +286,7 @@ const FinanceAccounting = () => {
               title={"Healthcare"}
               img={"/industries/HealthCare.jpg"}
             />
-            <HoverCard5 title={"Apparel"} img={"/industries/Apparel.jpg"} />
+            <HoverCard5 title={"Apparel"} img={"/industries/apparel.jpg"} />
             <HoverCard5
               title={"Insurance & Financial Services"}
               img={"/industries/insuranceFinance.jpg"}

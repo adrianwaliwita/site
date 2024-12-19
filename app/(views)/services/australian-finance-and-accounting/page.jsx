@@ -142,7 +142,7 @@ const AusFinance = () => {
                   </div>
                 </a>
               }
-              img={"/AUS-Services/accounting-tax.jpg"}
+              img={"/AUS-Services/ac-tax.jpg"}
             />
             <HoverCard3
               title={"Audit & Assurance"}
@@ -165,7 +165,7 @@ const AusFinance = () => {
                   </div>
                 </a>
               }
-              img={"/AUS-Services/audit-assurance.jpg"}
+              img={"/AUS-Services/au-aus.jpg"}
             />
             <HoverCard3
               title={"Business Services"}
@@ -188,7 +188,7 @@ const AusFinance = () => {
                   </div>
                 </a>
               }
-              img={"/AUS-Services/Business-Services.jpg"}
+              img={"/AUS-Services/bs.jpg"}
             />
             <HoverCard3
               title={"SMSF"}
