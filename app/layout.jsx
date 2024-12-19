@@ -2,7 +2,7 @@
 import "./globals.css";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
-import localFont from "next/dist/compiled/@next/font/dist/local";
+import localFont from "next/font/local";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { Providers } from "./providers";
 import NavbarMain from "./components/NavMenu";

@@ -161,7 +161,7 @@ export default function Home() {
                 <div
                   className={cn(
                     "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                    "bg-[url('/deshaka.jpg')] bg-cover aspect-square"
+                    "bg-[url('/deshaka2.jpg')] bg-cover aspect-square"
                   )}
                 ></div>
               </div>
