@@ -38,6 +38,11 @@ const logos = [
     name: "SATYN-2",
     url: "/accredit/SATYN-2.jpg",
   },
+  { name: "15", url: "/award/15.jpg" },
+  { name: "15", url: "/award/16.jpg" },
+  { name: "15", url: "/award/17.jpg" },
+  { name: "15", url: "/award/18.jpg" },
+  { name: "15", url: "/award/19.jpg" },
 ];
 
 const SecuringInterests = () => {

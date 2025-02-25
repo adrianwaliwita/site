@@ -68,7 +68,7 @@ export const MenuItem = ({
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-white  dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -95,7 +95,7 @@ export const Menu = ({ setActive = () => {}, children }: MenuProps) => {
   return (
     <nav
       onMouseLeave={handleMouseLeave}
-      className="relative border bg-white shadow-input flex justify-between items-center px-[10vw] py-[0.5vh] "
+      className="relative border  bg-white shadow-input flex justify-between items-center px-[10vw] py-[0.5vh] "
     >
       {/* Logo section */}
       <a href="/" className="cursor-pointer">
@@ -121,30 +121,38 @@ export const ProductItem = ({
   description,
   href,
   src,
+  children,
 }: {
   title: string;
   description: string;
   href: string;
   src: string;
+  children?: React.ReactNode;
 }) => {
   return (
-    <Link href={href} className="flex space-x-2">
-      {/* <Image
-        src={src}
-        width={100}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
-      /> */}
-      <div>
-        <h4 className="text-xl font-bold mb-1 bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-          {title}
-        </h4>
-        <p className="text-neutral-700 font-arial text-sm max-w-[10rem] dark:text-neutral-300">
-          {description}
-        </p>
-      </div>
-    </Link>
+    <div className="relative group ">
+      <Link href={href} className="flex items-center space-x-2">
+        <div>
+          <h4 className="text-xl font-bold mb-1 bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+            {title}
+          </h4>
+          <p className="text-neutral-700 font-arial text-sm max-w-[10rem] dark:text-neutral-300">
+            {description}
+          </p>
+        </div>
+        {children && (
+          <div className="relative bg ">
+            <ChevronDown
+              size={16}
+              className="ml-1 transition-transform duration-300 -rotate-90 group-hover:rotate-0"
+            />
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-max opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white dark:bg-black backdrop-blur-sm rounded-2xl border border-black/[0.2] dark:border-white/[0.2] shadow-xl z-50">
+              <div className="p-4">{children}</div>
+            </div>
+          </div>
+        )}
+      </Link>
+    </div>
   );
 };
 

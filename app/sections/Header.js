@@ -3,7 +3,7 @@ import React, { useState, useRef, useRouter } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "app/components/Menu";
 import { cn } from "@/lib/utils";
-
+import Link from "next/link";
 export default function NavbarMain() {
   const { scrollY } = useScroll();
   const [scrollingDown, setScrollingDown] = useState(false);
@@ -42,7 +42,7 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
       {/* Desktop Menu */}
       <div
         className={cn(
-          "fixed top-10 inset-x-0 shadow-lg mx-auto z-50 hidden md:block  ",
+          "fixed top-10 inset-x-0 shadow-lg mx-auto z-50 hidden md:block ",
           className
         )}
       >
@@ -59,10 +59,44 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
             <div className="text-sm grid grid-cols-2 gap-6 p-4 max-w-4xl mx-auto">
               <ProductItem
                 title="Finance & Accounting"
+                description="Discover our finance and accounting services."
                 href="/services/finance-and-accounting"
                 src="/serv/financeAcc.jpg"
-                description="Discover our finance and accounting services."
-              />
+              >
+                <div className="flex flex-col space-y-2 ">
+                  <Link
+                    href="/services/finance-and-accounting/accounts-payable/"
+                    className="hover:text-blue-500"
+                  >
+                    Accounts Payable
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/invoice-to-cash/"
+                    className="hover:text-blue-500"
+                  >
+                    Invoice to Cash
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/record-to-report/"
+                    className="hover:text-blue-500"
+                  >
+                    Record to Report
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/enterprise-performance-systems/"
+                    className="hover:text-blue-500"
+                  >
+                    Enterprise Performance Management
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/finance-and-accounts-consulting/"
+                    className="hover:text-blue-500"
+                  >
+                    Finance & Accounting Consulting
+                  </Link>
+                </div>
+              </ProductItem>
+
               <ProductItem
                 title="Technology"
                 href="/services/technology"
@@ -74,13 +108,47 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
                 href="/services/consultancy-and-projects"
                 src="/serv/projects.jpg"
                 description="Discover our consultancy & projects services."
-              />
+              ></ProductItem>
               <ProductItem
                 title="Australian Accounting & Financial Services"
                 href="/services/australian-finance-and-accounting"
                 src="/serv/aus.jpg"
                 description="Discover our Australian accounting & financial Services."
-              />
+              >
+                <div className="flex flex-col space-y-2">
+                  <Link
+                    href="/services/finance-and-accounting/accounts-payable/"
+                    className="hover:text-blue-500"
+                  >
+                    Accounts Payable
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/invoice-to-cash/"
+                    className="hover:text-blue-500"
+                  >
+                    Invoice to Cash
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/record-to-report/"
+                    className="hover:text-blue-500"
+                  >
+                    Record to Report
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/enterprise-performance-systems/"
+                    className="hover:text-blue-500"
+                  >
+                    Enterprise Performance Management
+                  </Link>
+                  <Link
+                    href="/services/finance-and-accounting/finance-and-accounts-consulting/"
+                    className="hover:text-blue-500"
+                  >
+                    Finance & Accounting Consulting
+                  </Link>
+                </div>
+              </ProductItem>
+
               <ProductItem
                 title="Admin Support"
                 href="/services/admin-support"
@@ -120,7 +188,7 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               <HoveredLink href="/life-at-hci">Life at HCI</HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem href="/contact" active={active} item="Contact" />
+          <MenuItem href="/resources" active={active} item="Resources" />
         </Menu>
       </div>
 
@@ -131,12 +199,12 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
           className
         )}
       >
-        <div className="w-20 h-20 ">
+        <div className="w-24 h-20 ">
           <a href="/" className="inline-block">
             <img
               src="/logo/2.png"
               alt="Company Logo"
-              className="h-20  w-auto object-contain" // Adjusted height
+              className="h-20  w-24 object-contain" // Adjusted height
             />
           </a>
         </div>

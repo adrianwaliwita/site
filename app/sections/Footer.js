@@ -93,7 +93,7 @@ const Footer = () => {
                         href="/services/consultancy-and-projects"
                         className="text-md leading-6 text-gray-300 hover:text-gray-50"
                       >
-                        Consulting and Projects
+                        Consultancy and Projects
                       </a>
                     </li>
                     <li>
