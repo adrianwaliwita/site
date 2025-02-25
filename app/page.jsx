@@ -1,12 +1,14 @@
 // app/page.jsx
 "use client";
-
+import { useState } from "react";
 import Container from "./sections/Container";
 import { cn } from "@/lib/utils";
 import GrowWithoutLimits from "./components/GrowWithoutLimits";
 import SectionTextRight from "app/sections/SectionTextRight";
 import SectionTextRightBlue from "app/sections/SectionTextRightBlue";
 import SectionTextRightLong from "app/sections/SectionTextRightLong";
+import MarqueeFront from "app/components/MarqueeFront";
+import PostCarousel from "app/components/PostCarousel";
 import {
   DividerBlueCenter,
   DividerBlueLeft,
@@ -31,11 +33,20 @@ const accredit = [
   { img: "/accredit/CMA.jpg" },
   { img: "/accredit/GPTW.jpg" },
   { img: "/accredit/CPA.jpg" },
-  { img: "/accredit/GPTW-WOMEN.jpg" },
   { img: "/accredit/AMCHAM.jpg" },
   { img: "/accredit/BRIT.jpg" },
   { img: "/accredit/ACCU.jpg" },
   { img: "/accredit/SLASSCOM.jpg" },
+  { img: "/accredit/EDB.jpg" },
+];
+const award = [
+  { img: "/award/15.jpg" },
+  { img: "/award/16.jpg" },
+  { img: "/award/17.jpg" },
+  { img: "/award/18.jpg" },
+  { img: "/award/19.jpg" },
+  { img: "/award/GPTW-WOMEN.jpg" },
+  { img: "/award/SATYN-2.jpg" },
 ];
 
 const featuresData = [
@@ -61,10 +72,24 @@ const featuresData = [
 ];
 
 export default function Home() {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const res = await fetch(
+        "https://hconnect-demo.saberion.org/wp-json/wp/v2/posts?per_page=3"
+      );
+      const data = await res.json();
+      setBlogs(data);
+    };
+
+    fetchBlogs();
+  }, []);
+
   return (
-    <div className="pt-[10vh] md:pt-[10vh]">
+    <div className="pt-[10vh] md:pt-[10vh] ">
       {/* Main Content Section */}
-      <Container className="max-w-7xl pt-[10vh] md:pt-0 lg:max-w-[180rem] flex flex-wrap h-[40vh] md:h-dvh w-[100%]  overflow-x-clip relative mb-20">
+      <Container className="max-w-7xl pt-[10vh] md:pt-0 lg:max-w-[180rem] flex flex-wrap h-[40vh] md:h-dvh w-[100%]  overflow-x-clip relative mb-20 md:mb-0 ">
         {/* First column */}
         <div className="flex items-center text-center md:text-left w-full  md:w-2/3 lg:w-1/2 px-5 md:px-[5%] lg:px-[5%] order-2 md:order-1">
           <div className="max-w-full md:w-full mb-8">
@@ -129,73 +154,84 @@ export default function Home() {
           </div>
         </section>
       </Container>
-      <div className="pt-[5vh] md:pt-[10vh]"></div>
+      <div className="pt-[5vh] md:pt-[10vh] md:pb-[10vh] xl:pb-[8vh]"></div>
 
-      <div className="">
-        <SectionTextLeftBlue
-          whiteTitle={
-            <>
-              <div
-                className={`${headingStyles.primaryLeft} ${headingStyles.white}`}
-              >
-                CEO&apos;S MESSAGE
-                <div className="flex justify-start w-full "></div>
-              </div>
-            </>
-          }
-          description={
-            <div
-              className={`space-y-4  ${bodyTextStyles.descriptionLeft} ${bodyTextStyles.white}`}
-            >
-              <div>
-                &quot;We do what we say, no excuses. Our relationships are built
-                on trust earned by delivering on our promises time and time
-                again. That&apos;s the kind of company and the kind of people we
-                are.&quot;
-              </div>
+      <div className="relative h-screen bg-gradient-to-bl from-[#000000] to-[#0000ff]">
+        {/* Background Image with parallax effect */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
+          style={{
+            backgroundImage: "url(/Site-Wave-FIN.jpg)",
+            backgroundAttachment: "fixed",
+            opacity: 0.6,
+          }}
+        ></div>
+
+        {/* Overlay with 50% opacity */}
+        <div className="absolute inset-0 bg-gradient-to-bl from-black to-blue opacity-50 z-10"></div>
+
+        {/* Content on top of the overlay */}
+        <div className="relative z-20">
+          <Container>
+            <div className="py-12">
+              <PostCarousel
+                items={blogs}
+                title="LATEST FROM H CONNECT INTERNATIONAL"
+              />
             </div>
-          }
-          component={
-            <div>
-              <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw]  px-[2vw] ">
-                <div
-                  className={cn(
-                    "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                    "bg-[url('/deshaka2.jpg')] bg-cover aspect-square"
-                  )}
-                ></div>
-              </div>
-            </div>
-          }
-        ></SectionTextLeftBlue>
+          </Container>
+        </div>
       </div>
 
-      <Container>
-        <section>
-          <div className="pt-[5vh] md:pt-[10vh]">
-            <div className="px-8 mx-auto  bg-white">
-              <div className="flex flex-col">
-                <div className=" ">
-                  <div className="grid grid-cols-1 gap-8 md:grid-cols-1 md:gap-24 items-center text-center">
-                    <div>
-                      <div className={headingStyles.primaryCenter}>
-                        <span className={headingStyles.gradient}>
-                          ACCREDITED
-                        </span>{" "}
-                        BY THE BEST{" "}
-                      </div>
-                      <DividerBlueCenter />
+      <section className="md:pb-[5vh]">
+        <div className="pt-[5vh] md:pt-[10vh] ">
+          <div className="px-8 mx-auto bg-white">
+            <div className="flex flex-col">
+              <div className="">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-1 md:gap-24 items-center text-center">
+                  <div>
+                    <div className={headingStyles.primaryCenter}>
+                      <span className={headingStyles.gradient}>ACCREDITED</span>{" "}
+                      BY THE BEST
                     </div>
-                  </div>
-                  <div className="pt-[5vh]">
-                    <MarqueeHori items={accredit}> </MarqueeHori>
+                    <DividerBlueCenter />
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </Container>
+        </div>
+        <div className="flex items-center justify-center ">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-[5vh] w-[100%] ">
+            {/* Carousel Section */}
+            <div className="col-span-2">
+              <MarqueeFront items={accredit} isActive={true}></MarqueeFront>
+            </div>
+
+            {/* Title Section */}
+            <div className="col-span-1 flex justify-center md:justify-center items-center ">
+              <h2 className="border-l-2 hidden md:block border-black pl-8 font-GTAmerica text-4xl  md:text-[3vw] md:leading-[7.5vw] lg:text-[4.6vw] font-bold tracking-normal text-black text-center bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent bl">
+                Accreditations
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="flex items-center justify-center bg-white">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-[5vh] w-[100%]  ">
+            {/* Title Section */}
+            <div className="col-span-1 flex justify-center md:justify-center items-center ">
+              <h2 className="border-r-2 hidden md:block border-black pr-8  font-GTAmerica text-4xl  md:text-[3vw] md:leading-[7.5vw] lg:text-[4.6vw] ml-[-10vh] font-bold tracking-normal text-black text-center bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent ">
+                Awards
+              </h2>
+            </div>
+
+            {/* Carousel Section */}
+            <div className="col-span-2 mt-[-10vh] md:mt-0 md:w-[110%] md:ml-[-10vw] ">
+              <MarqueeFront items={award}></MarqueeFront>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Container>
         {" "}
@@ -229,73 +265,6 @@ export default function Home() {
         <div className="bg-white">
           <section className="max-w-5xl mx-auto w-full md:px-10 py-10">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 w-full">
-              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50  col-span-3 md:col-span-2 flex flex-col gap-y-10 justify-between">
-                <div className="flex flex-col gap-y-3.5">
-                  <div className="font-medium text-white">
-                    It&apos;s been an amazing experience working with H Connect
-                    International! The team is professional, reliable, and
-                    incredibly responsive. They&apos;ve consistently delivered
-                    exceptional service, even with a vast range of demanding
-                    clients. We couldn&apos;t have hoped for a better partner,
-                    and with our big plans for growth, we see this as a great
-                    opportunity to grow together.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <img
-                    src="/united-states.png"
-                    alt="Emily Smith"
-                    className="h-10 w-10"
-                  />
-                  <div className="pt-2 text-sm font-semibold text-white">
-                    US CLIENT
-                  </div>
-                </div>
-              </div>
-              <div className="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                <div className="flex flex-col gap-y-3.5 ">
-                  <div className="font-medium text-white max-w-[70%]">
-                    We engaged H Connect International to help support our
-                    business with finance, payroll, and HR. We were invited to
-                    their Colombo office during which the team undertook
-                    comprehensive training and process mapping to really
-                    understand our requirements. <br />H Connect International
-                    has become an important partner, delivering consistent value
-                    and helping us implement improved business processes.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <img
-                    src="/united-states.png"
-                    alt="Emily Smith"
-                    className="h-10 w-10"
-                  />
-                  <div className="pt-2 text-sm font-semibold text-white">
-                    US CLIENT
-                  </div>
-                </div>
-              </div>
-              <div className="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
-                <div className="flex flex-col gap-y-3.5">
-                  <div className="font-medium text-white max-w-[70%]">
-                    We would like to extend our sincere gratitude to the team at
-                    H Connect International for their help in our day-to-day
-                    accounting functions. It has been 5 years since we partnered
-                    with H Connect International, and it’s been a consistently
-                    smooth journey. Thank you for all the support.
-                  </div>
-                </div>
-                <div className="flex flex-col">
-                  <img
-                    src="/united-kingdom.png"
-                    alt="Sarah Brown"
-                    className="h-10 w-10"
-                  />
-                  <div className="pt-2 text-sm font-semibold text-white">
-                    UK CLIENT
-                  </div>
-                </div>
-              </div>
               <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50 col-span-3 md:col-span-2 flex flex-col gap-y-10 justify-between">
                 <div className="flex flex-col gap-y-3.5">
                   <div className="font-medium text-white">
@@ -315,7 +284,75 @@ export default function Home() {
                     className="h-10 w-10"
                   />
                   <div className="pt-2 text-sm font-semibold text-white">
-                    AUSTRALIAN CLIENT
+                    CEO, Financial Services Firm in Australia
+                  </div>
+                </div>
+              </div>
+              <div className="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
+                <div className="flex flex-col gap-y-3.5 ">
+                  <div className="font-medium text-white max-w-[70%]">
+                    We engaged H Connect International to help support our
+                    business with finance, payroll, and HR. We were invited to
+                    their Colombo office during which the team undertook
+                    comprehensive training and process mapping to really
+                    understand our requirements. <br />H Connect International
+                    has become an important partner, delivering consistent value
+                    and helping us implement improved business processes.
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <img
+                    src="/united-kingdom.png"
+                    alt="Emily Smith"
+                    className="h-10 w-10"
+                  />
+                  <div className="pt-2 text-sm font-semibold text-white">
+                    Director, Residential Care Provider in the UK
+                  </div>
+                </div>
+              </div>
+
+              <div className="border p-7 rounded-xl bg-neutral-900 drop-shadow-md border-neutral-800/50 col-span-3 flex flex-col gap-y-10 justify-between">
+                <div className="flex flex-col gap-y-3.5">
+                  <div className="font-medium text-white max-w-[70%]">
+                    We would like to extend our sincere gratitude to the team at
+                    H Connect International for their help in our day-to-day
+                    accounting functions. It has been 5 years since we partnered
+                    with H Connect International, and it’s been a consistently
+                    smooth journey. Thank you for all the support.
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <img
+                    src="/united-kingdom.png"
+                    alt="Sarah Brown"
+                    className="h-10 w-10"
+                  />
+                  <div className="pt-2 text-sm font-semibold text-white">
+                    CEO, Early Childhood Educator in the UK
+                  </div>
+                </div>
+              </div>
+              <div className="border p-7 rounded-xl bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] md:bg-image1  md:bg-[length:350%] bg-center drop-shadow-md border-neutral-800/50  col-span-3 md:col-span-2 flex flex-col gap-y-10 justify-between">
+                <div className="flex flex-col gap-y-3.5">
+                  <div className="font-medium text-white">
+                    It&apos;s been an amazing experience working with H Connect
+                    International! The team is professional, reliable, and
+                    incredibly responsive. They&apos;ve consistently delivered
+                    exceptional service, even with a vast range of demanding
+                    clients. We couldn&apos;t have hoped for a better partner,
+                    and with our big plans for growth, we see this as a great
+                    opportunity to grow together.
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <img
+                    src="/united-states.png"
+                    alt="Emily Smith"
+                    className="h-10 w-10"
+                  />
+                  <div className="pt-2 text-sm font-semibold text-white">
+                    Director, HR Consultancy in the US
                   </div>
                 </div>
               </div>
@@ -323,7 +360,7 @@ export default function Home() {
           </section>
         </div>
         {/* Call to Action Section */}
-        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 mt-[7vh]">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-10  mt-[7vh]">
           <div className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
             <div className="max-w-2xl mx-auto">
               <h2

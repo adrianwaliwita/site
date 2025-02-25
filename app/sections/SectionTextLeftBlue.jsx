@@ -17,8 +17,8 @@ import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 
 const SectionTextLeft = ({ whiteTitle, description, component }) => {
   return (
-    <section className="md:px-[7%] mx-auto py-24 md:pb-0 min-h-[20vh] md:min-h-[87vh] bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] flex items-center  ">
-      <div className=" flex flex-col md:flex-row w-full h-full  md:mb-[10vh] md:px-[3%]">
+    <section className="md:px-[7%] mx-auto  md:pb-0 min-h-[20vh]  bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] flex items-center  ">
+      <div className=" flex flex-col md:flex-row w-full h-full  py-[10vh]  md:px-[3%]">
         <div className="flex justify-center items-center w-full md:w-[50%] md:order-last ">
           {component}
         </div>

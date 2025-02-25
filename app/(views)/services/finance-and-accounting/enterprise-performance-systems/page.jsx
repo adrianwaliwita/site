@@ -42,13 +42,14 @@ const EPM = () => {
               decisions. Our approach begins with establishing a robust EPM
               Center of Excellence (CoE), followed by the integration of
               predictive intelligence into your reporting, financial planning
-              and analysis, and enterprise performance management. you.
+              and analysis, and enterprise performance management.
             </div>
             <div>
               Our deep-rooted EPM expertise, combined with cutting-edge digital
               and analytics capabilities, enables us to uncover actionable
               insights. Our consultancy approach leverages proven transformation
               frameworks to deliver world-class EPM solutions, tailor made for
+              you.
             </div>
           </div>
         }
