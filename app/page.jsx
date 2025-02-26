@@ -179,25 +179,8 @@ export default function Home() {
                 title="LATEST FROM H CONNECT INTERNATIONAL"
               />
             </div>
-<<<<<<< HEAD
-          }
-          component={
-            <div>
-              <div className="max-w-[100vw] w-[100vw] md:max-w-[50vw] md:w-[40vw]  px-[2vw] ">
-                <div
-                  className={cn(
-                    "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 border border-transparent dark:border-neutral-800",
-                    "bg-[url('/deshaka2.jpg')] bg-cover aspect-square"
-                  )}
-                ></div>
-              </div>
-            </div>
-          }
-        ></SectionTextLeftBlue>
-=======
           </Container>
         </div>
->>>>>>> 2a5fe153f0d0e13a53b4aeefdb50e8446efe900b
       </div>
 
       <section className="md:pb-[5vh]">
@@ -270,7 +253,7 @@ export default function Home() {
                       <span className={headingStyles.gradient}>
                         IMPACT
                       </span>{" "}
-                      MATTERS{" "}
+                      THAT MATTERS{" "}
                     </div>{" "}
                   </div>{" "}
                 </div>{" "}

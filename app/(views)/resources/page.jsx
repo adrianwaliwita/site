@@ -8,7 +8,7 @@ import {
   DividerBlueLeft,
 } from "app/components/Divider";
 import LandingPageInner from "app/sections/LandingPageInner";
-
+import FeatuedBlogList from "app/components/FeaturedBlogList";
 const Resources = () => {
   const [news, setNews] = useState([]);
   const [blogs, setBlogs] = useState([]);
@@ -49,13 +49,6 @@ const Resources = () => {
     return plainText;
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubscribed(true);
-    setEmail("");
-    setTimeout(() => setIsSubscribed(false), 3000);
-  };
-
   return (
     <div className="w-full  ">
       <section className="flex flex-col items-center w-full">
@@ -88,7 +81,7 @@ const Resources = () => {
                   "https://via.placeholder.com/600"; // Fallback image
 
                 return (
-                  <Link key={item.id} href={`/resources/${item.id}`}>
+                  <Link key={item.id} href={`/resources/${item.slug}`}>
                     <div
                       className="bg-gray-200 p-6 rounded-lg hover:shadow-lg transition-shadow cursor-pointer h-[60vh] flex flex-col justify-center relative "
                       style={{
@@ -104,7 +97,7 @@ const Resources = () => {
                         <p
                           className="text-gray-200 mb-4 text-sm "
                           dangerouslySetInnerHTML={{
-                            __html: truncateExcerpt(item.excerpt.rendered, 20), // Limit to 30 words
+                            __html: truncateExcerpt(item.excerpt.rendered, 20), // Limit to 20 words
                           }}
                         />
                       </div>
@@ -114,45 +107,7 @@ const Resources = () => {
               })}
             </div>
           </section>
-
-          <section className="mb-16">
-            <div className="mx-auto-sm text-center mb-8 lg:mb-10">
-              <div className={headingStyles.primaryCenter}>
-                <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                  FEATURED
-                </span>{" "}
-                BLOGS
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {blogs.map((item) => {
-                const imageUrl =
-                  item._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-                  "https://via.placeholder.com/600"; // Fallback image
-
-                return (
-                  <Link key={item.id} href={`/resources/${item.id}`}>
-                    <div className="border-l-4 border-blue-700 pl-4 py-2 cursor-pointer">
-                      <img
-                        src={imageUrl}
-                        alt={item.title.rendered}
-                        className="w-full h-40 object-cover rounded-lg mb-4 "
-                      />
-                      <h3 className=" text-gray-900  text-sm md:text-lg !font-arial mb-2 font-bold">
-                        {item.title.rendered}
-                      </h3>
-                      <p
-                        className="text-gray-600  text-sm mb-4"
-                        dangerouslySetInnerHTML={{
-                          __html: item.excerpt.rendered,
-                        }}
-                      />
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
+          <FeatuedBlogList />
 
           <section className="mb-16">
             <div className="mx-auto-sm text-center mb-8 lg:mb-10">
@@ -195,6 +150,35 @@ const Resources = () => {
                   className="w-[350px] h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity"
                 />
                 <p className="mt-2 text-lg font-medium pl-6">Procure to Pay</p>
+              </a>
+              <a
+                href="/pdf/case-study-pdf/epm.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/case-study/epm.jpg"
+                  alt="Enterprise Performance Management Case Study"
+                  className="w-[350px] h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity"
+                />
+                <p className="mt-2 text-lg font-medium pl-6">
+                  Enterprise Performance Management
+                </p>
+              </a>
+
+              <a
+                href="/pdf/case-study-pdf/in-2-cash.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/case-study/in-2-cash.jpg"
+                  alt="Enterprise Performance Management Case Study"
+                  className="w-[350px] h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:opacity-80 transition-opacity"
+                />
+                <p className="mt-2 text-lg font-medium pl-6">Invoice to Cash</p>
               </a>
 
               <a
