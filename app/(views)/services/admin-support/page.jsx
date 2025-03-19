@@ -119,10 +119,10 @@ const FinanceAccounting = () => {
       <LandingPageInner
         subtitle="ADMINISTRATIVE SUPPORT"
         titleBeforeBlue=""
-        blueTitle=" EVERYDAY "
+        blueTitle=" EVERYDAY  "
         titleAfterBlue="
         MADE EASIER"
-        description=" Experience the power effortless admin has on your business"
+        description=" Experience the power effortless admin has on your business."
         ImgUrl="/service-images/admin.jpg"
       />
 

@@ -27,7 +27,7 @@ const accredit = [
   { img: "/accredit/GPTW-WOMEN.jpg" },
 ];
 
-const LifeAtHci = () => {
+const LifeAtHciClient = () => {
   return (
     <div className="w-full pt-[15vh] md:pt-[10vh]">
       <section className="flex flex-col items-center w-full mb-[12vh] ">
@@ -171,11 +171,11 @@ const LifeAtHci = () => {
       <div className="mt-[10vh]"></div>
       <CTA
         title={<>Ready to be part of the team?</>}
-        href={"/contact"}
+        href={"mailto:careers@hconnectint.com"}
         text={"Join Us"}
       ></CTA>{" "}
     </div>
   );
 };
 
-export default LifeAtHci;
+export default LifeAtHciClient;

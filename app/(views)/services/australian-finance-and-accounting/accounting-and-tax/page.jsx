@@ -3,7 +3,7 @@ import CTA from "app/sections/CTA";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
-
+import Meta from "app/components/Meta";
 const serviceBorders = [
   {
     title: "Bookkeeping",
@@ -57,77 +57,89 @@ const suite = [
   { img: "/suite-logo/reckon.png" },
 ];
 
+export const metadata = {
+  title: "Accounting and Tax Outsourcing Services",
+  description:
+    "Discover our comprehensive range of Accounting and Tax Outsourcing services tailored for Australian accounting firms.",
+};
+
 const AccountingAndTax = () => {
   return (
-    <div className="">
-      <section className="">
-        <div className="max-w-screen-xl mx-auto pt-[15vh] md:pt-[15vh]  lg:px-6">
-          <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-            <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw] font-bold tracking-normal text-black  ">
-              ACCOUNTING AND{" "}
-              <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                TAX
-              </span>
-            </div>
-            <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0">
-              Our tailored solutions connect you with dedicated remote teams to
-              optimize your workflow, complete your workload, and allow you to
-              concentrate on delivering exceptional client service
-            </div>
-          </div>
-          <div className="mx-auto ">
-            <div className="flex mx-auto justify-center ">
-              <ServiceBeyond features={serviceBorders} />
-            </div>
-            <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders2} />
-            </div>
-            <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders3} />
-            </div>
-            <div className="flex justify-center ">
-              <ServiceBeyond features={serviceBorders4} />
-            </div>
-            <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"></div>
-          </div>
-        </div>
-        <div className="pt-[5vh] md:pt-[10vh] ">
-          <PartnershipFeatures />
-        </div>
-      </section>
-      <section className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[5vh]  lg:px-6 ">
-        <div className="mx-auto ">
-          <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-            <section>
-              <div className="max-w-screen-xl mx-auto  px-4  lg:px-6 mt-[4vh]">
-                <div className="mx-auto-sm text-center mb-8 lg:mb-16">
-                  <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black ">
-                    OUR{" "}
-                    <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
-                      COMPREHENSIVE
-                    </span>{" "}
-                    SUITE
-                  </div>
-                  <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0 ">
-                    We are equipped with the right tools for the right job
-                  </div>
-                  <div className="mt-[5vh]"></div>
-                  <MarqueeHoriLogoSingle items={suite}> </MarqueeHoriLogoSingle>
-                </div>
+    <>
+      {" "}
+      <Meta title={metadata.title} description={metadata.description} />
+      <div className="">
+        <section className="">
+          <div className="max-w-screen-xl mx-auto pt-[15vh] md:pt-[15vh]  lg:px-6">
+            <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+              <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw] font-bold tracking-normal text-black  ">
+                ACCOUNTING AND{" "}
+                <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                  TAX
+                </span>
               </div>
-            </section>
+              <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0">
+                Our tailored solutions connect you with dedicated remote teams
+                to optimize your workflow, complete your workload, and allow you
+                to concentrate on delivering exceptional client service
+              </div>
+            </div>
+            <div className="mx-auto ">
+              <div className="flex mx-auto justify-center ">
+                <ServiceBeyond features={serviceBorders} />
+              </div>
+              <div className="flex justify-center ">
+                <ServiceBeyond features={serviceBorders2} />
+              </div>
+              <div className="flex justify-center ">
+                <ServiceBeyond features={serviceBorders3} />
+              </div>
+              <div className="flex justify-center ">
+                <ServiceBeyond features={serviceBorders4} />
+              </div>
+              <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5"></div>
+            </div>
           </div>
-        </div>
-      </section>
+          <div className="pt-[5vh] md:pt-[10vh] ">
+            <PartnershipFeatures />
+          </div>
+        </section>
+        <section className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[5vh]  lg:px-6 ">
+          <div className="mx-auto ">
+            <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
+              <section>
+                <div className="max-w-screen-xl mx-auto  px-4  lg:px-6 mt-[4vh]">
+                  <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+                    <div className="font-GTAmerica text-4xl md:px-5 md:text-[7vw] md:leading-[7vw]  lg:text-[4.6vw]  font-bold tracking-normal text-black ">
+                      OUR{" "}
+                      <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+                        COMPREHENSIVE
+                      </span>{" "}
+                      SUITE
+                    </div>
+                    <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0 ">
+                      We are equipped with the right tools for the right job
+                    </div>
+                    <div className="mt-[5vh]"></div>
+                    <MarqueeHoriLogoSingle items={suite}>
+                      {" "}
+                    </MarqueeHoriLogoSingle>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
 
-      <div className=" pt-[5vh] md:pt-[10vh]">
-        <CTA
-          title="READY TO DELIVER FROM DAY ONE"
-          href={"/contact"}
-          text={"Get in touch"}
-        ></CTA>
+        <div className=" pt-[5vh] md:pt-[10vh]">
+          <CTA
+            title="READY TO DELIVER FROM DAY ONE"
+            href={"/contact"}
+            text={"Get in touch"}
+          ></CTA>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

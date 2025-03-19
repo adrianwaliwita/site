@@ -165,7 +165,7 @@ const FinanceAccounting = () => {
         blueTitle="SCALE UP."
         titleAfterBlue="SIMPLIFY DOWN."
         description=" Scale with confidence and ease using our world-class
-        operating model"
+        operating model."
         ImgUrl="/service-images/consultancy.jpg"
       />
       <SectionTextRightDesc

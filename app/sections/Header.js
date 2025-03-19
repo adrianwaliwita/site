@@ -109,6 +109,13 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
                 src="/serv/projects.jpg"
                 description="Discover our consultancy & projects services."
               ></ProductItem>
+
+              <ProductItem
+                title="Admin Support"
+                href="/services/admin-support"
+                src="/serv/admin.jpg"
+                description="Discover our admin support services."
+              />
               <ProductItem
                 title="Australian Accounting & Financial Services"
                 href="/services/australian-finance-and-accounting"
@@ -117,44 +124,37 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               >
                 <div className="flex flex-col space-y-2">
                   <Link
-                    href="/services/finance-and-accounting/accounts-payable/"
+                    href="/services/australian-finance-and-accounting/accounting-and-tax/"
                     className="hover:text-blue-500"
                   >
-                    Accounts Payable
+                    Accounting & Tax
                   </Link>
                   <Link
-                    href="/services/finance-and-accounting/invoice-to-cash/"
+                    href="/services/australian-finance-and-accounting/audit-and-assurance/"
                     className="hover:text-blue-500"
                   >
-                    Invoice to Cash
+                    Audit & Assurance
                   </Link>
                   <Link
-                    href="/services/finance-and-accounting/record-to-report/"
+                    href="/services/australian-finance-and-accounting/business-services/"
                     className="hover:text-blue-500"
                   >
-                    Record to Report
+                    Business Services
                   </Link>
                   <Link
-                    href="/services/finance-and-accounting/enterprise-performance-systems/"
+                    href="/services/australian-finance-and-accounting/smsf/"
                     className="hover:text-blue-500"
                   >
-                    Enterprise Performance Management
+                    SMSF
                   </Link>
                   <Link
-                    href="/services/finance-and-accounting/finance-and-accounts-consulting/"
+                    href="/services/australian-finance-and-accounting/paraplanning/"
                     className="hover:text-blue-500"
                   >
-                    Finance & Accounting Consulting
+                    Paraplanning
                   </Link>
                 </div>
               </ProductItem>
-
-              <ProductItem
-                title="Admin Support"
-                href="/services/admin-support"
-                src="/serv/admin.jpg"
-                description="Discover our admin support services."
-              />
               <ProductItem
                 title="Digital Marketing"
                 href="/services/digital-marketing"
@@ -167,6 +167,7 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
                 src="/serv/HumanResources.jpg"
                 description="Discover our human resources services."
               />
+
               <ProductItem
                 title="Remote Teams"
                 href="/services/remote-teams"
@@ -264,7 +265,6 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               href="/about"
               onItemClick={handleMobileMenuItemClick}
             />
-
             <MobileSectionAccordion
               title="Services"
               href="/services"
@@ -318,7 +318,6 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
                 />
               </div>
             </MobileSectionAccordion>
-
             <MobileSectionAccordion
               title="Careers"
               onItemClick={handleMobileMenuItemClick}
@@ -331,10 +330,14 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
                 Life at HCI
               </ProductItemMobile>
             </MobileSectionAccordion>
-
             <MobileSectionAccordion
               title="Contact"
               href="/contact"
+              onItemClick={handleMobileMenuItemClick}
+            />
+            <MobileSectionAccordion
+              title="Resources"
+              href="/resources"
               onItemClick={handleMobileMenuItemClick}
             />
           </div>

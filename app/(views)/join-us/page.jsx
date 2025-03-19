@@ -37,7 +37,7 @@ const JoinUs = () => {
       </div>
       <CTA
         title={"Ready to be part of the team?"}
-        href={"/contact"}
+        href={"mailto:careers@hconnectint.com"}
         text={"Get in touch"}
       ></CTA>
     </div>

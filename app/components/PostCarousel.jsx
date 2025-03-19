@@ -80,7 +80,7 @@ const PostCarousel = ({ title }) => {
                     key={blog.id}
                     className="w-full flex justify-center px-2"
                   >
-                    <Link href={`/resources/${blog.id}`}>
+                    <Link href={`/resources/${blog.slug}`}>
                       <div
                         className="h-[65vh] md:w-80 md:h-96 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer mb-11"
                         style={{

@@ -50,7 +50,7 @@ const BlogPageInner = ({
         <img
           src={ImgUrl}
           alt="Finance Reports"
-          className="w-[50vw] sm:h-[50vh]  object-cover mt-10"
+          className="md:w-[50vw]  md:h-[50vh]  object-cover mt-10"
         />
       </section>
     </div>

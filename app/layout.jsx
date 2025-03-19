@@ -6,9 +6,8 @@ import localFont from "next/font/local";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { Providers } from "./providers";
 import NavbarMain from "./components/NavMenu";
-import Script from "next/script";
-
-const GA_TRACKING_ID = "G-3ZND83NMR7"; // Your GA4 ID
+import CookieConsentBanner from "./components/CookieConsentBanner";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const GTAmerica = localFont({
   src: [
@@ -26,35 +25,9 @@ const GTAmerica = localFont({
   variable: "--font-GTAmerica",
 });
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Contact", href: "/contact" },
-];
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GTAmerica.variable}`}>
-      <head>
-        {/* Google Analytics */}
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}');
-            `,
-          }}
-        />
-      </head>
       <body>
         <Providers>
           <ReactLenis root options={{ lerp: 0.35 }}>
@@ -62,7 +35,11 @@ export default function RootLayout({ children }) {
             {children}
           </ReactLenis>
           <Footer />
+          <CookieConsentBanner />
         </Providers>
+
+        {/* Google Analytics - now in a separate component */}
+        <GoogleAnalytics />
       </body>
     </html>
   );

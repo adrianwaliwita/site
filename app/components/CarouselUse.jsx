@@ -12,25 +12,77 @@ import {
 const events = [
   {
     id: 1,
+    title: "Pickle Smash",
+    image: "/events/pickle.jpg",
+  },
+  {
+    id: 2,
+    title: "TGIM",
+    image: "/events/TGIM.jpg",
+  },
+  {
+    id: 3,
+    title: "2025 1st Day",
+    image: "/events/2025-1st.jpg",
+  },
+  {
+    id: 4,
+    title: "HR Debate",
+    image: "/events/hr-debate.jpg",
+  },
+  {
+    id: 5,
+    title: "Care Collective",
+    image: "/events/CareCollective.jpg",
+  },
+  {
+    id: 6,
+    title: "Cupid's Catwalk",
+    image: "/events/cupid-cakewalk.jpg",
+  },
+  {
+    id: 7,
     title: "Koru",
     image: "/events/koru.png",
   },
   {
-    id: 2,
+    id: 8,
     title: "Christmas Party",
     image: "/events/christmas-party.png",
     description: "Annual summer celebration",
   },
   {
-    id: 3,
+    id: 9,
     title: "Run for their lives",
     image: "/events/RFTL.png",
   },
   {
-    id: 3,
-    title: "CPA Award",
-    image: "/events/CPA-AWARD.png",
+    id: 10,
+    title: "GPTW",
+    image: "/events/GPTW.jpg",
   },
+
+  {
+    id: 11,
+    title: "Halloween",
+    image: "/events/Halloween.jpg",
+  },
+  {
+    id: 12,
+    title: "Cricket Match",
+    image: "/events/cricket-match.jpg",
+  },
+  {
+    id: 13,
+    title: "CPA President's Cocktail",
+    image: "/events/CPA-Presidents-Cocktail.jpg",
+  },
+  {
+    id: 14,
+    title: "Out Bound Training",
+    image: "/events/Out-bound-training.jpg",
+  },
+
   // Add more events as needed
 ];
 

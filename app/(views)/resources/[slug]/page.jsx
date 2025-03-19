@@ -121,10 +121,10 @@ export default async function ResourcePage({ params }) {
           description=" by H Connect International"
           ImgUrl={imageUrl}
         />
-        <div className="max-w-[50vw] mt-10 mx-auto">
+        <div className="max-w-[100vw] md:max-w-[50vw]  mt-10 mx-auto">
           <CardContent>
             <div
-              className="resource-content prose prose-lg max-w-[60vw] text-black font-arial text-sm leading-[5.0vh]
+              className="resource-content prose prose-lg max-w-[100vw] md:max-w-[60vw] text-black font-arial text-sm leading-[5.0vh]
       [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6
       [&_blockquote]:border-l-4 [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-black
       [&_h2]:text-5xl !important [&_h2]:font-bold !important [&_h2]:leading-tight !important [&_h2]:mt-8 !important [&_h2]:mb-6 !important"
