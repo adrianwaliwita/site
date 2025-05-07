@@ -1,4 +1,4 @@
-const {nextui} = require('@nextui-org/theme');
+const { nextui } = require("@nextui-org/theme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -6,14 +6,14 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/navbar.js"
+    "./node_modules/@nextui-org/theme/dist/components/navbar.js",
   ],
   theme: {
     extend: {
       backgroundImage: {
         image1: "url('./assets/diamond.png')",
-        image2: "url('/path/to/image2.jpg')",
-        image3: "url('/path/to/image3.jpg')",
+        image2: "url('./assets/AUS2.png')",
+        image3: "url('./assets/AUS3.png')",
         image4: "url('/path/to/image4.jpg')",
       },
       colors: {
@@ -112,5 +112,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-motion"),require("tailwindcss-animate"),nextui()],
+  plugins: [
+    require("tailwindcss-motion"),
+    require("tailwindcss-animate"),
+    nextui(),
+  ],
 };

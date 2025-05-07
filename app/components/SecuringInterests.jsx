@@ -27,7 +27,7 @@ const sec = [
 const logos = [
   {
     name: "ISO",
-    url: "/DataProtection/iso.jpg",
+    url: "/accredit/ISO.jpg",
   },
   {
     name: "DPA",

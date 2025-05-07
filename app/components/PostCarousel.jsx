@@ -54,10 +54,10 @@ const PostCarousel = ({ title }) => {
   };
 
   return (
-    <div className="w-full p-4 flex justify-center">
+    <div className="w-full p-4  flex justify-center">
       <div className="max-w-screen-lg w-full">
         <h2
-          className={`${headingStyles.primaryCenter} ${headingStyles.white} mb-5 text-center`}
+          className={`${headingStyles.primaryCenter} ${headingStyles.white} mb-5 text-center `}
         >
           {title}
         </h2>
@@ -82,7 +82,7 @@ const PostCarousel = ({ title }) => {
                   >
                     <Link href={`/resources/${blog.slug}`}>
                       <div
-                        className="h-[65vh] md:w-80 md:h-96 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer mb-11"
+                        className="h-[65vh] md:w-80 md:h-96 rounded-lg shadow-lg hover:shadow-xl transition-shadow cursor-pointer mb-10"
                         style={{
                           background: "rgba(0, 0, 0, 0.0)",
                           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",

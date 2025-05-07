@@ -49,7 +49,7 @@ const SecuringInterests = () => {
   return (
     <section>
       <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[6.2vh] lg:px-6">
-        <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+        <div className="mx-auto-sm text-center mb-8 lg:mb-8">
           <div className={headingStyles.primaryCenter}>
             AN <span className={headingStyles.gradient}>AWARD-WINNING </span>{" "}
             CULTURE{" "}
@@ -57,7 +57,7 @@ const SecuringInterests = () => {
           <DividerBlueCenter />
         </div>
 
-        <div className="w-full pt-[2vh]">
+        <div className="w-full ">
           <div className="flex w-full flex-col items-center justify-center px-4 md:px-20">
             <div className="grid grid-cols-2 gap-x-4 md:gap-x-16 md:grid-cols-3">
               {logos.map((logo, key) => (

@@ -41,8 +41,8 @@ const CookieConsentBanner = () => {
         <div className="mb-4 md:mb-0 md:mr-8">
           <p className="text-sm text-gray-700">
             This website uses cookies to enhance your browsing experience and
-            analyze site traffic. By clicking "Accept", you consent to our use
-            of cookies as described in our Cookie Policy.
+            analyze site traffic. By clicking &quot;Accept&quot;, you consent to
+            our use of cookies as described in our Cookie Policy.
           </p>
         </div>
         <div className="flex space-x-4">

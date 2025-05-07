@@ -5,7 +5,7 @@ import {
   DividerWhiteLeft,
   DividerWhiteCenter,
 } from "app/components/Divider";
-const TopTierTalent = ({ description }) => {
+const TopTierTalent = ({ description, certDesc }) => {
   return (
     <section>
       <div className="max-w-screen-xl mx-auto pb-8 px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
@@ -48,7 +48,8 @@ const TopTierTalent = ({ description }) => {
               CERTIFIED
             </h3>
             <div className="font-font-arial text-sm md:text-base  text-black">
-              Every member of our team holds a relevant finance certification
+              {certDesc ||
+                "Every member of our team holds a relevant finance certification"}{" "}
             </div>
           </div>
           <div className="grid gap-4 justify-items-center text-center md:flex-1">

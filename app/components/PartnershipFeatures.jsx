@@ -142,7 +142,7 @@ const PartnershipFeatures = () => {
           </span>{" "}
           PARTNERSHIP
         </div>
-        <div className=" lg:mb-[-1vh]">
+        <div className=" lg:mt-[-2.3vh]">
           {" "}
           <DividerBlueCenter />
         </div>

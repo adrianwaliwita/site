@@ -27,6 +27,7 @@ const Footer = () => {
                   </div>
                 </a>
               </div>
+
               <div className="max-w-md pr-16 text-md text-gray-400">
                 Tailored solutions for a transforming world.{" "}
               </div>
@@ -65,6 +66,7 @@ const Footer = () => {
                 </a>
               </div>
             </div>
+
             <div className="mt-16 grid grid-cols-2 gap-8 col-span-2 mt-0">
               <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div>

@@ -33,12 +33,16 @@ const accredit = [
   { img: "/accredit/ACCA.jpg" },
   { img: "/accredit/CIMA.jpg" },
   { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
+  { img: "/accredit/GPTW-2025.jpg" },
   { img: "/accredit/CPA.jpg" },
+  { img: "/accredit/ISO.jpg" },
+
   { img: "/accredit/AMCHAM.jpg" },
   { img: "/accredit/BRIT.jpg" },
+
   { img: "/accredit/ACCU.jpg" },
   { img: "/accredit/SLASSCOM.jpg" },
+
   { img: "/accredit/EDB.jpg" },
 ];
 const award = [
@@ -157,9 +161,9 @@ export default function Home() {
             </div>
           </section>
         </Container>
-        <div className="pt-[5vh] md:pt-[10vh] md:pb-[10vh] xl:pb-[8vh]"></div>
+        <div className="pt-[5vh] md:pt-[10vh] md:pb-[10vh] "></div>
 
-        <div className="relative h-screen bg-gradient-to-bl from-[#000000] to-[#0000ff]">
+        <div className="relative h-[120vh] md:h-[120vh] lg:h-[100vh] xl:h-[80vh] bg-gradient-to-bl from-[#000000] to-[#0000ff]">
           {/* Background Image with parallax effect */}
           <div
             className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
@@ -280,9 +284,7 @@ export default function Home() {
                   READY TO START?
                 </h2>{" "}
               </div>
-              <div className="mt-[1vh] lg:mt-[-2vh]">
-                <DividerWhiteCenter />
-              </div>
+              <DividerWhiteCenter />
 
               <div className="flex flex-col justify-center gap-4 mt-8 sm:flex-row sm:items-center sm:gap-5">
                 <a

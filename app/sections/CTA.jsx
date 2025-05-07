@@ -20,9 +20,7 @@ const CalltoAction = ({ title, description, text, href }) => {
                 {title}{" "}
               </h2>
             </div>
-            <div className="mt-[1vh] lg:mt-[-2vh]">
-              <DividerWhiteCenter />
-            </div>
+            <DividerWhiteCenter />
             {description && (
               <p className="my-[2vh] mb-[5vh] font-arial text-white">
                 {description}

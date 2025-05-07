@@ -2,7 +2,7 @@ export const headingStyles = {
   LargeHeading:
     "text-[10.5vw] leading-[10.5vw]  sm:text-[10.5vw] sm:leading-[10.5vw]  md:text-[8vw] md:leading-[8vw] lg:text-[6vw] lg:leading-[6vw] font-GTAmerica font-bold",
   primaryCenter:
-    "font-GTAmerica text-4xl  md:text-[7vw] md:leading-[7.5vw] lg:text-[4.6vw] font-bold tracking-normal text-black text-center",
+    "font-GTAmerica text-4xl  md:text-[7vw] md:leading-[7.5vw] lg:text-[4.6vw] lg:leading-[4.6vw] font-bold tracking-normal text-black text-center",
   primaryLeft:
     "font-GTAmerica text-4xl  md:text-[7vw] md:leading-[7.5vw] lg:text-[4.6vw] lg:leading-[4.6vw] font-bold tracking-normal text-black text-center md:text-left ",
   WhiteCenter:
