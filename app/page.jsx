@@ -1,33 +1,20 @@
 // app/page.jsx
 "use client";
-import { useState } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Container from "./sections/Container";
-import { cn } from "@/lib/utils";
-import GrowWithoutLimits from "./components/GrowWithoutLimits";
-import SectionTextRight from "app/sections/SectionTextRight";
-import SectionTextRightBlue from "app/sections/SectionTextRightBlue";
-import SectionTextRightLong from "app/sections/SectionTextRightLong";
 import MarqueeFront from "app/components/MarqueeFront";
 import PostCarousel from "app/components/PostCarousel";
 import Testimonials from "app/components/Testimonials";
 
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
+import { DividerBlueCenter } from "app/components/Divider";
 
-import SectionTextLeft from "app/sections/SectionTextLeft";
 import ProgressSection from "app/sections/progressSection";
-import SectionTextLeftBlue from "app/sections/SectionTextLeftBlue";
-
-import { useEffect } from "react";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-// or '@/constants/textStyles' depending on your project structure
-import MarqueeVert from "./components/MarqueeVert";
-import MarqueeHori from "./components/MarqueeHori";
+
 import Button from "./components/Button";
+
+// Lazy loaded components
+const GrowWithoutLimits = lazy(() => import("./components/GrowWithoutLimits"));
 
 const accredit = [
   { img: "/accredit/ACCA.webp" },
@@ -77,8 +64,17 @@ const featuresData = [
   },
 ];
 
+// Loading fallback components
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center py-20">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+  </div>
+);
+
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
+  const [isAccreditVisible, setIsAccreditVisible] = useState(false);
+  const [isGrowSectionVisible, setIsGrowSectionVisible] = useState(false);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -90,6 +86,43 @@ export default function Home() {
     };
 
     fetchBlogs();
+
+    // Intersection Observer for lazy loading
+    const accreditObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsAccreditVisible(true);
+          accreditObserver.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const growSectionObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsGrowSectionVisible(true);
+          growSectionObserver.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const accreditSection = document.getElementById("accredit-section");
+    const growSection = document.getElementById("grow-section");
+
+    if (accreditSection) {
+      accreditObserver.observe(accreditSection);
+    }
+
+    if (growSection) {
+      growSectionObserver.observe(growSection);
+    }
+
+    return () => {
+      accreditObserver.disconnect();
+      growSectionObserver.disconnect();
+    };
   }, []);
 
   return (
@@ -129,7 +162,7 @@ export default function Home() {
         </div>
 
         <Container>
-          <section>
+          <section id="grow-section">
             <div className="pt-0 md:pt-[10vh]">
               <div className=" mx-auto  bg-white">
                 <div className="flex flex-col">
@@ -153,7 +186,13 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="pt-[5vh]">
-                      <GrowWithoutLimits features={featuresData} />
+                      {isGrowSectionVisible ? (
+                        <Suspense fallback={<LoadingSpinner />}>
+                          <GrowWithoutLimits features={featuresData} />
+                        </Suspense>
+                      ) : (
+                        <div className="h-64"></div> // Placeholder space
+                      )}
                     </div>
                   </div>
                 </div>
@@ -190,7 +229,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="md:pb-[5vh]">
+        <section id="accredit-section" className="md:pb-[5vh]">
           <div className="pt-[5vh] md:pt-[10vh] ">
             <div className="px-8 mx-auto bg-white">
               <div className="flex flex-col">
@@ -214,7 +253,11 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-[5vh] w-[100%] ">
               {/* Carousel Section */}
               <div className="col-span-2">
-                <MarqueeFront items={accredit} isActive={true}></MarqueeFront>
+                {isAccreditVisible ? (
+                  <MarqueeFront items={accredit} isActive={true}></MarqueeFront>
+                ) : (
+                  <div className="h-24"></div> // Placeholder space
+                )}
               </div>
 
               {/* Title Section */}
@@ -236,7 +279,11 @@ export default function Home() {
 
               {/* Carousel Section */}
               <div className="col-span-2 mt-[-10vh] md:mt-0 md:w-[110%] md:ml-[-10vw] ">
-                <MarqueeFront items={award}></MarqueeFront>
+                {isAccreditVisible ? (
+                  <MarqueeFront items={award}></MarqueeFront>
+                ) : (
+                  <div className="h-24"></div> // Placeholder space
+                )}
               </div>
             </div>
           </div>

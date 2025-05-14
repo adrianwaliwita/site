@@ -12,25 +12,27 @@ import CookieConsentBanner from "./components/CookieConsentBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { geoRedirect } from "./utils/GeoUtils";
 
+// ✅ Optimized local font for LCP performance
 const GTAmerica = localFont({
   src: [
     {
       path: "./fonts/GT-America-Compressed-Bold.ttf",
       weight: "700",
-      style: "Regular",
+      style: "normal",
     },
     {
       path: "./fonts/GT-America-Standard-Regular.woff",
       weight: "400",
-      style: "Regular",
+      style: "normal",
     },
     {
       path: "./fonts/GT-America-Standard-Regular.woff2",
       weight: "400",
-      style: "Regular",
+      style: "normal",
     },
   ],
   variable: "--font-GTAmerica",
+  display: "swap", // ✅ Important for preventing LCP delays
 });
 
 export default function RootLayout({ children }) {
@@ -39,13 +41,13 @@ export default function RootLayout({ children }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Check if it's on the client side
+  // Set client-side flag
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  // Run geolocation redirect only once on client
   useEffect(() => {
-    // Only run geolocation check once when the component mounts on client
     if (isClient && !geoChecked) {
       geoRedirect(router, pathname);
       setGeoChecked(true);

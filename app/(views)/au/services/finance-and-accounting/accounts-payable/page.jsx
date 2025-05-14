@@ -39,14 +39,16 @@ const AccountsPayable = () => {
             <div>
               In a time of volatile supply chains and fluctuating demand, a
               streamlined AP process enhances financial resilience and is
-              essential to build strong supplier relationships.
+              essential to build strong supplier relationships within the
+              Australin markets.
             </div>
             <div>
               AP teams serve a strategic purpose, supporting their businesses
               with efficient and effective supplier payments that safeguard
               operations and enhance corporate reputation. By adopting agility,
               automation, and data-driven insights through advanced
-              technologies, AP will become a resilient, future-proof function.
+              technologies, AP will become a resilient, future-proof function
+              for Australian businesses.
             </div>
           </div>
         }

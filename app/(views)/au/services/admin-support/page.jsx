@@ -1,7 +1,7 @@
 "use client";
 import HoverCard3 from "app/components/HoverCard3";
 import CTA from "app/sections/CTA";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import SecuringInterests from "app/components/SecuringInterests";
 import TopTierTalent from "app/components/TopTierTalent";
 import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
@@ -132,9 +132,9 @@ const FinanceAccounting = () => {
             <div className="space-y-4">
               <div>
                 Our dedicated team of administrative professionals can work with
-                businesses of all sizes across any industry to help overcome the
-                challenges of increasing workloads, rising costs, and the need
-                for greater efficiency.
+                businesses of all sizes across Australia and in any industry to
+                help overcome the challenges of increasing workloads, rising
+                costs, and the need for greater efficiency.
               </div>{" "}
               <div>
                 We efficiently deliver comprehensive, end-to-end solutions that
@@ -148,7 +148,7 @@ const FinanceAccounting = () => {
                 We adapt to your changing needs and anticipate your
                 requirements, ensuring the smooth running of your daily
                 operations. By combining our expertise with productivity tools
-                and a personalized approach, we enable you to optimize your
+                and a personalised approach, we enable you to optimise your
                 administrative processes, improve overall efficiency, and scale
                 faster.
               </div>{" "}
@@ -175,7 +175,7 @@ const FinanceAccounting = () => {
       </div>
 
       <div className="pt-[5vh] md:pt-[10vh]">
-        <PartnershipFeatures />
+        <PartnershipFeaturesAus />
       </div>
 
       <TopTierTalent

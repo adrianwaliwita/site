@@ -6,19 +6,14 @@ import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 import Meta from "app/components/Meta";
 
 import CTA from "app/sections/CTA";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import SecuringInterests from "app/components/SecuringInterests";
 import TopTierTalent from "app/components/TopTierTalent";
-import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
-import ProvenProcesses from "app/components/ProvenProcesses";
+import ServiceBeyondBordersAus from "app/components/ServiceBeyondBordersAus";
+import ProvenProcessesAus from "app/components/ProvenProcessesAus";
 
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
+import { DividerBlueCenter } from "app/components/Divider";
 import SectionTextRight from "app/sections/SectionTextRight";
 const suite = [
   { img: "/suite-logo/oracle.png" },
@@ -271,7 +266,7 @@ const AusFinance = () => {
         </section>
 
         <div className="pt-[5vh] md:pt-[10vh] ">
-          <PartnershipFeatures />
+          <PartnershipFeaturesAus />
         </div>
 
         <TopTierTalent description="We’re your premier source for exceptional talent. Our experts, with their deep understanding of Australian accounting and financial services are the perfect fit for your team." />
@@ -305,9 +300,9 @@ const AusFinance = () => {
 
         <SecuringInterests></SecuringInterests>
 
-        <ServiceBeyondBorders></ServiceBeyondBorders>
+        <ServiceBeyondBordersAus></ServiceBeyondBordersAus>
 
-        <ProvenProcesses></ProvenProcesses>
+        <ProvenProcessesAus></ProvenProcessesAus>
 
         <CTA
           title="READY TO DELIVER FROM DAY ONE"

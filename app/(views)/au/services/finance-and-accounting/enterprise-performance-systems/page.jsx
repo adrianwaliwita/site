@@ -1,11 +1,7 @@
 "use client";
 import LandingPageInner from "app/sections/LandingPageInner";
-import CTA from "app/sections/CTA";
 import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
-
-import SectionTextRight from "app/sections/SectionTextRight";
-import SectionTextLeft from "app/sections/SectionTextLeft";
-import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
+import { bodyTextStyles } from "app/constants/FontStyles";
 import { cn } from "@/lib/utils";
 import SectionTextRightLong from "app/sections/SectionTextRightLong";
 
@@ -49,7 +45,7 @@ const EPM = () => {
               and analytics capabilities, enables us to uncover actionable
               insights. Our consultancy approach leverages proven transformation
               frameworks to deliver world-class EPM solutions, tailor made for
-              you.
+              Australian Companies.
             </div>
           </div>
         }

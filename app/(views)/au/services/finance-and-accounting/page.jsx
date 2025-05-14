@@ -2,27 +2,18 @@
 import HoverCard5 from "app/components/HoverCard5";
 import HoverCard3 from "app/components/HoverCard3";
 
-import MarqueeHori from "app/components/MarqueeHori";
 import MarqueeHoriLogo from "app/components/MarqueeHoriLogo";
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 
 import CTA from "app/sections/CTA";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
-import SecuringInterests from "app/components/SecuringInterests";
+import SecuringInterestsAus from "app/components/SecuringInterestsAus";
 import TopTierTalent from "app/components/TopTierTalent";
 import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
-import ProvenProcesses from "app/components/ProvenProcesses";
+import ProvenProcessesAus from "app/components/ProvenProcessesAus";
 
-import LandingPageInner from "app/sections/LandingPageInner";
-import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
-import Link from "next/link";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
+import { DividerBlueCenter } from "app/components/Divider";
 
 const suite = [
   { img: "/suite-logo/oracle.png" },
@@ -276,9 +267,10 @@ const FinanceAccounting = () => {
             </div>
             <div className={bodyTextStyles.descriptionCenter}>
               We see finance professionals as integral strategic partners in
-              driving business success. Accordingly, our experts bring finance
-              transformation, analytics, automation and industry-leading
-              solutions to clients across industries.
+              driving business success within the Australian market.
+              Accordingly, our experts bring finance transformation, analytics,
+              automation and industry-leading solutions to clients across
+              industries.
             </div>
           </div>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw] mt-[2vh] md:mt-0">
@@ -321,7 +313,7 @@ const FinanceAccounting = () => {
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]"></div>
       </section>
 
-      <TopTierTalent description="We’re your premier source for exceptional financial talent. All our professionals hold a minimum of a bachelor’s degree along with relevant qualifications, including CIMA, AICPA, ACCA, CA, and CPA, ensuring that they bring the highest standards of expertise and professionalism to your organization."></TopTierTalent>
+      <TopTierTalent description="We're your premier source for exceptional financial talent. As one of the first four CPA-Recognised Employer Partners in Sri Lanka, we recruit and train the best of the best, ensuring they bring the highest standards of expertise and professionalism to your organisation."></TopTierTalent>
 
       <section>
         <div className=" mx-auto  px-4 pt-[5vh] md:pt-[10vh] lg:px-6">
@@ -350,7 +342,7 @@ const FinanceAccounting = () => {
         </div>
       </section>
 
-      <SecuringInterests></SecuringInterests>
+      <SecuringInterestsAus></SecuringInterestsAus>
 
       <ServiceBeyondBorders></ServiceBeyondBorders>
 
@@ -378,34 +370,13 @@ const FinanceAccounting = () => {
                 <div className="pt-[3vh]">
                   <MarqueeHoriLogo items={suite}> </MarqueeHoriLogo>
                 </div>
-
-                {/* <IconCloud
-                  iconSlugs={["react", "typescript"]}
-                  customPngIcons={[
-                    { src: "/suite-logo/oracle.png" },
-                    { src: "/suite-logo/sap.png" },
-                    { src: "/suite-logo/oracle-hyperion.png" },
-                    { src: "/suite-logo/acumatica.png" },
-                    { src: "/suite-logo/fathom.png" },
-                    { src: "/suite-logo/maxio.png" },
-                    { src: "/suite-logo/microsoft-dynamic.png" },
-                    { src: "/suite-logo/monday.png" },
-                    { src: "/suite-logo/myob.png" },
-                    { src: "/suite-logo/power-bi.png" },
-                    { src: "/suite-logo/qb.png" },
-                    { src: "/suite-logo/sage.png" },
-                    { src: "/suite-logo/salesforce.png" },
-                    { src: "/suite-logo/stripe.png" },
-                    { src: "/suite-logo/xero.png" },
-                  ]}
-                /> */}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <ProvenProcesses></ProvenProcesses>
+      <ProvenProcessesAus></ProvenProcessesAus>
 
       <CTA
         title="Ready to deliver from day one"

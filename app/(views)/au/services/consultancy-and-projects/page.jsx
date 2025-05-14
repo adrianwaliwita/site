@@ -1,18 +1,15 @@
 "use client";
 import HoverCard3 from "app/components/HoverCard3";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-
-import Security from "app/components/security";
-import ServiceBeyond from "app/components/ServiceBeyond";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
 import SecuringInterests from "app/components/SecuringInterests";
 import TopTierTalent from "app/components/TopTierTalent";
-import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
-import ProvenProcesses from "app/components/ProvenProcesses";
+import ServiceBeyondBordersAus from "app/components/ServiceBeyondBordersAus";
+import ProvenProcessesAus from "app/components/ProvenProcessesAus";
 import CTA from "app/sections/CTA";
-import ServGrid from "app/components/ServGrid";
+
 const steps = [
   {
     title: "Planning & Scheduling Phase",
@@ -43,51 +40,6 @@ const steps = [
     title: "Stakeholder Management",
     description:
       "We proactively engage and manage communication with all project stakeholders, keeping everyone informed and aligned with project goals",
-  },
-];
-
-const logos = [
-  {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
-  },
-  {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
-  },
-  {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
-  },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
-];
-
-const serviceBorders = [
-  {
-    title: "A True Extension",
-    description:
-      "Our dynamic team is an extension of yours. adopting your workflows, systems and norms. We become a part of you. ",
-  },
-  {
-    title: "Continuous Collaboration",
-    description:
-      "We hold weekly updates and monthly service reviews, tracked through both qualitative and quantitative measures. This ensures ongoing alignment, space for continuous improvement and a collaborative environment where your goals are always prioritized.",
-  },
-];
-
-const serviceBorders2 = [
-  {
-    title: "Face to Face Encounters",
-    description:
-      "We regularly host clients in our offices and make visits to their locations as well. This face-to-face interaction strengthens connections.",
-  },
-  {
-    title: "CEO - Led Commitment",
-    description:
-      "With direct access to our CEO, your concerns and priorities are always at the forefront. We're dedicated to providing a level of personalized service that goes beyond the ordinary.",
   },
 ];
 
@@ -173,12 +125,12 @@ const FinanceAccounting = () => {
           <>
             <div className="space-y-4">
               <div>
-                We collaborate with leading enterprises to deliver strategic
-                consulting services that drive sustainable growth and innovation
-                through outsourcing. With extensive experience supporting
-                corporations across multiple continents, we provide customized
-                consulting solutions tailored to your specific region and
-                industry.
+                We collaborate with leading Australian enterprises to deliver
+                strategic consulting services that drive sustainable growth and
+                innovation through outsourcing. With extensive experience
+                supporting corporations across multiple Australian regions, we
+                provide customised consulting solutions tailored to your
+                specific region and industry.
               </div>{" "}
               <div>
                 Whether you&apos;re a small-to-medium enterprise seeking
@@ -407,17 +359,19 @@ const FinanceAccounting = () => {
                 <div>
                   {" "}
                   We understand that no two projects are alike. Our tailor-made
-                  approach ensures you achieve measurable outcomes. We carefully
-                  assess your unique goals, challenges, and resources to
-                  determine the most suitable methodology for your project.
-                  Whether you require the flexibility of Agile, the structure of
-                  Waterfall, or a hybrid approach, we&apos;ll select the ideal
-                  methodology to ensure your project&apos;s success.{" "}
+                  approach ensures that you achieve measurable outcome specific
+                  to the Australian market. We carefully assess your unique
+                  goals, challenges, and resources to determine the most
+                  suitable methodology for your project. Whether you require the
+                  flexibility of Agile, the structure of Waterfall, or a hybrid
+                  approach, we&apos;ll select the ideal methodology to ensure
+                  your project&apos;s success.{" "}
                 </div>
                 <div>
                   Our team of experienced professionals will work closely with
                   you to develop a customized project plan that aligns with your
-                  specific objectives and delivers exceptional results.
+                  specific objectives and delivers exceptional results for your
+                  enterprise.
                 </div>
               </div>
             </div>
@@ -484,7 +438,7 @@ const FinanceAccounting = () => {
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]"></div>
       </section>
       <div className="pt-[5vh] md:pt-[10vh]">
-        <PartnershipFeatures />
+        <PartnershipFeaturesAus />
       </div>
 
       <TopTierTalent
@@ -496,9 +450,9 @@ Our team holds a minimum of a bachelor’s degree along with relevant qualificat
 
       <SecuringInterests></SecuringInterests>
 
-      <ServiceBeyondBorders></ServiceBeyondBorders>
+      <ServiceBeyondBordersAus></ServiceBeyondBordersAus>
 
-      <ProvenProcesses></ProvenProcesses>
+      <ProvenProcessesAus></ProvenProcessesAus>
 
       <CTA
         title="READY TO DELIVER FROM DAY ONE"

@@ -1,6 +1,6 @@
 import ServiceBeyond from "app/components/ServiceBeyond";
 import CTA from "app/sections/CTA";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import { DividerBlueCenter } from "app/components/Divider";
 
 const logos = [
@@ -72,10 +72,12 @@ const Paraplanning = () => {
             </div>
 
             <div className="font-arial text-sm md:text-base xl:text-xl mt-2 text-black px-4 md:px-0">
-              We handle the time-consuming back-end tasks, from preparation up
-              to the sign-off stage, so you can focus on growing your business
-              and delivering exceptional client service. Our experienced team
-              supports you throughout the paraplanning process.
+              We handle the time-consuming back-end tasks of paraplanning for
+              Australian financial advisors, from preparation up to the sign-off
+              stage, so you can focus on growing your business and delivering
+              exceptional client service. Our experienced team supports you
+              throughout the paraplanning process, tailored to the Australian
+              regulatory environment.
             </div>
           </div>
           <div className="mx-auto ">
@@ -90,7 +92,7 @@ const Paraplanning = () => {
           </div>
         </div>
         <div className="pt-[5vh] md:pt-[10vh] ">
-          <PartnershipFeatures />
+          <PartnershipFeaturesAus />
         </div>
       </section>
       <section className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[5vh]  lg:px-6 ">

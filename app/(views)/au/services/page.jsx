@@ -3,12 +3,7 @@ import Meta from "app/components/Meta";
 
 import HoverCard3 from "app/components/HoverCard3";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
+import { DividerBlueCenter } from "app/components/Divider";
 
 const metadata = {
   title: "Top Outsourcing Services | H Connect International",
@@ -55,8 +50,9 @@ const Services = () => {
                     <br />
                   </h1>
                   <div className={bodyTextStyles.descriptionLeft}>
-                    We deliver exceptional value through tailored services for
-                    better outcomes, faster results, and smarter decisions.
+                    We deliver exceptional value through services specifically
+                    tailored to the Australian market for better outcomes,
+                    faster results, and smarter decisions.
                   </div>
                 </div>
               </div>
@@ -329,9 +325,10 @@ const Services = () => {
                   </summary>
                   <div className="px-4 pb-4">
                     <div>
-                      We adhere to all global security standards such as GDPR,
-                      DPA, and the Australian Privacy Act, and we are an ISO
-                      27001 certified organization.{" "}
+                      We adhere to all global security standards, including
+                      GDPR, DPA, and the Australian Privacy Principles (APPs)
+                      under the Privacy Act 1988, and we are an ISO
+                      27001-certified organisation.
                     </div>
                   </div>
                 </details>
@@ -342,9 +339,13 @@ const Services = () => {
                   </summary>
                   <div className="px-4 pb-4">
                     <div>
-                      We have teams working multiple calendars and time zones
-                      and our infrastructure is designed for 24/7 operations.
-                      Additionally, our labor laws are flexible and
+                      We have teams working across multiple Australian time
+                      zones, and our infrastructure is designed for 24/7
+                      operations. Our teams work seamlessly with Australian
+                      Eastern Standard Time (AEST), Australian Central Standard
+                      Time (ACST), and Australian Western Standard Time (AWST)
+                      and can tailor our schedules to align with your specific
+                      needs. Additionally, our Labour laws are flexible and
                       industry-adapted, allowing us to accommodate any specific
                       scheduling requirements without disruption.
                     </div>
@@ -388,7 +389,10 @@ const Services = () => {
                       We are equipped with two cutting-edge facilities—one
                       situated at the World Trade Centre in Colombo&apos;s
                       financial hub, and the other conveniently located just 5
-                      kilometers away from it in the heart of Colombo.
+                      kilometers away from it in the heart of Colombo. While our
+                      operational hubs are in Colombo, our processes and
+                      technology are designed to provide seamless support and
+                      communication for our Australian partners
                     </div>
                   </div>
                 </details>
@@ -489,6 +493,71 @@ const Services = () => {
                       Our sourcing and onboarding process typically takes 6-8
                       weeks. This is complete with induction and relevant
                       training.
+                    </div>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="py-2 outline-none cursor-pointer focus:underline">
+                    Do you have experience working with Australian businesses or
+                    within the Australian regulatory environment?{" "}
+                  </summary>
+                  <div className="px-4 pb-4">
+                    <div>
+                      Yes, we have experience partnering with Australian
+                      businesses across various sectors. Our teams are trained
+                      on relevant Australian business practices and can adapt to
+                      specific industry regulations where required. Please
+                      contact us to discuss your specific industry.
+                    </div>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="py-2 outline-none cursor-pointer focus:underline">
+                    Can you provide Australian-based references or case studies?
+                  </summary>
+                  <div className="px-4 pb-4">
+                    <div>
+                      We have built a portfolio of successful partnerships with
+                      Australian businesses. We would be happy to discuss
+                      relevant case studies and provide references upon request,
+                      with client consent. You can access testimonials from our
+                      Australian clients on our home page.
+                    </div>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="py-2 outline-none cursor-pointer focus:underline">
+                    How do you ensure cultural alignment when working with
+                    Australian teams?{" "}
+                  </summary>
+                  <div className="px-4 pb-4">
+                    <div>
+                      Our training programs include awareness of Australian
+                      business culture, communication norms and standards. We
+                      strive to build strong, collaborative relationships with
+                      our Australian partners through clear and respectful
+                      communication.
+                    </div>
+                  </div>
+                </details>
+
+                <details>
+                  <summary className="py-2 outline-none cursor-pointer focus:underline">
+                    What communication methods do you use to stay connected with
+                    Australian clients?
+                  </summary>
+                  <div className="px-4 pb-4">
+                    <div>
+                      We utilise a range of communication tools, including email
+                      and video conferencing (Microsoft Teams) to ensure
+                      seamless and convenient communication across different
+                      time zones. Most of our teams have daily catchups, weekly
+                      meetings or equivalent depending on unique client
+                      preferences. We are flexible and can adapt to your
+                      preferred communication methods.
                     </div>
                   </div>
                 </details>

@@ -1,65 +1,16 @@
 "use client";
 import HoverCard3 from "app/components/HoverCard3";
 import CTA from "app/sections/CTA";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
-import SecuringInterests from "app/components/SecuringInterests";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
+import SecuringInterestsAus from "app/components/SecuringInterestsAus";
 import TopTierTalent from "app/components/TopTierTalent";
-import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
-import ProvenProcesses from "app/components/ProvenProcesses";
+import ServiceBeyondBordersAus from "app/components/ServiceBeyondBordersAus";
+import ProvenProcessesAus from "app/components/ProvenProcessesAus";
 
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
 import Link from "next/link";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
-
-const slugs = [
-  "oracle",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-];
-
-const accredit = [
-  { img: "/accredit/ACCA.jpg" },
-  { img: "/accredit/CIMA.jpg" },
-  { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
-  { img: "/accredit/CPA.jpg" },
-
-  { img: "/accredit/GPTW-WOMEN.jpg" },
-];
 
 const FinanceAccounting = () => {
   return (
@@ -77,17 +28,18 @@ const FinanceAccounting = () => {
         description={
           <div className="space-y-4">
             <div>
-              We partner with leading enterprises to drive the future of smart
-              and scalable product development. Whether it’s reimagining
-              infrastructure or crafting connected products, we focus on
-              delivering tailored, high-impact solutions.
+              We partner with leading Australian enterprises to drive the future
+              of smart and scalable product development. Whether it’s
+              reimagining infrastructure or crafting connected products, we
+              focus on delivering tailored, high-impact solutions that
+              anticipate the future of business.
               <br />
             </div>
             <div>
               With proven engineering leadership, we provide comprehensive,
               end-to-end digital and product engineering solutions that
               consistently unlock new levels of value and position businesses at
-              the forefront of industry innovation.By blending our technical
+              the forefront of industry innovation. By blending our technical
               depth with a tailored combination of advanced technology and human
               expertise, our engineers enable enterprises to innovate with
               confidence and execute with excellence.
@@ -95,9 +47,9 @@ const FinanceAccounting = () => {
 
             <div>
               This refined focus, backed by strategic insight, positions us as
-              not just a service provider, but as a partner in your journey to
-              market leadership, supporting businesses from across industries in
-              achieving long-term success through engineering ingenuity.{" "}
+              not just a service provider but as a partner in your journey to
+              market leadership, supporting businesses across industries in
+              achieving long-term success through engineering ingenuity.
             </div>
           </div>
         }
@@ -293,7 +245,7 @@ const FinanceAccounting = () => {
       </section>
 
       <div className="pt-[5vh] md:pt-[10vh]">
-        <PartnershipFeatures />
+        <PartnershipFeaturesAus />
       </div>
 
       <TopTierTalent
@@ -303,11 +255,11 @@ Our team holds a minimum of a bachelor’s degree along with relevant qualificat
         certDesc="Every member of our team holds a relevant tech certification"
       ></TopTierTalent>
 
-      <SecuringInterests></SecuringInterests>
+      <SecuringInterestsAus></SecuringInterestsAus>
 
-      <ServiceBeyondBorders></ServiceBeyondBorders>
+      <ServiceBeyondBordersAus></ServiceBeyondBordersAus>
 
-      <ProvenProcesses></ProvenProcesses>
+      <ProvenProcessesAus></ProvenProcessesAus>
       <CTA
         title="READY TO DELIVER FROM DAY ONE"
         description="Get in touch to learn more about our services and how we can help you grow your business."

@@ -1,6 +1,6 @@
 import ServiceBeyond from "app/components/ServiceBeyond";
 import CTA from "app/sections/CTA";
-import PartnershipFeatures from "app/components/PartnershipFeatures";
+import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import { DividerBlueCenter } from "app/components/Divider";
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
 import Meta from "app/components/Meta";
@@ -104,7 +104,7 @@ const AccountingAndTax = () => {
             </div>
           </div>
           <div className="pt-[5vh] md:pt-[10vh] ">
-            <PartnershipFeatures />
+            <PartnershipFeaturesAus />
           </div>
         </section>
         <section className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[5vh]  lg:px-6 ">

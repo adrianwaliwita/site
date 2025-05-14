@@ -26,15 +26,16 @@ const RecordToReport = () => {
         description={
           <div className={`space-y-4  ${bodyTextStyles.descriptionLeft}`}>
             <div>
-              The modern <strong>CFO </strong> operates in a complex landscape
-              characterized by rapid technological advancements, evolving
-              regulations, and the increasing demand for data-driven insights.
-              Legacy systems, manual processes, and disparate data sources often
-              hinder the ability to deliver timely, accurate, and strategic
-              financial information.To overcome these challenges, CFOs must
-              prioritize the transformation of their record-to-report functions,
-              leveraging technology and talent to drive efficiency, improve
-              compliance, and support data-driven decision-making.
+              The modern CFO operates in a complex landscape characterised by
+              rapid technological advancements, evolving Australian regulations,
+              and the increasing demand for data-driven insights. Legacy
+              systems, manual processes, and disparate data sources often hinder
+              the ability to deliver timely, accurate, and strategic financial
+              information. To overcome these challenges, CFOs must prioritise
+              the transformation of their record-to-report functions, leveraging
+              technology and talent to drive efficiency, improve compliance with
+              Australian regulatory standards, and support data-driven
+              decision-making.
             </div>
             <div>
               Leveraging our proven R2R solutions and frameworks, we design

@@ -1,11 +1,8 @@
 "use client";
 import LandingPageInner from "app/sections/LandingPageInner";
-import CTA from "app/sections/CTA";
 import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
 import { cn } from "@/lib/utils";
 
-import SectionTextRight from "app/sections/SectionTextRight";
-import SectionTextLeft from "app/sections/SectionTextLeft";
 import SectionTextRightLong from "app/sections/SectionTextRightLong";
 import SectionTextLeftLongBlue from "app/sections/SectionTextLeftLongBlue";
 
@@ -17,7 +14,7 @@ const InvoiceToCash = () => {
         titleBeforeBlue=""
         blueTitle=" ACCELERATE  "
         titleAfterBlue="INVOICE-TO-CASH"
-        description=" We optimize the accounts receivable process by creating in-depth visibility, enabling better decisions, improving user experiences, and boosting cash flow."
+        description=" We optimize the accounts receivable process by creating in-depth visibility, enabling better decisions, improving user experiences, and boosting cash flow for Australian businesses."
         ImgUrl="/F&A-services/invoCash.jpg"
       />
       <div className="pt-[5vh] md:pt-[10vh]"></div>
@@ -30,9 +27,10 @@ const InvoiceToCash = () => {
             <div>
               Today&apos;s demanding economic environment is leading to
               increased days sales outstanding (DSO) and a growing pile of
-              past-due invoices for companies across the world. It is essential
+              past-due invoices for companies across Australia. It is essential
               that CFOs visibility on real-time cash flow forecasts, revised
-              credit limit strategies, and their overall cash position.
+              credit limit strategies, and their overall cash position withing
+              the Australian economy.
             </div>
             <div>
               However, many companies find their Accounts Receivable functions
@@ -45,7 +43,7 @@ const InvoiceToCash = () => {
             <div className="">
               We specialize in transforming AR functions into agile,
               future-ready operations. Our teams will enable you to navigate the
-              complexities of the business landscape and ehance your
+              complexities of the Australian business landscape and ehance your
               invoice-to-cash process for maximum efficiency and profitability.
             </div>
           </div>

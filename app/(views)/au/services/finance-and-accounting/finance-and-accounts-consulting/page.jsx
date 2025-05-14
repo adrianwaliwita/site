@@ -48,7 +48,8 @@ const InvoiceToCash = () => {
             </div>
             <div>
               This holistic approach to finance transformation helps build a
-              forward-looking organization equipped for long-term success.
+              forward-looking organization equipped for long-term success in the
+              Australian market.
             </div>
           </div>
         }
@@ -66,7 +67,7 @@ const InvoiceToCash = () => {
       <SectionTextLeftLongBlue
         text={"Start Now"}
         title={<>Access our framework immediately</>}
-        description="Drive your finance function forward with data-driven insights, seamless automation, and strategic expertise. Achieve lasting growth, maximize profitability, and lead with confidence in a dynamic business landscape. Empower your team to turn financial vision into measurable success."
+        description="Drive your finance function forward with data-driven insights, seamless automation, and strategic expertise. Achieve lasting growth, maximize profitability, and lead with confidence in a dynamic Australian business landscape. Empower your team to turn financial vision into measurable success."
         component={
           <div className="max-w-[100vw] w-[100vw] md:max-w-[40vw] md:w-[40vw] px-[2vw] ">
             <div

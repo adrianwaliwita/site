@@ -1,38 +1,14 @@
 "use client";
-import Reveal from "app/components/Reveal";
-import HoverCard3 from "app/components/HoverCard3";
-import MarqueeHori from "app/components/MarqueeHori";
-import Button from "app/components/Button";
-import IconCloud from "app/components/LogoCloud";
-import ServiceBeyond from "app/components/ServiceBeyond";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
-import SecuringInterests from "app/components/SecuringInterests";
+import SecuringInterestsAus from "app/components/SecuringInterestsAus";
 import TopTierTalent from "app/components/TopTierTalent";
-import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
-import ProvenProcesses from "app/components/ProvenProcesses";
+import ServiceBeyondBordersAus from "app/components/ServiceBeyondBordersAus";
+import ProvenProcessesAus from "app/components/ProvenProcessesAus";
 import CTA from "app/sections/CTA";
 import ServGrid from "app/components/ServGrid";
 
-const logos = [
-  {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
-  },
-  {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
-  },
-  {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
-  },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
-];
 const HR = [
   {
     title: "Recruitment & Staffing",
@@ -129,10 +105,11 @@ const HumanResources = () => {
                 arise.
               </div>{" "}
               <div>
-                With our customized solutions, you can streamline HR operations,
-                reduce costs, and scale your business faster. We’re here to take
-                care of the behind-the-scenes work, so you can prioritize your
-                people and drive your company’s success forward.
+                With our customised solutions tailored for the Australian
+                market, you can streamline HR operations, reduce costs, and
+                scale your business faster. We're here to take care of the
+                behind-the-scenes work so you can prioritise your people and
+                drive your company's success forward.
               </div>{" "}
             </div>
           </>
@@ -165,11 +142,11 @@ const HumanResources = () => {
         certDesc="Every member of our team holds a relevant HR certification"
       ></TopTierTalent>
 
-      <SecuringInterests></SecuringInterests>
+      <SecuringInterestsAus></SecuringInterestsAus>
 
-      <ServiceBeyondBorders></ServiceBeyondBorders>
+      <ServiceBeyondBordersAus></ServiceBeyondBordersAus>
 
-      <ProvenProcesses></ProvenProcesses>
+      <ProvenProcessesAus></ProvenProcessesAus>
       <CTA
         title="READY TO DELIVER FROM DAY ONE"
         description="Get in touch to learn more about our services and how we can help you grow your business."

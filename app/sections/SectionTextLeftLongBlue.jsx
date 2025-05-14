@@ -32,7 +32,7 @@ const SectionTextLeftLongBlue = ({ title, description, component, text }) => {
               </div>
             </div>
             <div className="mt-[2vh]">
-              <Button text={text}></Button>
+              <Button text={text} href={"/request-appointment"}></Button>
             </div>
           </div>
 

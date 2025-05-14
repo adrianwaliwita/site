@@ -39,7 +39,7 @@ const CookieConsentBanner = () => {
     <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-50">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="mb-4 md:mb-0 md:mr-8">
-          <p className="text-sm text-gray-700">
+          <p className="text-[10px] md:text-sm text-gray-700 text-center md:text-left">
             This website uses cookies to enhance your browsing experience and
             analyze site traffic. By clicking &quot;Accept&quot;, you consent to
             our use of cookies as described in our Cookie Policy.
