@@ -58,16 +58,20 @@ import MarqueeHori from "app/components/MarqueeHori";
 import Button from "app/components/Button";
 
 const accredit = [
-  { img: "/accredit/ACCA.jpg" },
-  { img: "/accredit/CIMA.jpg" },
-  { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
-  { img: "/accredit/CPA.jpg" },
-  { img: "/accredit/AMCHAM.jpg" },
-  { img: "/accredit/BRIT.jpg" },
-  { img: "/accredit/ACCU.jpg" },
-  { img: "/accredit/SLASSCOM.jpg" },
-  { img: "/accredit/EDB.jpg" },
+  { img: "/accredit/ACCA.webp" },
+  { img: "/accredit/CIMA.webp" },
+  { img: "/accredit/CMA.webp" },
+  { img: "/accredit/GPTW-2025.webp" },
+  { img: "/accredit/CPA.webp" },
+  { img: "/accredit/ISO.webp" },
+
+  { img: "/accredit/AMCHAM.webp" },
+  { img: "/accredit/BRIT.webp" },
+
+  { img: "/accredit/ACCU.webp" },
+  { img: "/accredit/SLASSCOM.webp" },
+
+  { img: "/accredit/EDB.webp" },
 ];
 const award = [
   { img: "/award/15.jpg" },
@@ -370,36 +374,8 @@ export default function Home() {
               </div>{" "}
             </div>{" "}
           </div>
-          <div className="mt-8">
+          <div className="mt-8 mb-8">
             <Testimonials />
-          </div>
-          {/* Call to Action Section */}
-          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-10  mt-[7vh]">
-            <div className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
-              <div className="max-w-2xl mx-auto">
-                <h2
-                  className={`${headingStyles.primaryCenter} ${headingStyles.white}`}
-                >
-                  READY TO START?
-                </h2>{" "}
-              </div>
-              <DividerWhiteCenter />
-
-              <div className="flex flex-col justify-center gap-4 mt-8 sm:flex-row sm:items-center sm:gap-5">
-                <a
-                  className={`inline-flex items-center justify-center bg-white ${bodyTextStyles.cta} text-indigo-700 shadow-sm transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
-                  href="/contact"
-                >
-                  Get in Touch
-                </a>
-                <a
-                  className={`inline-flex items-center justify-center bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] ${bodyTextStyles.cta} text-white shadow-sm ring-1 ring-inset ring-white transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-800`}
-                  href="/about"
-                >
-                  Learn More
-                </a>
-              </div>
-            </div>
           </div>
         </Container>
       </div>

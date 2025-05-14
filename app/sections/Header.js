@@ -247,13 +247,13 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               />
             </div>
           </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Careers">
+          <MenuItem setActive={setActive} active={active} item="Join Us">
             <div className="flex flex-col space-y-4 text-sm">
               <HoveredLink
                 href={getPath("/join-us")}
                 onClick={() => setActive(null)} // Use onClick here for HoveredLink if needed
               >
-                Join Us
+                Careers
               </HoveredLink>
               <HoveredLink
                 href={getPath("/life-at-hci")}
@@ -263,7 +263,6 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               </HoveredLink>
             </div>
           </MenuItem>
-          {/* Removed active={active} from Resources as it doesn't have a dropdown */}
           <MenuItem href={getPath("/resources")} item="Resources" />
           <MenuItem href={getPath("/contact")} item="Contact Us" />{" "}
           {/* Added Contact Link */}

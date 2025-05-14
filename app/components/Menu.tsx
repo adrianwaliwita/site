@@ -111,7 +111,7 @@ export const Menu = ({ setActive = () => {}, children }: MenuProps) => {
       {/* Menu items */}
       <div className="flex space-x-6 ">{children}</div>
       {/* Button on the right */}
-      <ButtonHead text="Contact Us" href="/contact" />
+      <ButtonHead text="Get Started" href="/request-appointment" />
     </nav>
   );
 };

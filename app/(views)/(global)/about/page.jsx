@@ -258,15 +258,6 @@ const AboutClient = () => {
                   linkedin:
                     "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
                 },
-
-                {
-                  name: "Mariam Husni",
-                  position: "Manager Operations - Paraplanning",
-                  img: "/team/9.jpg",
-                  email: "mariam.husni@hconnectint.com",
-                  linkedin:
-                    "https://www.linkedin.com/in/mariam-husni-b20583b9/",
-                },
               ].map((teamMember, index) => (
                 <div
                   key={index}

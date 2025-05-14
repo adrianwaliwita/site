@@ -50,87 +50,25 @@ const RequestAppointment = () => {
               <div className="flex items-stretch justify-center">
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Contact Details */}
-                  <div className="h-full pr-6">
-                    <p className="mt-3 mb-12 text-lg text-white text-center md:text-left ">
+                  <div className="h-full md:col-span-2">
+                    <p className="mt-3 px-10 text-lg  text-white text-center md:text-left ">
                       Please fill out the form below to request an appointment.
                       We will get back to you as soon as possible.
                     </p>
-                    <ul className="mb-6 md:mb-0 space-y-6 md:space-y-4">
-                      <li className="flex items-start space-x-4">
-                        <div className="flex h-10 w-10 items-center justify-center rounded text-white md:mr-[-12px]">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="h-6 w-6"
-                          >
-                            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-                            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                          </svg>
-                        </div>{" "}
-                        <div className="flex justify-start pt-2">
-                          <Button type="submit" disabled={state.submitting}>
-                            {state.submitting ? "Sending..." : "Send Message"}
-                          </Button>
-                        </div>
-                        <div className="ml-4 mb-4">
-                          <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                            Address
-                          </h3>
-                          <div className="text-white">
-                            Level 1, 735 High Street,
-                            <br />
-                            Epping VIC 3076
-                          </div>
-                        </div>
-                      </li>
-                      <li className="flex items-start space-x-4">
-                        <div className="flex h-10 w-10 items-center justify-center rounded  text-gray-50">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="h-6 w-6"
-                          >
-                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
-                          </svg>
-                        </div>
-                        <div className="ml-4 mb-4">
-                          <h3 className="mb-2 text-lg font-medium leading-6 text-white">
-                            Contact
-                          </h3>
-                          <p className="text-white">TP:+61 29 1919737</p>
-                          <p className="text-white">
-                            Mail: info@hconnectint.com
-                          </p>
-                        </div>
-                      </li>
-                    </ul>
                   </div>
 
                   {/* Contact Form */}
-                  <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+                  <div
+                    className="card h-fit max-w-6xl p-5 md:p-12 md:col-span-2"
+                    id="form"
+                  >
                     {state.succeeded ? (
                       <div className="text-black text-2xl text-center font-arial bg-white rounded p-10">
-                        Thanks for your message! We'll get back to you soon.
+                        Thanks for your message! We&apos;ll get back to you
+                        soon.
                       </div>
                     ) : (
                       <>
-                        <h2 className="mb-4 text-3xl tracking-wide font-bold text-white font-GTAmerica">
-                          Request an Appointment
-                        </h2>
                         <form onSubmit={handleSubmit} id="contactForm">
                           <div className="mb-6">
                             <div className="mx-0 mb-1 sm:mb-4">

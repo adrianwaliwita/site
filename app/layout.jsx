@@ -8,7 +8,6 @@ import Header from "./sections/Header";
 import localFont from "next/font/local";
 import { ReactLenis } from "lenis/dist/lenis-react";
 import { Providers } from "./providers";
-import NavbarMain from "./components/NavMenu";
 import CookieConsentBanner from "./components/CookieConsentBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import { geoRedirect } from "./utils/GeoUtils";
@@ -22,6 +21,11 @@ const GTAmerica = localFont({
     },
     {
       path: "./fonts/GT-America-Standard-Regular.woff",
+      weight: "400",
+      style: "Regular",
+    },
+    {
+      path: "./fonts/GT-America-Standard-Regular.woff2",
       weight: "400",
       style: "Regular",
     },

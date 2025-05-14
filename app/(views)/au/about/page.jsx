@@ -33,22 +33,9 @@ const accredit = [
   { img: "/accredit/GPTW-WOMEN.jpg" },
 ];
 
-const metadata = {
-  title: "About H Connect International | Your Outsourcing Partner",
-  description:
-    "As a leading outsourcing company, we're all about making an impact. Find out how our client-first philosophy provides absolute value creation for your business.",
-};
-
-const AboutClient = () => {
+const AboutAus = () => {
   return (
     <>
-      <head>
-        <title>About Us</title>
-        <meta
-          name="description"
-          content="As a leading outsourcing company, we're all about making an impact. Find out how our client-first philosophy provides absolute value creation for your business."
-        />
-      </head>
       <div className="w-full pt-[15vh] md:pt-[10vh]">
         <section className="flex flex-col items-center w-full ">
           {/* Content Section */}
@@ -257,15 +244,6 @@ const AboutClient = () => {
                   email: "natali.jayatilaka@hconnectint.com",
                   linkedin:
                     "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
-                },
-
-                {
-                  name: "Mariam Husni",
-                  position: "Manager Operations - Paraplanning",
-                  img: "/team/9.jpg",
-                  email: "mariam.husni@hconnectint.com",
-                  linkedin:
-                    "https://www.linkedin.com/in/mariam-husni-b20583b9/",
                 },
               ].map((teamMember, index) => (
                 <div
@@ -615,4 +593,4 @@ const AboutClient = () => {
   );
 };
 
-export default AboutClient;
+export default AboutAus;
