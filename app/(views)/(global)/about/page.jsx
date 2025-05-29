@@ -23,32 +23,10 @@ const progressImages = [
   { img: "/about/6.jpg" },
   { img: "/about/7.jpg" },
 ];
-const accredit = [
-  { img: "/accredit/ACCA.jpg" },
-  { img: "/accredit/CIMA.jpg" },
-  { img: "/accredit/CMA.jpg" },
-  { img: "/accredit/GPTW.jpg" },
-  { img: "/accredit/CPA.jpg" },
-
-  { img: "/accredit/GPTW-WOMEN.jpg" },
-];
-
-const metadata = {
-  title: "About H Connect International | Your Outsourcing Partner",
-  description:
-    "As a leading outsourcing company, we're all about making an impact. Find out how our client-first philosophy provides absolute value creation for your business.",
-};
 
 const AboutClient = () => {
   return (
     <>
-      <head>
-        <title>About Us</title>
-        <meta
-          name="description"
-          content="As a leading outsourcing company, we're all about making an impact. Find out how our client-first philosophy provides absolute value creation for your business."
-        />
-      </head>
       <div className="w-full pt-[15vh] md:pt-[10vh]">
         <section className="flex flex-col items-center w-full ">
           {/* Content Section */}

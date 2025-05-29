@@ -45,7 +45,7 @@ const logos = [
   { name: "15", url: "/award/19.jpg" },
 ];
 
-const SecuringInterests = () => {
+const AwardWinning = () => {
   return (
     <section>
       <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[6.2vh] lg:px-6">
@@ -76,4 +76,4 @@ const SecuringInterests = () => {
   );
 };
 
-export default SecuringInterests;
+export default AwardWinning;

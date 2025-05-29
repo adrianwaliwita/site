@@ -1,18 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+// ✅ NO "use client"
 import "./globals.css";
-import Footer from "./sections/Footer";
-import Header from "./sections/Header";
 import localFont from "next/font/local";
-import { ReactLenis } from "lenis/dist/lenis-react";
-import { Providers } from "./providers";
-import CookieConsentBanner from "./components/CookieConsentBanner";
-import GoogleAnalytics from "./components/GoogleAnalytics";
-import { geoRedirect } from "./utils/GeoUtils";
+import ClientLayout from "./ClientLayout";
 
-// ✅ Optimized local font for LCP performance
 const GTAmerica = localFont({
   src: [
     {
@@ -32,42 +22,30 @@ const GTAmerica = localFont({
     },
   ],
   variable: "--font-GTAmerica",
-  display: "swap", // ✅ Important for preventing LCP delays
+  display: "swap",
 });
 
+export const metadata = {
+  title: "H Connect International | Business Process Management",
+  description:
+    "We offer cost-effective outsourcing services in finance, accounting, procurement, technology, and marketing to streamline and scale your business operations.",
+  keywords: [
+    "H Connect",
+    "Business Process Management",
+    "Outsourcing",
+    "BPM Sri Lanka",
+    "H Connect International",
+  ],
+  alternates: {
+    canonical: "https://hconnectint.com",
+  },
+};
+
 export default function RootLayout({ children }) {
-  const [isClient, setIsClient] = useState(false);
-  const [geoChecked, setGeoChecked] = useState(false);
-  const router = useRouter();
-  const pathname = usePathname();
-
-  // Set client-side flag
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Run geolocation redirect only once on client
-  useEffect(() => {
-    if (isClient && !geoChecked) {
-      geoRedirect(router, pathname);
-      setGeoChecked(true);
-    }
-  }, [isClient, geoChecked, router, pathname]);
-
   return (
     <html lang="en" className={`${GTAmerica.variable}`}>
       <body>
-        <Providers>
-          <ReactLenis root options={{ lerp: 0.35 }}>
-            <Header />
-            {children}
-          </ReactLenis>
-          <Footer />
-          <CookieConsentBanner />
-        </Providers>
-
-        {/* Google Analytics */}
-        <GoogleAnalytics />
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

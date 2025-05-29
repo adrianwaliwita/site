@@ -107,9 +107,9 @@ const HumanResources = () => {
               <div>
                 With our customised solutions tailored for the Australian
                 market, you can streamline HR operations, reduce costs, and
-                scale your business faster. We're here to take care of the
+                scale your business faster. We&apos;re here to take care of the
                 behind-the-scenes work so you can prioritise your people and
-                drive your company's success forward.
+                drive your company&apos;s success forward.
               </div>{" "}
             </div>
           </>

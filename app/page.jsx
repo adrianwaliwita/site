@@ -142,7 +142,11 @@ export default function Home() {
                 agility, resilience, and efficiency. We provide tailored
                 solutions for a transforming world.
               </div>
-              <Button text="Learn More" href="/about" />
+              <Button
+                text="Dive Deeper"
+                href="/about"
+                ariaLabel="Learn more about H Connect International"
+              />
             </div>
           </div>
 
