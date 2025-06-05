@@ -69,14 +69,14 @@ const Leadership = () => {
                   linkedin:
                     "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
                 },
-                {
-                  name: "Udesh Wickramarathne",
-                  position: "Head of Australian F&A Services",
-                  img: "/team/13.webp",
-                  email: "udesh.wickramarathne@hconnectint.com",
-                  linkedin:
-                    "https://www.linkedin.com/in/udesh-wickramarathne-123020194/",
-                },
+                // {
+                //   name: "Udesh Wickramarathne",
+                //   position: "Head of Australian F&A Services",
+                //   img: "/team/13.webp",
+                //   email: "udesh.wickramarathne@hconnectint.com",
+                //   linkedin:
+                //     "https://www.linkedin.com/in/udesh-wickramarathne-123020194/",
+                // },
               ].map((teamMember, index) => (
                 <div
                   key={index}
