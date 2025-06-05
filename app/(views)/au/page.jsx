@@ -5,8 +5,7 @@ import Container from "app/sections/Container";
 import { cn } from "@/lib/utils";
 import GrowWithoutLimits from "app/components/GrowWithoutLimits";
 import SectionTextRight from "app/sections/SectionTextRight";
-import SectionTextRightBlue from "app/sections/SectionTextRightBlue";
-import SectionTextRightLong from "app/sections/SectionTextRightLong";
+
 import MarqueeFront from "app/components/MarqueeFront";
 import PostCarousel from "app/components/PostCarousel";
 import Testimonials from "app/components/Testimonials";
@@ -17,10 +16,8 @@ const ausGov = [
   { img: "/AUS-Services/melb.jpg" },
   { img: "/AUS-Services/nt.jpg" },
   { img: "/AUS-Services/tasm.jpg" },
-
   { img: "/AUS-Services/qt.jpg" },
   { img: "/AUS-Services/nsw.jpg" },
-
   { img: "/AUS-Services/wa.jpg" },
   { img: "/AUS-Services/act.jpg" },
   { img: "/AUS-Services/sau.jpg" },
@@ -137,7 +134,7 @@ export default function Home() {
                 enable business agility, resilience, and efficiency. We provide
                 tailored solutions for the Australian market and beyond.
               </div>
-              <Button text="Learn More" href="/about" />
+              <Button text="View Details" href="/about" />
             </div>
           </div>
           {/* Second column - 2x2 grid */}

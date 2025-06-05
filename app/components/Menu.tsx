@@ -34,12 +34,18 @@ export const MenuItem = ({
     setActive(item);
   };
 
+  const handleClick = () => {
+    // Reset active state when clicking on menu items
+    setActive(null);
+  };
+
   const hasDropdown = !!children;
 
   return (
     <Link
       href={href || "#"}
       onMouseEnter={handleMouseEnter}
+      onClick={handleClick}
       className="relative cursor-pointer"
     >
       <motion.div
@@ -122,16 +128,29 @@ export const ProductItem = ({
   href,
   src,
   children,
+  onClick,
 }: {
   title: string;
   description: string;
   href: string;
   src: string;
   children?: React.ReactNode;
+  onClick?: () => void;
 }) => {
+  const handleClick = () => {
+    // Call the onClick prop if provided (for closing menu)
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <div className="relative group ">
-      <Link href={href} className="flex items-center space-x-2">
+      <Link
+        href={href}
+        className="flex items-center space-x-2"
+        onClick={handleClick}
+      >
         <div>
           <h4 className="text-xl font-bold mb-1 bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
             {title}
@@ -156,11 +175,19 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, href, ...rest }) => {
+export const HoveredLink = ({ children, href, onClick, ...rest }) => {
+  const handleClick = () => {
+    // Call the onClick prop if provided (for closing menu)
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <Link
       href={href}
       {...rest}
+      onClick={handleClick}
       className="text-neutral-700 dark:text-neutral-200 hover:text-black cursor-pointer"
     >
       {children}

@@ -40,7 +40,7 @@ const AccountsPayable = () => {
               In a time of volatile supply chains and fluctuating demand, a
               streamlined AP process enhances financial resilience and is
               essential to build strong supplier relationships within the
-              Australin markets.
+              Australian markets.
             </div>
             <div>
               AP teams serve a strategic purpose, supporting their businesses

@@ -85,7 +85,47 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
         <Menu setActive={setActive}>
           {/* Apply getPath to all hrefs */}
           <MenuItem active={active} href={getPath("/")} item="Home" />
-          <MenuItem href={getPath("/about")} item="About" />
+          {/* About Dropdown Menu */}
+          <MenuItem
+            setActive={setActive}
+            href={getPath("/about")} // Main about link
+            active={active}
+            item="About"
+          >
+            <div className="text-sm grid grid-cols-2 gap-6 p-4 max-w-3xl mx-auto">
+              <ProductItem
+                title="Company Overview"
+                description="Learn about our company, mission, and values."
+                href={getPath("/about")}
+                src="/about/company.jpg"
+                onClick={() => setActive(null)}
+              />
+
+              <ProductItem
+                title="Leadership"
+                description="Meet our executive team and leadership."
+                href={getPath("/about/leadership")}
+                src="/about/leadership.jpg"
+                onClick={() => setActive(null)}
+              />
+
+              <ProductItem
+                title="Corporate Social Responsibility"
+                description="Discover our commitment to social responsibility."
+                href={getPath("/about/csr")}
+                src="/about/csr.jpg"
+                onClick={() => setActive(null)}
+              />
+
+              <ProductItem
+                title="Awards & Partnerships"
+                description="Explore our achievements and strategic partnerships."
+                href={getPath("/about/awards-partnerships")}
+                src="/about/awards.jpg"
+                onClick={() => setActive(null)}
+              />
+            </div>
+          </MenuItem>
           <MenuItem
             setActive={setActive}
             href={getPath("/services")} // Main services link
@@ -351,11 +391,40 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               href={getPath("/")}
               onItemClick={handleMobileMenuItemClick}
             />
+
+            {/* About Mobile Accordion */}
             <MobileSectionAccordion
               title="About"
-              href={getPath("/about")}
               onItemClick={handleMobileMenuItemClick}
-            />
+            >
+              <div className="space-y-2 pl-4">
+                <ProductItemMobile
+                  title="Company Overview"
+                  href={getPath("/about")}
+                  description="Learn about our company, mission, and values."
+                  onItemClick={handleMobileMenuItemClick}
+                />
+                <ProductItemMobile
+                  title="Leadership"
+                  href={getPath("/about/leadership")}
+                  description="Meet our executive team and leadership."
+                  onItemClick={handleMobileMenuItemClick}
+                />
+                <ProductItemMobile
+                  title="Corporate Social Responsibility"
+                  href={getPath("/about/csr")}
+                  description="Discover our commitment to social responsibility."
+                  onItemClick={handleMobileMenuItemClick}
+                />
+                <ProductItemMobile
+                  title="Awards & Partnerships"
+                  href={getPath("/about/awards-partnerships")}
+                  description="Explore our achievements and strategic partnerships."
+                  onItemClick={handleMobileMenuItemClick}
+                />
+              </div>
+            </MobileSectionAccordion>
+
             <MobileSectionAccordion
               title="Services"
               // Main services link optional here, can be first item inside

@@ -33,7 +33,7 @@ const Leadership = () => {
                 {
                   name: "Deshaka Perera",
                   position: "CEO",
-                  img: "/team/1.jpg",
+                  img: "/team/1.webp",
                   email: "deshaka.perera@hconnectint.com",
                   linkedin:
                     "https://www.linkedin.com/in/deshaka-perera-3102011b/",
@@ -41,14 +41,14 @@ const Leadership = () => {
                 {
                   name: "Arshad Booso",
                   position: "Head of Industry Specific Services",
-                  img: "/team/2.jpg",
+                  img: "/team/2.webp",
                   email: "arshad.booso@hconnectint.com",
                   linkedin: "https://www.linkedin.com/in/arshadbooso/",
                 },
                 {
                   name: "Shachithra Gunesekara",
                   position: "Head of People & Culture",
-                  img: "/team/3.jpg",
+                  img: "/team/3.webp",
                   email: "shachithra.gunesekara@hconnectint.com",
                   linkedin:
                     "https://www.linkedin.com/in/shachithra-gunasekara-33879272/",
@@ -56,7 +56,7 @@ const Leadership = () => {
                 {
                   name: "Pasindu Liyanage",
                   position: "Head of IT & Compliance",
-                  img: "/team/4.jpg",
+                  img: "/team/4.webp",
                   email: "pasindu.liyanage@hconnectint.com",
                   linkedin:
                     "https://www.linkedin.com/in/pasindu-sajith-liyanage/",
@@ -64,7 +64,7 @@ const Leadership = () => {
                 {
                   name: "Natali Jayatilaka",
                   position: "Head of Sales & Marketing",
-                  img: "/team/5.jpg",
+                  img: "/team/5.webp",
                   email: "natali.jayatilaka@hconnectint.com",
                   linkedin:
                     "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
@@ -72,10 +72,10 @@ const Leadership = () => {
                 {
                   name: "Udesh Wickramarathne",
                   position: "Head of Australian F&A Services",
-                  img: "/team/5.jpg",
+                  img: "/team/13.webp",
                   email: "udesh.wickramarathne@hconnectint.com",
                   linkedin:
-                    "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
+                    "https://www.linkedin.com/in/udesh-wickramarathne-123020194/",
                 },
               ].map((teamMember, index) => (
                 <div
@@ -173,7 +173,7 @@ const Leadership = () => {
                   <div
                     className={cn(
                       "group cursor-pointer overflow-hidden relative card rounded-md shadow-xl mx-auto flex flex-col justify-end p-4 ",
-                      "bg-[url('/absolute.jpg')] bg-cover aspect-square"
+                      "bg-[url('/absolute.webp')] bg-cover aspect-square"
                     )}
                   ></div>
                 </div>

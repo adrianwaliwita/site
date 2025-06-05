@@ -136,16 +136,16 @@ const AboutClient = () => {
               <div className="order-1 flex items-center">
                 <div className="flex flex-col justify-center items-center md:items-start w-full md:w-[48%] md:order-first ">
                   <div className={headingStyles.primaryLeft}>
-                    <span className={headingStyles.gradient}>RESOURCE</span>{" "}
-                    GROUPS{" "}
+                    <span className={headingStyles.gradient}>EMPLOYEE</span>{" "}
+                    RESOURCE GROUPS{" "}
                   </div>
 
                   <div className="w-[80vw] text-center md:text-left md:w-[40vw]  xl:pr-[8vw]">
                     <DividerBlueLeft />
 
                     <div className={bodyTextStyles.primary}>
-                      Our employee-led resource groups create vibrant
-                      communities that celebrate, educate, and empower.
+                      Our employee-led ERGs create vibrant communities that
+                      celebrate, educate, and empower.
                       <ul>
                         <li>
                           <strong>•</strong>{" "}
@@ -158,14 +158,19 @@ const AboutClient = () => {
                           the exciting possibilities of AI.
                         </li>
                         <li>
-                          <strong>•</strong> <strong> The Connect Crew </strong>{" "}
-                          Inspiring a greener workplace through internal
-                          sustainability projects and mindful practices
+                          <strong>•</strong>{" "}
+                          <strong> The Connect Crew:: </strong> Inspiring a
+                          greener workplace through internal sustainability
+                          projects and mindful practices / Sustainability
+                          champions, implementing eco-conscious initiatives
+                          throughout the team.
                         </li>
                         <li>
                           <strong>•</strong> <strong> The Green Team: </strong>{" "}
                           Inspiring a greener workplace through internal
-                          sustainability projects and mindful practices
+                          sustainability projects and mindful practices /
+                          Sustainability champions, implementing eco-conscious
+                          initiatives throughout the team.
                         </li>
                       </ul>
                     </div>
