@@ -33,11 +33,11 @@ const accredit = [
   { img: "/accredit/EDB.webp" },
 ];
 const award = [
-  { img: "/award/15.jpg" },
-  { img: "/award/16.jpg" },
-  { img: "/award/17.jpg" },
-  { img: "/award/18.jpg" },
-  { img: "/award/19.jpg" },
+  { img: "/award/digiTransform.jpg" },
+  { img: "/award/sustain.jpg" },
+  { img: "/award/innovation.jpg" },
+  { img: "/award/leadership.jpg" },
+  { img: "/award/partner.jpg" },
   { img: "/award/GPTW-WOMEN.jpg" },
   { img: "/award/SATYN-2.jpg" },
 ];
