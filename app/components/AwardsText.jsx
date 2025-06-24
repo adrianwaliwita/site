@@ -35,9 +35,9 @@ const logos = [
   },
   {
     img: "/award/leadership.jpg",
-    title: "CGMA Leadership Award: Asia Pacific",
+    title: "AICPA and CIMA Partner Organisation",
     description:
-      "Celebrated as a forward-thinking organisation putting people first, standing out among 1,200 Asia Pacific applicants.",
+      "Named AICPA and CIMA Partner Organisation of the Year among the APAC region for our shared vision with the AICPA and CIMA community.",
   },
   {
     img: "/award/digiTransform.jpg",

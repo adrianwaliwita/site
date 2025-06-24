@@ -45,24 +45,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${GTAmerica.variable}`}>
-      <head>
-        {" "}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-        />
-        {/* X-Content-Type-Options */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        {/* Referrer Policy */}
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-        {/* Disable DNS prefetching */}
-        <meta httpEquiv="x-dns-prefetch-control" content="off" />
-        {/* Permissions Policy (limited support via meta) */}
-        <meta
-          httpEquiv="Permissions-Policy"
-          content="camera=(), microphone=(), geolocation=()"
-        />
-      </head>
+      <head>{/* ✅ Put regular <link>, <meta>, etc. here */}</head>
       <body>
         {/* ✅ GTM script must be inside body */}
         <Script
