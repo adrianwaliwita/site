@@ -1,10 +1,15 @@
+// app/components/Menu.tsx
+
 "use client";
-import React from "react";
+
+import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
+import { ChevronDown, Search } from "lucide-react";
+// Import your custom components
 import ButtonHead from "./ButtonHead";
-import { ChevronDown } from "lucide-react";
+import RegionSwitcher from "./RegionSwitcher";
+import SearchModal from "./SearchModal";
 
 const transition = {
   type: "spring",
@@ -35,7 +40,6 @@ export const MenuItem = ({
   };
 
   const handleClick = () => {
-    // Reset active state when clicking on menu items
     setActive(null);
   };
 
@@ -70,11 +74,11 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4 ">
+            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4 z-50">
               <motion.div
                 transition={transition}
                 layoutId="active"
-                className="bg-white  dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
                 <motion.div layout className="w-max h-full p-4">
                   {children}
@@ -85,6 +89,35 @@ export const MenuItem = ({
         </motion.div>
       )}
     </Link>
+  );
+};
+
+// Search Component that triggers the modal// In your Menu.tsx file, update the SearchComponent:
+
+const SearchComponent = () => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const openSearch = useCallback(() => {
+    setIsSearchOpen(true);
+  }, []);
+
+  const closeSearch = useCallback(() => {
+    setIsSearchOpen(false);
+  }, []);
+
+  return (
+    <>
+      <button
+        onClick={openSearch}
+        className="p-2 text-gray-500 hover:text-black transition-colors duration-200"
+        aria-label="Open search"
+        type="button" // Prevent form submission if inside a form
+      >
+        <Search size={20} />
+      </button>
+
+      <SearchModal isOpen={isSearchOpen} onClose={closeSearch} />
+    </>
   );
 };
 
@@ -101,9 +134,8 @@ export const Menu = ({ setActive = () => {}, children }: MenuProps) => {
   return (
     <nav
       onMouseLeave={handleMouseLeave}
-      className="relative border  bg-white shadow-input flex justify-between items-center px-[10vw] py-[0.5vh] "
+      className="relative border bg-white shadow-input flex justify-between items-center px-[10vw] py-[0.5vh]"
     >
-      {/* Logo section */}
       <a href="/" className="cursor-pointer">
         <div className="flex items-center space-x-2">
           <img
@@ -113,11 +145,12 @@ export const Menu = ({ setActive = () => {}, children }: MenuProps) => {
           />
         </div>
       </a>
-
-      {/* Menu items */}
-      <div className="flex space-x-6 ">{children}</div>
-      {/* Button on the right */}
-      <ButtonHead text="Get Started" href="/request-appointment" />
+      <div className="flex space-x-6">{children}</div>
+      <div className="flex items-center space-x-4">
+        <SearchComponent />
+        <ButtonHead text="Get Started" href="/request-appointment" />
+        <RegionSwitcher />
+      </div>
     </nav>
   );
 };
@@ -138,14 +171,13 @@ export const ProductItem = ({
   onClick?: () => void;
 }) => {
   const handleClick = () => {
-    // Call the onClick prop if provided (for closing menu)
     if (onClick) {
       onClick();
     }
   };
 
   return (
-    <div className="relative group ">
+    <div className="relative group">
       <Link
         href={href}
         className="flex items-center space-x-2"
@@ -160,7 +192,7 @@ export const ProductItem = ({
           </p>
         </div>
         {children && (
-          <div className="relative bg ">
+          <div className="relative bg">
             <ChevronDown
               size={16}
               className="ml-1 transition-transform duration-300 -rotate-90 group-hover:rotate-0"
@@ -175,9 +207,8 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, href, onClick, ...rest }) => {
+export const HoveredLink = ({ children, href, onClick, ...rest }: any) => {
   const handleClick = () => {
-    // Call the onClick prop if provided (for closing menu)
     if (onClick) {
       onClick();
     }
