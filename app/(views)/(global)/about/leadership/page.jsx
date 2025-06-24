@@ -14,8 +14,8 @@ const Leadership = () => {
         <div className="py-[5vh] md:pt-[8vh] "></div>
 
         <section>
-          <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] lg:px-6">
-            <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+          <div className="max-w-screen-xl mx-auto pt-[5vh] md:pt-[10vh] px-4 lg:px-6">
+            <div className="mx-auto text-center mb-8 lg:mb-16">
               <div className={headingStyles.primaryCenter}>
                 <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
                   REAL PEOPLE.
@@ -28,7 +28,7 @@ const Leadership = () => {
                 emphasis on building lasting relationships
               </div>
             </div>
-            <div className="grid gap-8 px-10 mb-6 lg:mb-16 md:grid-cols-2">
+            <div className="grid gap-6 mb-6 lg:mb-16 md:grid-cols-2">
               {[
                 {
                   name: "Deshaka Perera",
@@ -69,43 +69,38 @@ const Leadership = () => {
                   linkedin:
                     "https://www.linkedin.com/in/natali-jayatilaka-412bab190/",
                 },
-                {
-                  name: "Udesh Wickramarathne",
-                  position: "Head of Australian F&A Services",
-                  img: "/team/13.webp",
-                  email: "udesh.wickramarathne@hconnectint.com",
-                  linkedin:
-                    "https://www.linkedin.com/in/udesh-wickramarathne-123020194/",
-                },
               ].map((teamMember, index) => (
                 <div
                   key={index}
-                  className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+                  className="flex flex-col sm:flex-row items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
                 >
-                  <a href="#">
+                  <div className="w-full sm:w-auto flex-shrink-0">
                     <img
-                      className="w-full h-[30vh] object-cover rounded-lg sm:rounded-none sm:rounded-l-lg team-img"
+                      className="w-full h-64 sm:h-[30vh] sm:w-48 object-cover sm:rounded-l-lg"
                       src={teamMember.img}
                       alt={`${teamMember.name} Avatar`}
                     />
-                  </a>
-                  <div className="p-5">
-                    <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      <a href="#">{teamMember.name}</a>
+                  </div>
+                  <div className="p-4 sm:p-5 flex-1 text-center sm:text-left">
+                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white mb-1">
+                      {teamMember.name}
                     </h3>
-                    <span className="text-gray-500 dark:text-gray-400">
+                    <span className="text-sm sm:text-base text-gray-500 dark:text-gray-400 block mb-3">
                       {teamMember.position}
                     </span>
-                    <div className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
-                      {teamMember.description}
-                    </div>{" "}
-                    <ul className="flex space-x-4 sm:mt-0">
+                    {teamMember.description && (
+                      <div className="mb-4 font-light text-gray-500 dark:text-gray-400 text-sm sm:text-base">
+                        {teamMember.description}
+                      </div>
+                    )}
+                    <ul className="flex justify-center sm:justify-start space-x-4">
                       <li>
                         <a
                           href={teamMember.linkedin}
-                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={`${teamMember.name}'s LinkedIn profile`}
                         >
                           <svg
                             className="w-5 h-5"
@@ -120,7 +115,8 @@ const Leadership = () => {
                       <li>
                         <a
                           href={`mailto:${teamMember.email}`}
-                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                          className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+                          aria-label={`Email ${teamMember.name}`}
                         >
                           <svg
                             className="w-5 h-5"
@@ -155,7 +151,7 @@ const Leadership = () => {
             }
             description={
               <div
-                className={`space-y-4 w-[90%]  ${bodyTextStyles.descriptionLeft} ${bodyTextStyles.white}`}
+                className={`space-y-4 w-[100%] px-4 md:px-0 md:w-[90%]  ${bodyTextStyles.descriptionLeft} ${bodyTextStyles.white}`}
               >
                 <div>
                   Our leadership drives absolute value across every part of the
