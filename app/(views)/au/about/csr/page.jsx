@@ -182,21 +182,18 @@ const AboutClient = () => {
               <div className="order-1 md:order-2 w-full">
                 <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 md:gap-6">
                   <HoverCard5
-                    title="Expert-led Technical Training Programs"
-                    img="/con-learning/expert-lead.jpg"
+                    title="Care Collective"
+                    img="/ergs/care-collect.jpg"
                   />
                   <HoverCard5
-                    title="Interpersonal Skill Development Initiatives"
-                    img="/con-learning/skill-dev.jpg"
+                    title="The AI Task Force"
+                    img="/ergs/ai-task.jpg"
                   />
                   <HoverCard5
-                    title="Inter-team Cross Training"
-                    img="/con-learning/inter-team.jpg"
+                    title="The Connect Crew"
+                    img="/ergs/connect-crew.jpg"
                   />
-                  <HoverCard5
-                    title="Designated Online Learning Portal"
-                    img="/con-learning/learning.jpg"
-                  />
+                  <HoverCard5 title="The Green Team" img="/ergs/green.jpg" />
                 </div>
               </div>
             </div>

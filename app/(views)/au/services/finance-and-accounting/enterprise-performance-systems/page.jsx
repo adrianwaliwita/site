@@ -62,7 +62,7 @@ const EPM = () => {
       />
 
       <SectionTextLeftLongBlue
-        text={"Start Now"}
+        text={"Get Started"}
         title={
           <>
             Boost your data to decision cycle with our EPM and FP&A capabilities

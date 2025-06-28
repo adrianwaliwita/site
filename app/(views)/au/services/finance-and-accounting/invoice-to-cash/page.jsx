@@ -61,7 +61,7 @@ const InvoiceToCash = () => {
       />
 
       <SectionTextLeftLongBlue
-        text={"Start Now"}
+        text={"Get Started"}
         title={
           <>
             Take your first step towards an agile and future-ready business{" "}

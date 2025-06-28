@@ -65,7 +65,7 @@ const InvoiceToCash = () => {
         }
       />
       <SectionTextLeftLongBlue
-        text={"Start Now"}
+        text={"Get Started"}
         title={<>Access our framework immediately</>}
         description="Drive your finance function forward with data-driven insights, seamless automation, and strategic expertise. Achieve lasting growth, maximize profitability, and lead with confidence in a dynamic Australian business landscape. Empower your team to turn financial vision into measurable success."
         component={

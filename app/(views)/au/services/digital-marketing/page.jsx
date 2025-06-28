@@ -8,7 +8,8 @@ import {
 } from "app/components/Divider";
 import MarqueeHoriLogo from "app/components/MarqueeHoriLogo";
 import MarqueeHoriLogoSingle from "app/components/MarqueeHoriLogoSingle";
-
+import HoverCard3 from "app/components/HoverCard3";
+import Link from "next/link";
 import PartnershipFeatures from "app/components/PartnershipFeatures";
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
@@ -48,94 +49,62 @@ const suite = [
   { img: "/suite-logo/wordpress.png" },
 ];
 
-const serviceBorders = [
-  {
-    title: "A True Extension",
-    description:
-      "Our dynamic team is an extension of yours. adopting your workflows, systems and norms. We become a part of you. ",
-  },
-  {
-    title: "Continuous Collaboration",
-    description:
-      "We hold weekly updates and monthly service reviews, tracked through both qualitative and quantitative measures. This ensures ongoing alignment, space for continuous improvement and a collaborative environment where your goals are always prioritized.",
-  },
-];
-
-const serviceBorders2 = [
-  {
-    title: "Face to Face Encounters",
-    description:
-      "We regularly host clients in our offices and make visits to their locations as well. This face-to-face interaction strengthens connections.",
-  },
-  {
-    title: "CEO - Led Commitment",
-    description:
-      "With direct access to our CEO, your concerns and priorities are always at the forefront. We're dedicated to providing a level of personalized service that goes beyond the ordinary.",
-  },
-];
-
-const sec = [
-  {
-    title: "Access Controls",
-    description:
-      "We've implemented multi-layered access controls to protect against unauthorized access",
-  },
-  {
-    title: "Audits & Assessments",
-    description:
-      "We proactively monitor our security posture through regular audits and vulnerability assessments",
-  },
-  {
-    title: "24/7 IT Support",
-    description:
-      " Our dedicated team provides round-the-clock support to ensure your systems are always running smoothly.",
-  },
-];
-
 const DM = [
-  {
-    title: "Strategic Social Media Management",
-    description:
-      "Cultivating online communities where your brand thrives, from curated content to targeted engagement strategies",
-  },
-  {
-    title: "Performance Analytics and Reporting",
-    description:
-      " Using data-driven insights to optimize your campaigns for peak performance",
-  },
-  {
-    title: "Email Marketing",
-    description:
-      " Creating targeted email campaigns backed by analytics and tracking to build relationships and drive action ",
-  },
-];
-const DM2 = [
-  {
-    title: "Content Creation",
-    description:
-      " Crafting high-quality, on-brand engaging content across multiple social media channels",
-  },
   {
     title: "Search Engine Optimization (SEO) Marketing",
     description:
       " Climbing the SERP ladder, ensuring your brand is seen by the right people at the right moment by on-page and off-page SEO optimization, and in-depth keyword research and analysis",
   },
   {
-    title: "Web & Creative services",
+    title: "Pay-Per-Click (PPC) Advertising Services  ",
     description:
-      "  We transform abstract ideas into high-impact websites inclusive of SEO, performance optimization, strategic UI/UX design, maintenance, and updates.",
+      " Precisely target your ideal customers through strategic Google Ads, paid search advertising, display advertising, social media advertising, and data-driven PPC management to maximise conversions ",
+  },
+  {
+    title: "Social Media Marketing (SMM) Services  ",
+    description:
+      " Build a global brand and cultivate online communities where your brand thrives, from curated content to targeted engagement strategies  ",
+  },
+];
+const DM2 = [
+  {
+    title: "Content Marketing Services  ",
+    description:
+      " Craft high-quality, on-brand, SEO-optimised content across your website and social media channels ",
+  },
+  {
+    title: "Email Marketing Services  ",
+    description:
+      " Create targeted email campaigns for lead nurturing, high engagement, and increased customer retention backed by email analytics and real-time performance tracking. ",
+  },
+  {
+    title: "Conversion Rate Optimisation (CRO) Services  ",
+    description:
+      "Enhance user experience and improve conversion pathways through A/B testing, landing page optimisation, and behavioural analytics.  ",
   },
 ];
 const DM3 = [
   {
-    title: "Branding",
+    title: "Performance Analytics, tracking and Reporting  ",
     description:
-      " Developing strategic brand identities to create a cohesive brand experience across all touchpoints including detailed branding guidelines and other marketing materials.",
+      " Using data-driven insights to track key metrics, ensure goal alignment and optimise your campaigns for peak performance ",
   },
   {
-    title: "Paid Advertising",
+    title: "Web Development Services  ",
     description:
-      " Precisely targeting your ideal customers through paid search advertising, display advertising, social media advertising, and Ad copywriting to drive conversions",
+      " Transform abstract ideas into high-impact, user-friendly websites inclusive of SEO, performance optimisation, strategic UI/UX design, maintenance, and updates. ",
+  },
+  {
+    title: "Branding Services   ",
+    description:
+      " Develop strategic brand identities to create a cohesive brand experience across all touchpoints including logo design, detailed brand guidelines, visual assets and consistent brand messaging. ",
+  },
+];
+const DM4 = [
+  {
+    title: "Generative Engine Optimization (GEO)  ",
+    description:
+      " Adapt to the future of search powered by AI. We develop AI-powered strategies to ensure your content resonates with generative engines and reaches your audience effectively. ",
   },
 ];
 
@@ -198,6 +167,7 @@ const FinanceAccounting = () => {
         <ServGrid features={DM} />
         <ServGrid features={DM2} />
         <ServGrid features={DM3} />
+        <ServGrid features={DM4} />
       </div>
 
       <div className="pt-[5vh] md:pt-[10vh]">
@@ -209,6 +179,202 @@ const FinanceAccounting = () => {
         certDesc="Every member of our team holds a relevant marketing certification"
       ></TopTierTalent>
 
+      <section className="bg-white dark:bg-gray-900 pt-[5vh] md:pt-[10vh] ">
+        <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+          <div className={headingStyles.primaryCenter}>
+            OUR PROVEN{" "}
+            <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+              DIGITAL MARKETING
+            </span>{" "}
+            APPROACH
+          </div>
+          <div className=" lg:mb-[-1vh]">
+            {" "}
+            <DividerBlueCenter />
+          </div>
+          <div className={bodyTextStyles.descriptionCenter}>
+            {
+              "We use a strategic, data-driven approach to deliver measurable business growth:  "
+            }
+          </div>
+        </div>
+        <div className=" px-4 mx-auto  lg:px-6">
+          <div className="w-full flex justify-center px-[5vw]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-fit">
+              <HoverCard3
+                title={
+                  <div>
+                    <span className="text-white font-bold transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Customised Digital Strategy:
+                    </span>
+                    <br />
+                    <span className="text-white font-medium text-[2.5vw] md:text-[1vw]   transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Tailored solutions aligned with your business goals. 
+                    </span>
+                  </div>
+                }
+                description={
+                  <Link href={"/contact"}>
+                    <div>
+                      <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                        Learn More
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 25 25"
+                        className="w-5 h-5 fill-current "
+                      >
+                        <path
+                          d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                          data-name="Right"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                }
+                img={"/dm/digital-strat.jpg"}
+              />
+
+              <HoverCard3
+                title={
+                  <div>
+                    <span className="text-white font-bold transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Competitor & Market Research:
+                    </span>
+                    <br />
+                    <span className="text-white font-medium text-[2.5vw] md:text-[1vw] transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Gain a competitive edge through in-depth analysis. 
+                    </span>
+                  </div>
+                }
+                description={
+                  <Link href={"/contact"}>
+                    <div>
+                      <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                        Learn More
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 25 25"
+                        className="w-5 h-5 fill-current "
+                      >
+                        <path
+                          d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                          data-name="Right"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                }
+                img={"/dm/comp.jpg"}
+              />
+              <HoverCard3
+                title={
+                  <div>
+                    <span className="text-white font-bold transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Performance Monitoring & Optimisation:
+                    </span>
+                    <br />
+                    <span className="text-white font-medium text-[2.5vw] md:text-[1vw] transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                      Continuous improvement for sustained success. 
+                    </span>
+                  </div>
+                }
+                description={
+                  <Link href={"/contact"}>
+                    <div>
+                      <span className="text-white font-medium transition-all duration-300 ease-in-out group-hover:translate-x-2">
+                        Learn More
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 25 25"
+                        className="w-5 h-5 fill-current "
+                      >
+                        <path
+                          d="m17.5 5.999-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
+                          data-name="Right"
+                        />
+                      </svg>
+                    </div>
+                  </Link>
+                }
+                img={"/dm/perf.jpg"}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4  px-[5vw]"></div>
+      </section>
+      <section className="bg-white dark:bg-gray-900 pt-[5vh] md:pt-[10vh] ">
+        <div className="mx-auto-sm text-center mb-8 lg:mb-16">
+          <div className={headingStyles.primaryCenter}>
+            CLIENT{" "}
+            <span className="bg-gradient-to-bl from-[#2e2e53] to-[#0000ff] bg-clip-text text-transparent">
+              SUCCESS
+            </span>{" "}
+            STORIES
+          </div>
+          <div className=" lg:mb-[-1vh]">
+            {" "}
+            <DividerBlueCenter />
+          </div>
+          <div className={bodyTextStyles.descriptionCenter}>
+            {
+              "We use a strategic, data-driven approach to deliver measurable business growth:  "
+            }
+          </div>
+        </div>
+        <div className="mt-6 lg:mt-4 lg:mb-6 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-center px-4 sm:px-0">
+          <a
+            href="/pdf/case-study-pdf/r2r.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group"
+          >
+            <img
+              src="/case-study/r2r.jpg"
+              alt="Transform Case Study"
+              className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[350px] h-[280px] sm:h-[300px] lg:h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+            />
+            <p className="mt-3 text-base sm:text-lg font-medium text-center font-arial">
+              Record to Report
+            </p>
+          </a>
+
+          <a
+            href="/pdf/case-study-pdf/p2p.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group"
+          >
+            <img
+              src="/case-study/p2p.jpg"
+              alt="Growth Strategy Case Study"
+              className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[350px] h-[280px] sm:h-[300px] lg:h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+            />
+            <p className="mt-3 text-base sm:text-lg font-medium text-center">
+              Procure to Pay
+            </p>
+          </a>
+
+          <a
+            href="/pdf/case-study-pdf/epm.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block group"
+          >
+            <img
+              src="/case-study/epm.jpg"
+              alt="Enterprise Performance Management Case Study"
+              className="w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[350px] h-[280px] sm:h-[300px] lg:h-[350px] object-cover mx-auto rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-105"
+            />
+            <p className="mt-3 text-base sm:text-lg font-medium text-center">
+              Enterprise Performance Management
+            </p>
+          </a>
+        </div>
+      </section>
       <SecuringInterests></SecuringInterests>
 
       <ServiceBeyondBorders></ServiceBeyondBorders>

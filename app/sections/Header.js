@@ -41,17 +41,30 @@ export default function NavbarMain() {
 function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
   const [active, setActive] = useState(null);
   const pathname = usePathname(); // Get current pathname
-  const isAustralianSite = pathname?.startsWith("/au"); // Check if path starts with /au
+
+  // Determine current region based on pathname
+  const getCurrentRegion = () => {
+    if (pathname?.startsWith("/au")) return "au";
+    if (pathname?.startsWith("/uk")) return "uk";
+    return "global";
+  };
+
+  const currentRegion = getCurrentRegion();
 
   // Helper function to generate the correct path based on the current site context
   const getPath = (path) => {
     // Ensure the base path starts with a '/'
     const basePath = path.startsWith("/") ? path : `/${path}`;
-    // Prevent double slashes if the root path "/" is passed
+
+    // Handle root path
     if (basePath === "/") {
-      return isAustralianSite ? "/au" : "/";
+      return currentRegion === "global" ? "/" : `/${currentRegion}`;
     }
-    return isAustralianSite ? `/au${basePath}` : basePath;
+
+    // Add region prefix if not global
+    return currentRegion === "global"
+      ? basePath
+      : `/${currentRegion}${basePath}`;
   };
 
   const handleMobileMenuItemClick = () => {
@@ -90,7 +103,7 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
             setActive={setActive}
             href={getPath("/about")} // Main about link
             active={active}
-            item="About"
+            item="About Us"
           >
             <div className="text-sm grid grid-cols-2 gap-6 p-4 max-w-3xl mx-auto">
               <ProductItem
@@ -303,7 +316,33 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               </HoveredLink>
             </div>
           </MenuItem>
-          <MenuItem href={getPath("/resources")} item="Resources" />
+          <MenuItem
+            href={getPath("/resources")}
+            item="Resources"
+            setActive={setActive}
+            active={active}
+          >
+            <div className="flex flex-col space-y-4 text-sm">
+              <HoveredLink
+                href={getPath("/resources/blogs")}
+                onClick={() => setActive(null)} // Use onClick here for HoveredLink if needed
+              >
+                Blogs
+              </HoveredLink>
+              <HoveredLink
+                href={getPath("/resources/newsletters")}
+                onClick={() => setActive(null)}
+              >
+                Newsletters
+              </HoveredLink>
+              <HoveredLink
+                href={getPath("/resources/case-studies")}
+                onClick={() => setActive(null)}
+              >
+                Case Studies
+              </HoveredLink>
+            </div>
+          </MenuItem>
           <MenuItem href={getPath("/contact")} item="Contact Us" />{" "}
           {/* Added Contact Link */}
         </Menu>
@@ -515,7 +554,26 @@ function Navbar({ className, isMobileMenuOpen, setIsMobileMenuOpen }) {
               title="Resources"
               href={getPath("/resources")}
               onItemClick={handleMobileMenuItemClick}
-            />
+            >
+              <ProductItemMobile
+                title="Blogs"
+                href={getPath("/resources/blogs")}
+                description="Insights, tutorials, and industry updates from our team."
+                onItemClick={handleMobileMenuItemClick}
+              />
+              <ProductItemMobile
+                title="Newsletters"
+                href={getPath("/resources/newsletters")}
+                description="Stay updated with our latest news and announcements."
+                onItemClick={handleMobileMenuItemClick}
+              />
+              <ProductItemMobile
+                title="Case Studies"
+                href={getPath("/resources/case-studies")}
+                description="Real-world examples of our solutions in action."
+                onItemClick={handleMobileMenuItemClick}
+              />
+            </MobileSectionAccordion>
             <MobileSectionAccordion
               title="Contact Us"
               href={getPath("/contact")}

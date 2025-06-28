@@ -59,7 +59,7 @@ const RecordToReport = () => {
       />
 
       <SectionTextLeftLongBlue
-        text={"Start Now"}
+        text={"Get Started"}
         title={
           <>
             Ready for that <br /> upgrade?

@@ -14,7 +14,8 @@ module.exports = {
         image1: "url('./assets/diamond.webp')",
         image2: "url('./assets/AUS2.png')",
         image3: "url('./assets/AUS3.png')",
-        image4: "url('/path/to/image4.jpg')",
+        image4: "url('./assets/LON2.png')",
+        image5: "url('./assets/LON3.png')",
       },
       colors: {
         background: "hsl(var(--background))",

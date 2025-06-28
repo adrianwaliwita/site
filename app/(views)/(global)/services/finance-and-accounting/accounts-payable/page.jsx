@@ -64,7 +64,7 @@ const AccountsPayable = () => {
       <div className="mb-[-5vh] md:mb-0"></div>
 
       <SectionTextLeftLongBlue
-        text={"Start Now"}
+        text={"Get Started"}
         title={
           <>
             TAILORED <br />

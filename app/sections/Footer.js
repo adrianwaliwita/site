@@ -6,12 +6,25 @@ import {
   faTiktok,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation"; // Add this import
+import ButtonFoot from "app/components/ButtonFoot";
 
 const Footer = () => {
+  const pathname = usePathname(); // Use Next.js hook instead
+  const [showMap, setShowMap] = useState(false);
+
+  useEffect(() => {
+    // Check if current pathname contains /au
+    setShowMap(pathname.includes("/au"));
+  }, [pathname]); // Add pathname as dependency
+
   return (
     <footer className="bg-[#000000]">
       <div className="mx-auto p-0 md:p-8 xl:px-0">
         <div className="mx-auto max-w-7xl px-6 pb-10 pt-16">
+          {/* Conditionally render Google Map for Australian pages */}
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-4">
               <div>
@@ -64,6 +77,9 @@ const Footer = () => {
                   <span className="sr-only">Facbook</span>
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
+              </div>
+              <div>
+                <ButtonFoot text="Get Started" href="/request-appointment" />
               </div>
             </div>
 
@@ -191,6 +207,22 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          {showMap && (
+            <div className="my-16">
+              <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093384!2d144.9537353153167!3d-37.81627997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1f34c89%3A0x506f0b535df4f2e7!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1640995200000!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="H Connect International Australian Office Location"
+                ></iframe>
+              </div>
+            </div>
+          )}
           <div className="mt-16 border-t border-gray-100/30 pt-8 sm:mt-20 lg:mt-24">
             <div className="text-md text-center text-white mx-auto">
               Copyright © 2025 HConnect International. All rights reserved.

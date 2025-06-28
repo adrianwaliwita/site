@@ -212,7 +212,7 @@ const RemoteTeams = () => {
       <CTA
         title="SCHEDULE A FREE CONSULTATION"
         href={"/contact"}
-        text={"START NOW"}
+        text={"GET STARTED"}
       ></CTA>
     </div>
   );

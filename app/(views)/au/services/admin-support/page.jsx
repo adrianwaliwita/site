@@ -4,39 +4,12 @@ import CTA from "app/sections/CTA";
 import PartnershipFeaturesAus from "app/components/PartnershipFeaturesAus";
 import SecuringInterests from "app/components/SecuringInterests";
 import TopTierTalent from "app/components/TopTierTalent";
-import ServiceBeyondBorders from "app/components/ServiceBeyondBorders";
+import ServiceBeyondBordersAus from "app/components/ServiceBeyondBordersAus";
 import ProvenProcesses from "app/components/ProvenProcesses";
 import ServGrid from "app/components/ServGrid";
 
 import LandingPageInner from "app/sections/LandingPageInner";
 import SectionTextRightDesc from "app/sections/SectionTextRightDesc";
-import Link from "next/link";
-import { headingStyles, bodyTextStyles } from "app/constants/FontStyles";
-import {
-  DividerBlueCenter,
-  DividerBlueLeft,
-  DividerWhiteLeft,
-  DividerWhiteCenter,
-} from "app/components/Divider";
-
-const logos = [
-  {
-    name: "ISO",
-    url: "/DataProtection/iso.jpg",
-  },
-  {
-    name: "DPA",
-    url: "/DataProtection/dpa.jpg",
-  },
-  {
-    name: "GDPR",
-    url: "/DataProtection/gdpr.jpg",
-  },
-  {
-    name: "PrivacyActi",
-    url: "/DataProtection/PrivacyAct.jpg",
-  },
-];
 
 const accredit = [
   { img: "/accredit/ACCA.jpg" },
@@ -185,7 +158,7 @@ const FinanceAccounting = () => {
 
       <SecuringInterests></SecuringInterests>
 
-      <ServiceBeyondBorders></ServiceBeyondBorders>
+      <ServiceBeyondBordersAus></ServiceBeyondBordersAus>
 
       <ProvenProcesses></ProvenProcesses>
 
