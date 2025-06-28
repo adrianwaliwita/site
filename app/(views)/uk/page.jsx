@@ -110,9 +110,9 @@ export default function Home() {
                 CONFIDENCE
               </h1>
               <div className={bodyTextStyles.primary}>
-                Our world-class operating model and Australian-certified talent
-                enable business agility, resilience, and efficiency. We provide
-                tailored solutions for the Australian market and beyond.
+                Our world-class operating model and UK-certified talent enable
+                business agility, resilience, and efficiency. We provide
+                tailored solutions for the UK market and beyond.
               </div>
               <Button text="View Details" href="/about" />
             </div>
